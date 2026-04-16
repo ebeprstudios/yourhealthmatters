@@ -45,7 +45,7 @@ export default function Home() {
               </h2>
               <p className="text-forest-200 leading-relaxed mb-4">
                 These guides were built through deep research and the clinical guidance of
-                Dr. Vera Holloway - a Certified Nutrition Specialist (CNS), Certified Holistic
+                Dr. Vera - a Certified Nutrition Specialist (CNS), Certified Holistic
                 Nutritionist (CHN), and practitioner with 30+ years of experience across four
                 continents.
               </p>
@@ -90,7 +90,7 @@ export default function Home() {
             Chat with Dr. Vera
           </h2>
           <p className="text-stone-500 max-w-lg mx-auto leading-relaxed">
-            Dr. Vera Holloway is trained on all ten guides and 30 years of global clinical
+            Dr. Vera is trained on all ten guides and 30 years of global clinical
             knowledge. Ask her any holistic health question - nutrition, herbs, body systems,
             timing, or how to support a specific health goal.
           </p>
