@@ -32,7 +32,7 @@ export default function GuideCard({ guide, index }: GuideCardProps) {
       <Link href={`/guides/${guide.slug}`}>
         <div className="guide-card bg-white rounded-2xl overflow-hidden border border-stone-100 cursor-pointer group h-full flex flex-col">
           {/* Color header */}
-          <div className={`${guide.color} px-5 py-6 relative overflow-hidden`}>
+          <div className="px-5 py-6 relative overflow-hidden" style={{ backgroundColor: guide.accentColor }}>
             {/* Decorative circle */}
             <div className="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-white/5" />
             <div className="absolute -right-2 -bottom-6 w-16 h-16 rounded-full bg-white/5" />
