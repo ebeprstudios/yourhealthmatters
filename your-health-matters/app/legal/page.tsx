@@ -14,9 +14,9 @@ export default function LegalPage() {
           <h2 className="font-serif text-2xl text-forest-900 mb-4">Copyright Notice</h2>
           <p className="text-stone-600 leading-relaxed mb-4">© {year} Erica Ehiwe. All rights reserved.</p>
           <p className="text-stone-600 leading-relaxed mb-4">
-            All content on this website — including but not limited to text, guides, research compilations,
+            All content on this website - including but not limited to text, guides, research compilations,
             PDF documents, visual aids, hormone charts, food protocols, and the design and organization of
-            all materials — is the original intellectual property of <strong className="text-forest-900">Erica Ehiwe</strong> and
+            all materials - is the original intellectual property of <strong className="text-forest-900">Erica Ehiwe</strong> and
             is protected by United States and international copyright law.
           </p>
           <p className="text-stone-600 leading-relaxed mb-4">
@@ -27,7 +27,7 @@ export default function LegalPage() {
           </p>
           <p className="text-stone-600 leading-relaxed">
             Unauthorized reproduction, distribution, modification, or commercial use of any content from
-            this site — in whole or in part — without express written permission from Erica Ehiwe is
+            this site - in whole or in part - without express written permission from Erica Ehiwe is
             strictly prohibited.
           </p>
         </section>
@@ -60,7 +60,7 @@ export default function LegalPage() {
           </p>
           <p className="text-stone-600 leading-relaxed text-sm mb-4">
             Always consult a licensed physician, registered dietitian, or qualified healthcare provider
-            before making significant changes to your diet, supplement regimen, or health protocols —
+            before making significant changes to your diet, supplement regimen, or health protocols -
             particularly if you are managing an active health condition, taking medications, or pregnant.
           </p>
           <p className="text-stone-600 leading-relaxed text-sm">
@@ -70,15 +70,15 @@ export default function LegalPage() {
         </section>
 
         <section className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm mb-6">
-          <h2 className="font-serif text-2xl text-forest-900 mb-4">AI Chat (Dr. Vera) Disclaimer</h2>
+          <h2 className="font-serif text-2xl text-forest-900 mb-4">Dr. Vera Chat Disclaimer</h2>
           <p className="text-stone-600 leading-relaxed text-sm mb-4">
-            The "Dr. Vera Holloway" chat assistant is an AI language model trained on holistic health
+            The Dr. Vera Holloway chat assistant is a digital health education tool trained on holistic health
             knowledge. It is not a real person, licensed physician, dietitian, or healthcare provider.
             Responses are educational in nature and should never be used as a substitute for professional
             medical consultation.
           </p>
           <p className="text-stone-600 leading-relaxed text-sm">
-            Erica Ehiwe and this website are not liable for any health decisions made based on AI chat responses.
+            Erica Ehiwe and this website are not liable for any health decisions made based on chat responses.
           </p>
         </section>
 
