@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest-dark:  #042a22;
+  --forest-900:   #085041;
+  --forest-700:   #235d41;
+  --forest-500:   #3a8f63;
+  --forest-200:   #c3e1d1;
+  --cream:        #F5F0E8;
+  --cream-100:    #faf6ed;
+  --gold:         #d4a017;
+  --gold-light:   #f0d080;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: #1E1E1C;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Floating particles ─────────────────────────────── */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: particleFade 8s ease-in-out infinite;
+}
+
+@keyframes particleFade {
+  0%   { opacity: 0; transform: translateY(0) scale(0.5); }
+  20%  { opacity: 0.6; }
+  80%  { opacity: 0.4; }
+  100% { opacity: 0; transform: translateY(-120px) scale(1.2); }
+}
+
+/* ── Scroll reveal ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Guide card hover ───────────────────────────────── */
+.guide-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.guide-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(8, 80, 65, 0.15);
+}
+
+/* ── Chat component ─────────────────────────────────── */
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(8, 80, 65, 0.3);
+  border-radius: 2px;
+}
+
+/* ── Shimmer loading ────────────────────────────────── */
+.shimmer-text {
+  background: linear-gradient(90deg,
+    rgba(8,80,65,0.6) 0%,
+    rgba(8,80,65,1) 50%,
+    rgba(8,80,65,0.6) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Gradient text ──────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #085041 0%, #3a8f63 50%, #d4a017 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Hero wave ──────────────────────────────────────── */
+.wave-divider {
+  position: relative;
+  overflow: hidden;
+}
+.wave-divider::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--cream);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+/* ── Typography ─────────────────────────────────────── */
+h1, h2, h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+  line-height: 1.2;
+}
+
+/* ── Prose content ──────────────────────────────────── */
+.prose-vera p { 
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+.prose-vera strong { color: #085041; }
+
+/* ── Mobile safe area ───────────────────────────────── */
+@supports (padding: max(0px)) {
+  .pb-safe { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+}
