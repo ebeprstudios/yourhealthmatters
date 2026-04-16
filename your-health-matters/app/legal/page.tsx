@@ -72,13 +72,14 @@ export default function LegalPage() {
         <section className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm mb-6">
           <h2 className="font-serif text-2xl text-forest-900 mb-4">Dr. Vera Chat Disclaimer</h2>
           <p className="text-stone-600 leading-relaxed text-sm mb-4">
-            The Dr. Vera Holloway chat assistant is a digital health education tool trained on holistic health
-            knowledge. It is not a real person, licensed physician, dietitian, or healthcare provider.
-            Responses are educational in nature and should never be used as a substitute for professional
-            medical consultation.
+            The Dr. Vera Holloway chat assistant is a digital health education tool. It is not a real person,
+            licensed physician, registered dietitian, or healthcare provider of any kind. All responses are
+            for educational purposes only and should never be used as a substitute for professional medical
+            consultation, diagnosis, or treatment.
           </p>
           <p className="text-stone-600 leading-relaxed text-sm">
-            Erica Ehiwe and this website are not liable for any health decisions made based on chat responses.
+            Erica Ehiwe and Your Health Matters are not liable for any health decisions made based on
+            responses from this chat tool.
           </p>
         </section>
 
