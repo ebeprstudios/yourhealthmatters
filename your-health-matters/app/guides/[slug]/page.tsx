@@ -33,7 +33,7 @@ export default function GuidePage({ params }: Props) {
       <Nav />
 
       {/* Hero */}
-      <header className={`${guide.color} pt-24 pb-16 relative overflow-hidden`}>
+      <header className="bg-forest-900 pt-24 pb-16 relative overflow-hidden" style={{ backgroundColor: guide.accentColor }}>
         {/* Decorative circles */}
         <div className="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none" />
         <div className="absolute -left-10 bottom-0 w-40 h-40 rounded-full bg-white/5 pointer-events-none" />
@@ -167,7 +167,7 @@ export default function GuidePage({ params }: Props) {
 
               {/* Download card */}
               <div
-                className={`${guide.color} rounded-2xl p-5 text-white text-center`}
+                className="rounded-2xl p-5 text-white text-center" style={{ backgroundColor: guide.accentColor }}
               >
                 <span className="text-3xl block mb-2">{guide.icon}</span>
                 <p className="font-serif font-bold text-lg mb-1">Printable PDF</p>
