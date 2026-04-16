@@ -135,7 +135,7 @@ export default function Hero() {
           style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', animationDelay: '0.15s', opacity: 0, animationFillMode: 'forwards' }}
         >
           Ten evidence-based healing guides covering nutrition, herbs, body systems, and daily
-          protocols — researched and created by <strong className="text-white">Erica Ehiwe</strong>.
+          protocols - researched and created by <strong className="text-white">Erica Ehiwe</strong>.
           Ask Dr. Vera any question about your health.
         </p>
 
