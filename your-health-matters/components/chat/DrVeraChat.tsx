@@ -78,29 +78,91 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
   }
 
   function formatMessage(content: string) {
-    // Convert markdown-ish to styled spans
     const lines = content.split('\n')
-    return lines.map((line, i) => {
+    const elements: React.ReactNode[] = []
+    let i = 0
+
+    while (i < lines.length) {
+      const line = lines[i]
+
+      // Disclaimer line
       if (line.startsWith('⚕️')) {
-        return (
-          <p key={i} className="text-xs text-stone-400 italic mt-3 pt-3 border-t border-stone-200">
-            {line}
-          </p>
+        elements.push(
+          <p key={i} className="text-xs text-stone-400 italic mt-3 pt-3 border-t border-stone-200">{line}</p>
         )
+        i++; continue
       }
-      if (line.startsWith('**') && line.endsWith('**')) {
-        return <p key={i} className="font-semibold text-forest-900 mt-2">{line.slice(2, -2)}</p>
+
+      // Skip horizontal rules
+      if (line.trim() === '---' || line.trim() === '---' || /^-{3,}$/.test(line.trim())) {
+        i++; continue
       }
-      if (line.startsWith('- ') || line.startsWith('• ')) {
-        return (
-          <p key={i} className="ml-3 before:content-['·'] before:mr-2 before:text-forest-500">
-            {line.slice(2)}
-          </p>
+
+      // Skip table separator rows
+      if (/^[|\-\s]+$/.test(line) && line.includes('|') && line.includes('-')) {
+        i++; continue
+      }
+
+      // Table data rows
+      if (line.startsWith('|') && line.endsWith('|')) {
+        const cells = line.split('|').filter(c => c.trim())
+        const isHeader = lines[i+1] && /^[|\-\s]+$/.test(lines[i+1])
+        elements.push(
+          <div key={i} className={`flex gap-2 text-sm py-1 ${isHeader ? 'font-semibold text-forest-900 border-b border-stone-200 mb-1' : 'text-stone-700'}`}>
+            {cells.map((cell, ci) => (
+              <span key={ci} className="flex-1">{cell.trim().replace(/\*\*/g, '')}</span>
+            ))}
+          </div>
         )
+        i++; continue
       }
-      if (line === '') return <div key={i} className="h-2" />
-      return <p key={i}>{line}</p>
-    })
+
+      // ## Headings
+      if (line.startsWith('## ')) {
+        const text = line.replace(/^##\s+/, '').replace(/\*\*/g, '')
+        elements.push(
+          <p key={i} className="font-semibold text-forest-900 text-sm mt-3 mb-1">{text}</p>
+        )
+        i++; continue
+      }
+
+      // # Headings
+      if (line.startsWith('# ')) {
+        const text = line.replace(/^#\s+/, '').replace(/\*\*/g, '')
+        elements.push(
+          <p key={i} className="font-bold text-forest-900 text-base mt-3 mb-1">{text}</p>
+        )
+        i++; continue
+      }
+
+      // Bullet points - or *
+      if (line.match(/^[\-\*]\s/) || line.match(/^\d+\.\s/)) {
+        const text = line.replace(/^[\-\*\d+\.]+\s/, '')
+        const clean = text.replace(/\*\*(.*?)\*\*/g, '$1')
+        elements.push(
+          <div key={i} className="flex items-start gap-2 text-sm text-stone-700 py-0.5">
+            <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+            <span>{clean}</span>
+          </div>
+        )
+        i++; continue
+      }
+
+      // Empty line
+      if (line.trim() === '') {
+        elements.push(<div key={i} className="h-2" />)
+        i++; continue
+      }
+
+      // Regular paragraph - strip ** bold markers, render clean
+      const clean = line.replace(/\*\*(.*?)\*\*/g, '$1')
+      elements.push(
+        <p key={i} className="text-sm text-stone-700 leading-relaxed">{clean}</p>
+      )
+      i++
+    }
+
+    return elements
   }
 
   return (
@@ -135,7 +197,7 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
             🌿
           </div>
           <div>
-            <p className="text-white font-semibold text-sm font-serif">Dr. Vera Holloway, CNS</p>
+            <p className="text-white font-semibold text-sm font-serif">Dr. Vera, CNS</p>
             <p className="text-forest-300 text-xs">Holistic Nutrition Specialist</p>
           </div>
           <div className="ml-auto flex items-center gap-1.5">
