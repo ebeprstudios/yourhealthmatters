@@ -585,4 +585,4 @@ export function getGuideBySlug(slug: string): Guide | undefined {
   return guides.find(g => g.slug === slug)
 }
 
-export const categories = [...new Set(guides.map(g => g.category))]
+export const categories = Array.from(new Set(guides.map(g => g.category)))
