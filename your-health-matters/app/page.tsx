@@ -65,7 +65,7 @@ export default function Home() {
                 { icon: '🌍', title: '9 Global Traditions', desc: 'West African · Ayurvedic · TCM · Mediterranean · Caribbean · Amazon · SE Asian · Middle Eastern · Okinawan' },
                 { icon: '🔬', title: '18 Organ Systems', desc: 'Every guide is mapped to specific body systems for precision healing' },
                 { icon: '📋', title: 'Evidence-Based', desc: 'Clinical research, traditional knowledge, and mechanism-driven explanations' },
-                { icon: '🌿', title: 'Ask Dr. Vera', desc: 'AI-powered chat trained on all 10 guides — available on every page' },
+                { icon: '🌿', title: 'Ask Dr. Vera', desc: 'Chat with Dr. Vera — trained on all 10 guides and available on every page' },
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="flex gap-4 bg-forest-800/50 rounded-xl p-4">
                   <span className="text-2xl flex-shrink-0">{icon}</span>
