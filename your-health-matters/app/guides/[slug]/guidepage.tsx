@@ -33,7 +33,7 @@ export default function GuidePage({ params }: Props) {
       <Nav />
 
       {/* Hero */}
-      <header className="pt-24 pb-16 relative overflow-hidden" style={{ backgroundColor: guide.accentColor }}>
+      <header className="bg-forest-900 pt-24 pb-16 relative overflow-hidden" style={{ backgroundColor: guide.accentColor }}>
         {/* Decorative circles */}
         <div className="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none" />
         <div className="absolute -left-10 bottom-0 w-40 h-40 rounded-full bg-white/5 pointer-events-none" />
