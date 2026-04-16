@@ -72,7 +72,7 @@ export default function LegalPage() {
         <section className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm mb-6">
           <h2 className="font-serif text-2xl text-forest-900 mb-4">Dr. Vera Chat Disclaimer</h2>
           <p className="text-stone-600 leading-relaxed text-sm mb-4">
-            The Dr. Vera Holloway chat assistant is a digital health education tool. It is not a real person,
+            The Dr. Vera chat assistant is a digital health education tool. It is not a real person,
             licensed physician, registered dietitian, or healthcare provider of any kind. All responses are
             for educational purposes only and should never be used as a substitute for professional medical
             consultation, diagnosis, or treatment.
