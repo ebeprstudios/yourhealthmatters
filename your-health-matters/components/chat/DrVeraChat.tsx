@@ -30,8 +30,9 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
     return () => clearInterval(interval)
   }, [loading])
 
-  // Auto-scroll to bottom
+  // Auto-scroll to bottom only when there are messages
   useEffect(() => {
+    if (messages.length === 0 && !loading) return
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, loading])
 
@@ -157,7 +158,7 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
               <p className="text-stone-400 text-xs leading-relaxed">
                 {pageScope
                   ? 'Ask me about the topics in this guide, or any holistic health question.'
-                  : 'Nutrition, herbs, body systems, healing protocols — ask anything.'
+                  : 'Nutrition, herbs, body systems, healing protocols - ask anything.'
                 }
               </p>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
@@ -243,7 +244,7 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
             </button>
           </div>
           <p className="text-xs text-stone-400 mt-2 text-center">
-            Educational only — not medical advice
+            Educational only - not medical advice
           </p>
         </div>
       </div>
