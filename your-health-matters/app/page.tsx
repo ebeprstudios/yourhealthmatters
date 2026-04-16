@@ -45,14 +45,14 @@ export default function Home() {
               </h2>
               <p className="text-forest-200 leading-relaxed mb-4">
                 These guides were built through deep research and the clinical guidance of
-                Dr. Vera Holloway — a Certified Nutrition Specialist (CNS), Certified Holistic
+                Dr. Vera Holloway - a Certified Nutrition Specialist (CNS), Certified Holistic
                 Nutritionist (CHN), and practitioner with 30+ years of experience across four
                 continents.
               </p>
               <p className="text-forest-200 leading-relaxed mb-4">
                 The research spans West African food medicine, Ayurvedic tradition, Traditional
                 Chinese Medicine, Mediterranean protocols, Caribbean herbal lineages, and
-                Southeast Asian botanical knowledge — integrated with modern clinical research.
+                Southeast Asian botanical knowledge - integrated with modern clinical research.
               </p>
               <p className="text-forest-300 text-sm italic">
                 This is education, not medicine. Everything here is designed to help you ask
@@ -65,7 +65,7 @@ export default function Home() {
                 { icon: '🌍', title: '9 Global Traditions', desc: 'West African · Ayurvedic · TCM · Mediterranean · Caribbean · Amazon · SE Asian · Middle Eastern · Okinawan' },
                 { icon: '🔬', title: '18 Organ Systems', desc: 'Every guide is mapped to specific body systems for precision healing' },
                 { icon: '📋', title: 'Evidence-Based', desc: 'Clinical research, traditional knowledge, and mechanism-driven explanations' },
-                { icon: '🌿', title: 'Ask Dr. Vera', desc: 'Chat with Dr. Vera — trained on all 10 guides and available on every page' },
+                { icon: '🌿', title: 'Ask Dr. Vera', desc: 'Chat with Dr. Vera - trained on all 10 guides and available on every page' },
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="flex gap-4 bg-forest-800/50 rounded-xl p-4">
                   <span className="text-2xl flex-shrink-0">{icon}</span>
@@ -91,7 +91,7 @@ export default function Home() {
           </h2>
           <p className="text-stone-500 max-w-lg mx-auto leading-relaxed">
             Dr. Vera Holloway is trained on all ten guides and 30 years of global clinical
-            knowledge. Ask her any holistic health question — nutrition, herbs, body systems,
+            knowledge. Ask her any holistic health question - nutrition, herbs, body systems,
             timing, or how to support a specific health goal.
           </p>
         </div>

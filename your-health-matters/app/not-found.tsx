@@ -7,7 +7,7 @@ export default function NotFound() {
         <span className="text-6xl block mb-6">🌿</span>
         <h1 className="font-serif text-4xl text-forest-900 mb-4">Page Not Found</h1>
         <p className="text-stone-500 mb-8 max-w-sm mx-auto">
-          This guide doesn't exist yet. Check back soon — more healing guides are being added regularly.
+          This guide doesn't exist yet. Check back soon - more healing guides are being added regularly.
         </p>
         <Link
           href="/"

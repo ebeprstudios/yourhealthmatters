@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: 'Your Health Matters | Holistic Health Research & Education',
   description:
-    'Evidence-based holistic health guides covering nutrition, herbs, body systems, and healing protocols — researched and created by Erica Ehiwe for Your Health Matters.',
+    'Evidence-based holistic health guides covering nutrition, herbs, body systems, and healing protocols - researched and created by Erica Ehiwe for Your Health Matters.',
   keywords: 'holistic health, nutrition, healing foods, herbal medicine, insulin timing, cholesterol, kidney health',
   authors: [{ name: 'Erica Ehiwe' }],
   openGraph: {
