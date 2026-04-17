@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import NewsletterForm from '@/components/ui/NewsletterForm'
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -173,6 +174,17 @@ export default function Hero() {
               <p className="text-forest-300 text-xs mt-1">{label}</p>
             </div>
           ))}
+        </div>
+
+        {/* Newsletter inline signup */}
+        <div
+          className="mt-12 animate-fade-up"
+          style={{ animationDelay: '0.6s', opacity: 0, animationFillMode: 'forwards' }}
+        >
+          <p className="text-forest-300 text-xs uppercase tracking-widest mb-3">
+            Get weekly health tips
+          </p>
+          <NewsletterForm variant="hero" />
         </div>
       </div>
 
