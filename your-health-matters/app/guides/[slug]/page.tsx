@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function GuidePage({ params }: Props) {
   const guide = getGuideBySlug(params.slug)
-  if (!guide) notFound()
+  if (!guide) return notFound()
 
   const currentIndex = guides.findIndex(g => g.slug === guide.slug)
   const prev = currentIndex > 0 ? guides[currentIndex - 1] : null
