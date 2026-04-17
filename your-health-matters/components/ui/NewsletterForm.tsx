@@ -157,7 +157,7 @@ export default function NewsletterForm({ variant = 'section' }: NewsletterFormPr
     <div>
       {status === 'success' ? (
         <div className="text-center py-6">
-          <p className="text-5xl mb-4">🌿</p>
+          <p className="text-4xl sm:text-5xl mb-4">🌿</p>
           <p className="font-serif text-2xl text-forest-900 mb-2">Welcome aboard!</p>
           <p className="text-stone-500">{message}</p>
         </div>
