@@ -57,7 +57,7 @@ export default function GuidePage({ params }: Props) {
                 </span>
                 <span className="text-xs text-white/60">{guide.category}</span>
               </div>
-              <h1 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-3 leading-tight">
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
                 {guide.title}
               </h1>
               <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
@@ -67,7 +67,7 @@ export default function GuidePage({ params }: Props) {
           </div>
 
           {/* Key facts */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
+          <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 max-w-2xl">
             {guide.keyFacts.map((fact, i) => (
               <div key={i} className="flex items-start gap-2 bg-white/10 rounded-xl px-4 py-2.5">
                 <span className="text-gold-400 mt-0.5">✦</span>
@@ -102,7 +102,7 @@ export default function GuidePage({ params }: Props) {
 
       {/* Content + Sidebar layout */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
           {/* Main content */}
           <article className="lg:col-span-2 space-y-10">
             {guide.sections.map((section, i) => (
@@ -196,7 +196,7 @@ export default function GuidePage({ params }: Props) {
       <section className="bg-forest-900/5 py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h3 className="font-serif text-2xl text-forest-900 mb-8 text-center">Explore More Guides</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {guides
               .filter(g => g.slug !== guide.slug)
               .slice(0, 4)
