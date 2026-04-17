@@ -161,7 +161,7 @@ export default function Hero() {
 
         {/* Stats */}
         <div
-          className="mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-md mx-auto animate-fade-up"
+          className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-8 max-w-sm sm:max-w-md mx-auto animate-fade-up"
           style={{ animationDelay: '0.45s', opacity: 0, animationFillMode: 'forwards' }}
         >
           {[
@@ -170,7 +170,7 @@ export default function Hero() {
             { n: '9', label: 'Global Traditions' },
           ].map(({ n, label }) => (
             <div key={n} className="text-center">
-              <p className="text-3xl font-serif font-bold text-gold-400">{n}</p>
+              <p className="text-2xl sm:text-3xl font-serif font-bold text-gold-400">{n}</p>
               <p className="text-forest-300 text-xs mt-1">{label}</p>
             </div>
           ))}
