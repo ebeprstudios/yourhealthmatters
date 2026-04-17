@@ -620,3 +620,12 @@ export function getMealPrepWeek(weekNumber: number): MealPrepWeek {
   const index = weekNumber % mealPrepWeeks.length
   return mealPrepWeeks[index]
 }
+
+// Get current ISO week number (shared utility)
+export function getCurrentWeekNumber(): number {
+  const now = new Date()
+  const start = new Date(now.getFullYear(), 0, 1)
+  const diff = now.getTime() - start.getTime()
+  const oneWeek = 1000 * 60 * 60 * 24 * 7
+  return Math.floor(diff / oneWeek)
+}
