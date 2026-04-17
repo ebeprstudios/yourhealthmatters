@@ -2,12 +2,15 @@ import Nav from '@/components/layout/Nav'
 import Hero from '@/components/sections/Hero'
 import GuideCard from '@/components/ui/GuideCard'
 import DrVeraChat from '@/components/chat/DrVeraChat'
+import NewsletterForm from '@/components/ui/NewsletterForm'
+import NewsletterPopup from '@/components/ui/NewsletterPopup'
 import { guides } from '@/lib/guides'
 
 export default function Home() {
   return (
     <main>
       <Nav />
+      <NewsletterPopup />
       <Hero />
 
       {/* Guide Library */}
@@ -96,6 +99,37 @@ export default function Home() {
           </p>
         </div>
         <DrVeraChat compact />
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="bg-forest-900 py-20 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <span className="inline-block text-forest-400 text-sm font-semibold tracking-widest uppercase mb-3">
+            Stay Connected
+          </span>
+          <h2 className="font-serif text-4xl text-white mb-4">
+            Weekly Health Tips
+          </h2>
+          <p className="text-forest-300 leading-relaxed mb-10 max-w-lg mx-auto">
+            Every week, Erica Ehiwe shares evidence-based insights on healing foods,
+            herbs, body systems, and daily protocols to help you take better care of your body.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm border border-forest-600 rounded-2xl p-8">
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              {[
+                { icon: '🌿', label: 'Healing Foods' },
+                { icon: '🌱', label: 'Herbal Medicine' },
+                { icon: '⏰', label: 'Body Clock Tips' },
+              ].map(({ icon, label }) => (
+                <div key={label} className="text-center">
+                  <p className="text-2xl mb-1">{icon}</p>
+                  <p className="text-forest-300 text-xs">{label}</p>
+                </div>
+              ))}
+            </div>
+            <NewsletterForm variant="section" />
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
