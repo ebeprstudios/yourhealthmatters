@@ -95,12 +95,18 @@ export default function Hero() {
           <span className="text-yellow-400 text-xs font-semibold whitespace-nowrap">Hosea 4:6</span>
         </div>
 
-        {/* Badge */}
-        <div className="flex justify-center mb-6">
+        {/* Badges */}
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
           <div className="inline-flex items-center gap-2 bg-forest-700/60 backdrop-blur-sm border border-forest-500/40 rounded-full px-4 py-1.5 animate-fade-in">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-forest-200 text-xs font-medium tracking-wide">
               Your Health Matters
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-2 bg-yellow-500/15 backdrop-blur-sm border border-yellow-500/40 rounded-full px-4 py-1.5 animate-fade-in">
+            <span className="text-yellow-400 text-xs">✦</span>
+            <span className="text-yellow-200 text-xs font-medium tracking-wide">
+              New healing guides added every month
             </span>
           </div>
         </div>
