@@ -580,7 +580,67 @@ export const guides: Guide[] = [
     chatScope: 'You are Dr. Vera answering questions about healing foods across four categories (lean proteins, leafy greens, complex carbs with fiber, healthy fats), global healing foods from West African, Ayurvedic, TCM, Caribbean, Amazon, and Mediterranean traditions, black (forbidden) rice and its anthocyanin mechanisms, moringa and its 25x iron content, ghee as an Ayurvedic herb carrier, black seed oil (thymoquinone), bitter melon, baobab, chanca piedra, and how to incorporate global healing foods into a daily protocol.',
   },
 ]
-
+{
+    slug: 'cancer-patient-protocol',
+    title: 'Cancer Patient Healing Protocol',
+    subtitle: 'Customized nutrition for cancer patients with pacemaker and warfarin therapy',
+    description: 'A comprehensive healing protocol for cancer patients managing three simultaneous conditions: active treatment, pacemaker with warfarin therapy, and liver support needs. Every recommendation filtered through all three conditions.',
+    icon: '🎗️',
+    color: 'bg-rose-900',
+    accentColor: '#4A0E0E',
+    badge: 'Clinical Protocol',
+    pdfFile: 'cancer_patient_protocol.pdf',
+    category: 'Specialized Protocols',
+    keyFacts: [
+      'Every food verified low Vitamin K - warfarin safe',
+      'Liver flush protocol safe during chemotherapy',
+      'WBC and immune support through food and herbs',
+      'Cardiac-safe with pacemaker - all foods reviewed',
+    ],
+    sections: [
+      {
+        heading: 'Three Conditions. One Protocol.',
+        content: [
+          'Most nutrition guides address one condition at a time. This protocol was built for a patient managing three simultaneously: active cancer treatment, a pacemaker with warfarin anticoagulation therapy, and a liver under significant stress from chemotherapy metabolites.',
+          'Each condition imposes its own dietary rules. Cancer treatment creates WBC suppression, oxidative stress, and liver burden. Warfarin requires consistent low Vitamin K intake - sudden changes destabilize INR and create dangerous bleeding or clotting risk. The pacemaker requires foods that support arterial health and cardiac rhythm without interfering with anticoagulation.',
+          'Every single food in this protocol has been filtered through all three lenses simultaneously. Nothing here serves one condition while harming another.',
+        ]
+      },
+      {
+        heading: 'The Vitamin K Rule on Warfarin',
+        content: [
+          'Vitamin K is not a banned nutrient on warfarin - it is a managed nutrient. The rule is consistency, not elimination. The same amount of the same Vitamin K foods daily allows the physician to calibrate the warfarin dose accurately.',
+          'This protocol keeps Vitamin K LOW rather than just consistent - because during active cancer treatment, food intake and absorption are variable. Low and consistent is safer than high and consistent when a patient is managing nausea, treatment cycles, and appetite fluctuations.',
+          'Foods completely avoided: spinach, kale, moringa leaves, parsley in large amounts, broccoli raw, collard greens, Swiss chard, Brussels sprouts, grapefruit. These are not bad foods - they are incompatible with safe warfarin management for this patient.',
+        ]
+      },
+      {
+        heading: 'Liver Support During Chemotherapy',
+        content: [
+          'Chemotherapy agents are hepatotoxic by design - the liver metabolizes and clears every drug administered. Simultaneously, tumor cell death releases a massive oxidative and toxic burden.',
+          'The morning protocol activates liver bile flow and methylation pathways before the first meal. Artichoke hearts at lunch stimulate bile production throughout the day. Milk thistle with every meal provides the most evidence-supported liver protection available from food or herb.',
+          'The kitchen closes at 7pm without exception. The liver runs its deepest Phase II detox between 1 and 3am. Food after 7pm diverts resources from chemotherapy metabolite clearance to digestion at the exact hours when clearance needs to peak.',
+        ]
+      },
+      {
+        heading: 'White Blood Cell Support',
+        content: [
+          'Turkey Tail mushroom PSK and PSP is approved as a cancer adjunct therapy in Japan specifically for WBC recovery. Beta-glucans activate NK cells and macrophages - the front line of immune defense.',
+          'Astragalus root polysaccharides stimulate bone marrow activity and are used in Chinese hospitals alongside chemotherapy for WBC recovery. Confirm with oncologist before starting.',
+          'Sleep is the most powerful WBC intervention available. Bone marrow produces white blood cells most actively during deep sleep between 10pm and 3am. Reishi mushroom at night supports both immune activation and deep sleep architecture simultaneously.',
+        ]
+      },
+      {
+        heading: 'The Daily Healing Juice Formula',
+        content: [
+          'Every morning: small beet + large cucumber (skin on) + 4 stalks celery (skin on) + 1 lemon peeled + fresh ginger + fresh turmeric + pinch of black pepper added after juicing + half teaspoon spirulina stirred in after juicing.',
+          'This formula is specifically safe for warfarin therapy - very low Vitamin K across all ingredients. It simultaneously supports liver Phase I and II detox, kidney health, WBC support, and cardiac health through beet nitrates for arterial dilation.',
+          'Drink within 20 minutes of pressing. Peak Zone only - before 10am. Add the spirulina and black pepper after juicing - never through the juicer. Confirm spirulina with the oncologist before beginning.',
+        ]
+      },
+    ],
+    chatScope: 'You are Dr. Vera answering questions about cancer patient nutrition, specifically for patients managing warfarin therapy with a pacemaker alongside active cancer treatment. Focus on: Vitamin K-safe foods, liver support during chemotherapy, WBC and immune support through food and herbs, the neutropenic diet, safe supplement recommendations for warfarin patients, grapefruit contraindications, the daily juice formula, and the kitchen-closes-at-7pm overnight liver detox protocol. Always emphasize that all recommendations must be reviewed with both the oncologist and cardiologist.',
+  },
 export function getGuideBySlug(slug: string): Guide | undefined {
   return guides.find(g => g.slug === slug)
 }
