@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import NewsletterForm from '@/components/ui/NewsletterForm'
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -15,10 +14,9 @@ export default function Hero() {
 
     let animId: number
     const particles: Array<{
-      x: number; y: number; vx: number; vy: number;
-      r: number; opacity: number; color: string; life: number; maxLife: number;
+      x: number; y: number; vx: number; vy: number
+      r: number; opacity: number; color: string; life: number; maxLife: number
     }> = []
-
     const colors = ['#5dcaa5', '#3a8f63', '#d4a017', '#1D9E75', '#94c9ac']
 
     function resize() {
@@ -32,15 +30,12 @@ export default function Hero() {
       const w = canvas!.offsetWidth
       const h = canvas!.offsetHeight
       particles.push({
-        x: Math.random() * w,
-        y: h + 10,
+        x: Math.random() * w, y: h + 10,
         vx: (Math.random() - 0.5) * 0.6,
         vy: -(Math.random() * 0.8 + 0.3),
-        r: Math.random() * 3 + 1,
-        opacity: 0,
+        r: Math.random() * 3 + 1, opacity: 0,
         color: colors[Math.floor(Math.random() * colors.length)],
-        life: 0,
-        maxLife: Math.random() * 200 + 120,
+        life: 0, maxLife: Math.random() * 200 + 120,
       })
     }
 
@@ -51,11 +46,8 @@ export default function Hero() {
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i]
         p.x += p.vx; p.y += p.vy; p.life++
-        p.opacity = p.life < 30
-          ? p.life / 30
-          : p.life > p.maxLife - 30
-          ? (p.maxLife - p.life) / 30
-          : 0.5
+        p.opacity = p.life < 30 ? p.life / 30
+          : p.life > p.maxLife - 30 ? (p.maxLife - p.life) / 30 : 0.5
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.fillStyle = p.color
@@ -70,10 +62,7 @@ export default function Hero() {
     resize()
     window.addEventListener('resize', resize)
     animate()
-    return () => {
-      cancelAnimationFrame(animId)
-      window.removeEventListener('resize', resize)
-    }
+    return () => { cancelAnimationFrame(animId); window.removeEventListener('resize', resize) }
   }, [])
 
   return (
@@ -97,21 +86,23 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
 
-        {/* Scripture banner */}
-        <div className="inline-flex items-center gap-3 bg-forest-800/70 backdrop-blur-sm border border-gold-500/30 rounded-full px-5 py-2.5 mb-6 animate-fade-in">
-          <span className="text-gold-400 text-sm">📖</span>
-          <span className="text-gold-300 text-xs sm:text-sm font-medium italic">
+        {/* Scripture banner - Hosea 4:6 */}
+        <div className="inline-flex items-center gap-3 bg-forest-800/70 backdrop-blur-sm border border-yellow-500/30 rounded-full px-5 py-2.5 mb-5 animate-fade-in">
+          <span className="text-yellow-400 text-sm">📖</span>
+          <span className="text-yellow-200 text-xs sm:text-sm font-medium italic">
             "My people are destroyed for lack of knowledge."
           </span>
-          <span className="text-gold-500 text-xs font-semibold">Hosea 4:6</span>
+          <span className="text-yellow-400 text-xs font-semibold whitespace-nowrap">Hosea 4:6</span>
         </div>
 
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-forest-700/60 backdrop-blur-sm border border-forest-500/40 rounded-full px-4 py-1.5 mb-6 animate-fade-in">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-forest-200 text-xs font-medium tracking-wide">
-            Your Health Matters
-          </span>
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2 bg-forest-700/60 backdrop-blur-sm border border-forest-500/40 rounded-full px-4 py-1.5 animate-fade-in">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-forest-200 text-xs font-medium tracking-wide">
+              Your Health Matters
+            </span>
+          </div>
         </div>
 
         {/* Headline */}
@@ -121,7 +112,7 @@ export default function Hero() {
         >
           Food is Medicine.
           <br />
-          <span className="text-gold-400">Learn to Use It.</span>
+          <span className="text-yellow-400">Learn to Use It.</span>
         </h1>
 
         {/* Subheadline */}
@@ -129,7 +120,7 @@ export default function Hero() {
           className="text-forest-200 mb-10 max-w-2xl mx-auto animate-fade-up leading-relaxed"
           style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', animationDelay: '0.15s', opacity: 0, animationFillMode: 'forwards' }}
         >
-          Evidence-based holistic health guides covering nutrition, herbs, body systems, and daily
+          Eleven evidence-based healing guides covering nutrition, herbs, body systems, and daily
           protocols - researched and created by <strong className="text-white">Erica Ehiwe</strong>.
           Ask Dr. Vera any question about your health.
         </p>
@@ -145,7 +136,7 @@ export default function Hero() {
           </Link>
           <Link href="/#chat"
             className="px-8 py-3.5 bg-forest-700/60 backdrop-blur-sm text-white font-semibold rounded-full border border-forest-400/40 hover:bg-forest-700 transition-all hover:scale-105 active:scale-95">
-            Ask Dr. Vera
+            🌿 Ask Dr. Vera
           </Link>
         </div>
 
@@ -157,24 +148,13 @@ export default function Hero() {
           {[
             { n: '11', label: 'Healing Guides' },
             { n: '18', label: 'Organ Systems' },
-            { n: '9', label: 'Global Traditions' },
+            { n: '9',  label: 'Global Traditions' },
           ].map(({ n, label }) => (
             <div key={n} className="text-center">
-              <p className="text-2xl sm:text-3xl font-serif font-bold text-gold-400">{n}</p>
+              <p className="text-2xl sm:text-3xl font-serif font-bold text-yellow-400">{n}</p>
               <p className="text-forest-300 text-xs mt-1">{label}</p>
             </div>
           ))}
-        </div>
-
-        {/* Newsletter */}
-        <div
-          className="mt-12 animate-fade-up"
-          style={{ animationDelay: '0.6s', opacity: 0, animationFillMode: 'forwards' }}
-        >
-          <p className="text-forest-300 text-xs uppercase tracking-widest mb-3">
-            Get weekly health tips
-          </p>
-          <NewsletterForm variant="hero" />
         </div>
       </div>
 
