@@ -11,6 +11,7 @@ export default function Home() {
     <main>
       <Nav />
       <NewsletterPopup />
+      <Hero />
 
       {/* Guide Library */}
       <section id="guides" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
@@ -39,14 +40,14 @@ export default function Home() {
 
           {/* Scripture banner */}
           <div className="text-center mb-12">
-            <div className="inline-flex flex-col items-center gap-2 bg-forest-800/80 border border-gold-500/30 rounded-2xl px-8 py-5 max-w-2xl mx-auto">
+            <div className="inline-flex flex-col items-center gap-2 bg-forest-800/80 border border-yellow-500/30 rounded-2xl px-8 py-5 max-w-2xl mx-auto">
               <span className="text-2xl">🕊️</span>
-              <p className="text-gold-300 text-base sm:text-lg font-serif italic leading-relaxed text-center">
+              <p className="text-yellow-200 text-base sm:text-lg font-serif italic leading-relaxed text-center">
                 "Do you not know that your body is a temple of the Holy Spirit within you,
                 whom you have from God? You are not your own, for you were bought with a price.
                 So glorify God in your body."
               </p>
-              <p className="text-gold-500 text-sm font-semibold tracking-wide">
+              <p className="text-yellow-400 text-sm font-semibold tracking-wide">
                 1 Corinthians 6:19-20
               </p>
             </div>
@@ -108,14 +109,15 @@ export default function Home() {
           </h2>
           <p className="text-forest-300 leading-relaxed mb-10 max-w-lg mx-auto">
             Every week, Erica Ehiwe shares evidence-based insights on healing foods,
-            herbs, body systems, and daily protocols to help you take better care of your body.
+            herbs, body systems, and daily protocols - plus a scripture of the week
+            and a Saturday meal prep guide organized around your body's natural insulin time zones.
           </p>
           <div className="bg-white/10 backdrop-blur-sm border border-forest-600 rounded-2xl p-8">
             <div className="grid grid-cols-3 gap-3 sm:gap-6 mb-6 sm:mb-8">
               {[
+                { icon: '📖', label: 'Scripture Weekly' },
                 { icon: '🌿', label: 'Healing Foods' },
-                { icon: '🌱', label: 'Herbal Medicine' },
-                { icon: '⏰', label: 'Body Clock Tips' },
+                { icon: '🥗', label: 'Meal Prep Guide' },
               ].map(({ icon, label }) => (
                 <div key={label} className="text-center">
                   <p className="text-2xl mb-1">{icon}</p>
@@ -128,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Global Dr. Vera chat section */}
+      {/* Dr. Vera chat section */}
       <section id="chat" className="max-w-2xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-10">
           <span className="inline-block text-forest-600 text-sm font-semibold tracking-widest uppercase mb-3">
@@ -139,8 +141,7 @@ export default function Home() {
           </h2>
           <p className="text-stone-500 max-w-lg mx-auto leading-relaxed">
             Dr. Vera is trained on all eleven guides and 30 years of global clinical
-            knowledge. Ask her any holistic health question - nutrition, herbs, body systems,
-            timing, or how to support a specific health goal.
+            knowledge. Ask her any holistic health question.
           </p>
         </div>
         <DrVeraChat compact />
@@ -159,7 +160,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-forest-600 text-xs leading-relaxed">
-                Holistic Health Research and Education.<br />
+                Holistic Health Research and Education.
                 Evidence-based healing guides for the whole body.
               </p>
             </div>
@@ -172,9 +173,7 @@ export default function Home() {
             <p className="text-sm mb-1">
               Copyright {new Date().getFullYear()} Erica Ehiwe - All Rights Reserved
             </p>
-            <p className="text-xs text-forest-700 mb-3">
-              Your Health Matters
-            </p>
+            <p className="text-xs text-forest-700 mb-3">Your Health Matters</p>
             <div className="flex flex-wrap justify-center gap-4 text-xs text-forest-700 mt-3">
               <a href="/legal" className="hover:text-forest-400 transition-colors underline">Legal and Copyright</a>
               <span>-</span>
