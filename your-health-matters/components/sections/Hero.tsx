@@ -47,9 +47,7 @@ export default function Hero() {
     function animate() {
       if (!canvas || !ctx) return
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight)
-
       if (Math.random() < 0.12) spawn()
-
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i]
         p.x += p.vx; p.y += p.vy; p.life++
@@ -58,14 +56,12 @@ export default function Hero() {
           : p.life > p.maxLife - 30
           ? (p.maxLife - p.life) / 30
           : 0.5
-
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.fillStyle = p.color
         ctx.globalAlpha = p.opacity * 0.7
         ctx.fill()
         ctx.globalAlpha = 1
-
         if (p.life >= p.maxLife || p.y < -10) particles.splice(i, 1)
       }
       animId = requestAnimationFrame(animate)
@@ -82,36 +78,34 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-forest-900 wave-divider">
-      {/* Canvas particles */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-      />
-
-      {/* Radial gradient overlay */}
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-radial from-forest-700/40 via-transparent to-forest-950/60 pointer-events-none" />
 
       {/* Floating botanical elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {['🌿', '🌱', '🍃', '✦', '🌿', '🍃', '✦', '🌱'].map((el, i) => (
-          <span
-            key={i}
+          <span key={i}
             className={`absolute text-2xl opacity-10 select-none ${
               i % 3 === 0 ? 'animate-float' : i % 3 === 1 ? 'animate-float-delay' : 'animate-float-slow'
             }`}
-            style={{
-              left: `${8 + i * 12}%`,
-              top: `${15 + (i % 4) * 18}%`,
-              fontSize: `${1.2 + (i % 3) * 0.4}rem`,
-            }}
+            style={{ left: `${8 + i * 12}%`, top: `${15 + (i % 4) * 18}%`, fontSize: `${1.2 + (i % 3) * 0.4}rem` }}
           >
             {el}
           </span>
         ))}
       </div>
 
-      {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+
+        {/* Scripture banner */}
+        <div className="inline-flex items-center gap-3 bg-forest-800/70 backdrop-blur-sm border border-gold-500/30 rounded-full px-5 py-2.5 mb-6 animate-fade-in">
+          <span className="text-gold-400 text-sm">📖</span>
+          <span className="text-gold-300 text-xs sm:text-sm font-medium italic">
+            "My people are destroyed for lack of knowledge."
+          </span>
+          <span className="text-gold-500 text-xs font-semibold">Hosea 4:6</span>
+        </div>
+
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-forest-700/60 backdrop-blur-sm border border-forest-500/40 rounded-full px-4 py-1.5 mb-6 animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -135,7 +129,7 @@ export default function Hero() {
           className="text-forest-200 mb-10 max-w-2xl mx-auto animate-fade-up leading-relaxed"
           style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', animationDelay: '0.15s', opacity: 0, animationFillMode: 'forwards' }}
         >
-          Ten evidence-based healing guides covering nutrition, herbs, body systems, and daily
+          Evidence-based holistic health guides covering nutrition, herbs, body systems, and daily
           protocols - researched and created by <strong className="text-white">Erica Ehiwe</strong>.
           Ask Dr. Vera any question about your health.
         </p>
@@ -145,17 +139,13 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
           style={{ animationDelay: '0.3s', opacity: 0, animationFillMode: 'forwards' }}
         >
-          <Link
-            href="/#guides"
-            className="px-8 py-3.5 bg-white text-forest-900 font-semibold rounded-full hover:bg-cream transition-all hover:scale-105 active:scale-95 shadow-lg"
-          >
+          <Link href="/#guides"
+            className="px-8 py-3.5 bg-white text-forest-900 font-semibold rounded-full hover:bg-cream transition-all hover:scale-105 active:scale-95 shadow-lg">
             Explore the Guides
           </Link>
-          <Link
-            href="/#chat"
-            className="px-8 py-3.5 bg-forest-700/60 backdrop-blur-sm text-white font-semibold rounded-full border border-forest-400/40 hover:bg-forest-700 transition-all hover:scale-105 active:scale-95"
-          >
-            🌿 Ask Dr. Vera
+          <Link href="/#chat"
+            className="px-8 py-3.5 bg-forest-700/60 backdrop-blur-sm text-white font-semibold rounded-full border border-forest-400/40 hover:bg-forest-700 transition-all hover:scale-105 active:scale-95">
+            Ask Dr. Vera
           </Link>
         </div>
 
@@ -165,7 +155,7 @@ export default function Hero() {
           style={{ animationDelay: '0.45s', opacity: 0, animationFillMode: 'forwards' }}
         >
           {[
-            { n: '10', label: 'Healing Guides' },
+            { n: '11', label: 'Healing Guides' },
             { n: '18', label: 'Organ Systems' },
             { n: '9', label: 'Global Traditions' },
           ].map(({ n, label }) => (
@@ -176,7 +166,7 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Newsletter inline signup */}
+        {/* Newsletter */}
         <div
           className="mt-12 animate-fade-up"
           style={{ animationDelay: '0.6s', opacity: 0, animationFillMode: 'forwards' }}
