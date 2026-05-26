@@ -630,7 +630,7 @@ export const guides: Guide[] = [
     badge: "Cardiac Recovery",
     icon: "❤️",
     accentColor: "#B5273E",
-    comingSoon: true,
+    comingSoon: false,
   },
 
   {
@@ -649,7 +649,7 @@ export const guides: Guide[] = [
     badge: "Diabetes Support",
     icon: "🌾",
     accentColor: "#D4A017",
-    comingSoon: true,
+    comingSoon: false,
   },
 
   {
@@ -674,7 +674,7 @@ export const guides: Guide[] = [
     badge: "7-Day Protocol",
     icon: "🔄",
     accentColor: "#7BA382",
-    comingSoon: true,
+    comingSoon: false,
   },
 
   {
@@ -693,7 +693,7 @@ export const guides: Guide[] = [
     badge: "Nervous System",
     icon: "🧠",
     accentColor: "#6B3D7A",
-    comingSoon: true,
+    comingSoon: false,
   },
 
   {
@@ -853,18 +853,19 @@ export const guides: Guide[] = [
     id: "g-19",
     slug: "renewing-the-mind-guide",
     title: "Renewing the Mind Guide",
-    subtitle: "A reflection on renewal — placed in Devotional pending review",
+    subtitle:
+      "Neuroplasticity, vagal tone, and the eight-week protocol for retraining an anxious nervous system",
     description:
-      "Placed in the devotional section pending content review. If the file reads as cross-tradition mind-body rather than explicitly scriptural, move to Specialty under Mind-Body.",
+      "A clinical mind-body protocol for retraining an anxious nervous system — amygdala threat scanning, vagal tone, heart rate variability, anxiety wave management, and the measurable eight-week markers that say the work is taking hold.",
     pdfPath: "/pdfs/renewing_the_mind_guide.pdf",
     organSystems: ["brain", "adrenal"],
-    level: "all",
-    tier: "devotional",
-    gated: false,
-    badge: "Devotional",
-    icon: "🕊️",
-    accentColor: "#2E2A6B",
-    comingSoon: true,
+    level: 2,
+    tier: "specialty",
+    gated: true,
+    badge: "Mind-Body",
+    icon: "🧠",
+    accentColor: "#6B3D7A",
+    comingSoon: false,
   },
 ];
 
