@@ -3,6 +3,14 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
+const PRIMARY_LINKS = [
+  { href: '/guides', label: 'Guides' },
+  { href: '/systems', label: 'Systems' },
+  { href: '/insulin-zones', label: 'Insulin Zones' },
+  { href: '/shopping-list', label: 'Shopping List' },
+  { href: '/subscribe', label: 'Subscribe' },
+]
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -15,54 +23,55 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-forest-100'
-          : 'bg-forest-900/80 backdrop-blur-sm'
-      }`}
+      className="fixed top-0 left-0 right-0 z-40 transition-all duration-300"
+      style={{
+        backgroundColor: scrolled
+          ? 'rgba(251, 248, 242, 0.96)'
+          : 'rgba(31, 94, 58, 0.85)',
+        backdropFilter: 'blur(10px)',
+        borderBottom: scrolled ? 'var(--border-hairline)' : 'none',
+      }}
+      aria-label="Primary"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+        {/* Wordmark */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <span className="text-2xl group-hover:scale-110 transition-transform">🌿</span>
+          <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">🌿</span>
           <div>
-            <p className={`font-serif font-bold text-base leading-tight transition-colors ${
-              scrolled ? 'text-forest-900' : 'text-white'
-            }`}>
-              Erica Ehiwe
-            </p>
-            <p className={`text-xs leading-tight transition-colors ${
-              scrolled ? 'text-forest-600' : 'text-forest-200'
-            }`}>
+            <p
+              className="font-serif font-bold text-base leading-tight transition-colors"
+              style={{ color: scrolled ? 'var(--ink-900)' : 'white' }}
+            >
               Your Health Matters
+            </p>
+            <p
+              className="text-xs leading-tight transition-colors"
+              style={{ color: scrolled ? 'var(--ink-500)' : 'rgba(255,255,255,0.75)' }}
+            >
+              Holistic Health Research &amp; Education
             </p>
           </div>
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-6">
-          {[
-            { href: '/#guides', label: 'Healing Guides' },
-            { href: '/#about', label: 'About' },
-            { href: '/legal', label: 'Legal' },
-          ].map(({ href, label }) => (
+        <div className="hidden md:flex items-center gap-5">
+          {PRIMARY_LINKS.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`text-sm font-medium transition-colors hover:text-forest-400 ${
-                scrolled ? 'text-stone-600' : 'text-white/90'
-              }`}
+              className="text-sm font-medium transition-colors"
+              style={{ color: scrolled ? 'var(--ink-700)' : 'rgba(255,255,255,0.92)' }}
             >
               {label}
             </Link>
           ))}
           <Link
             href="/#chat"
-            className={`text-sm font-medium px-4 py-2 rounded-full border transition-all hover:bg-forest-900 hover:text-white hover:border-forest-900 ${
-              scrolled
-                ? 'border-forest-900 text-forest-900'
-                : 'border-white text-white hover:bg-white hover:text-forest-900'
-            }`}
+            className="text-sm font-medium px-4 py-2 rounded-full border transition-all"
+            style={{
+              borderColor: scrolled ? 'var(--ink-900)' : 'white',
+              color: scrolled ? 'var(--ink-900)' : 'white',
+            }}
           >
             Ask Dr. Vera
           </Link>
@@ -70,9 +79,11 @@ export default function Nav() {
 
         {/* Mobile menu button */}
         <button
-          className={`md:hidden p-2 rounded-lg ${scrolled ? 'text-forest-900' : 'text-white'}`}
-          onClick={() => setMenuOpen(o => !o)}
+          className="md:hidden p-2 rounded-lg"
+          onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          style={{ color: scrolled ? 'var(--ink-900)' : 'white' }}
         >
           <div className="w-5 h-0.5 bg-current mb-1.5 transition-all" />
           <div className="w-5 h-0.5 bg-current mb-1.5 transition-all" />
@@ -82,22 +93,32 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-forest-100 px-4 py-4 space-y-3">
-          {[
-            { href: '/#guides', label: 'Healing Guides' },
-            { href: '/#about', label: 'About' },
-            { href: '/legal', label: 'Legal' },
-            { href: '/#chat', label: '🌿 Ask Dr. Vera' },
-          ].map(({ href, label }) => (
+        <div
+          className="md:hidden px-4 py-4 space-y-1"
+          style={{
+            backgroundColor: 'var(--paper-raised)',
+            borderTop: 'var(--border-hairline)',
+          }}
+        >
+          {PRIMARY_LINKS.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="block text-sm font-medium text-stone-700 hover:text-forest-900 py-2"
+              className="block text-sm font-medium py-2.5"
+              style={{ color: 'var(--ink-700)' }}
             >
               {label}
             </Link>
           ))}
+          <Link
+            href="/#chat"
+            onClick={() => setMenuOpen(false)}
+            className="block text-sm font-medium py-2.5"
+            style={{ color: 'var(--zone-peak)' }}
+          >
+            🌿 Ask Dr. Vera
+          </Link>
         </div>
       )}
     </nav>

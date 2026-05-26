@@ -1,18 +1,10 @@
+@import "../styles/tokens.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --forest-dark:  #042a22;
-  --forest-900:   #085041;
-  --forest-700:   #235d41;
-  --forest-500:   #3a8f63;
-  --forest-200:   #c3e1d1;
-  --cream:        #F5F0E8;
-  --cream-100:    #faf6ed;
-  --gold:         #d4a017;
-  --gold-light:   #f0d080;
-}
+/* tokens.css is the single source of truth for color, type, spacing,
+   radius, shadow, motion. Do not introduce raw hex values here. */
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -21,9 +13,9 @@ html {
 }
 
 body {
-  background-color: var(--cream);
-  color: #1E1E1C;
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink-900);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -56,19 +48,33 @@ body {
 
 /* ── Guide card hover ───────────────────────────────── */
 .guide-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--dur-medium) var(--ease-soft),
+              box-shadow var(--dur-medium) var(--ease-soft);
 }
 .guide-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(8, 80, 65, 0.15);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-raised);
 }
 
 /* ── Chat component ─────────────────────────────────── */
 .chat-messages::-webkit-scrollbar { width: 4px; }
 .chat-messages::-webkit-scrollbar-track { background: transparent; }
 .chat-messages::-webkit-scrollbar-thumb {
-  background: rgba(8, 80, 65, 0.3);
+  background: var(--ink-300);
   border-radius: 2px;
+}
+
+/* ── Focus-visible affordance ───────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--zone-peak);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Print: shopping list & guide pages ─────────────── */
+@media print {
+  nav, footer, .no-print { display: none !important; }
+  body { background: white; color: black; }
 }
 
 /* ── Shimmer loading ────────────────────────────────── */
@@ -109,23 +115,23 @@ body {
   left: 0;
   right: 0;
   height: 60px;
-  background: var(--cream);
+  background: var(--paper);
   clip-path: ellipse(55% 100% at 50% 100%);
 }
 
 /* ── Typography ─────────────────────────────────────── */
 h1, h2, h3 {
-  font-family: var(--font-playfair), Georgia, serif;
-  line-height: 1.2;
+  font-family: var(--font-serif);
+  line-height: var(--leading-display);
 }
 
 /* ── Prose content ──────────────────────────────────── */
-.prose-vera p { 
-  line-height: 1.75;
-  color: #374151;
-  margin-bottom: 1rem;
+.prose-vera p {
+  line-height: var(--leading-body);
+  color: var(--ink-700);
+  margin-bottom: var(--space-4);
 }
-.prose-vera strong { color: #085041; }
+.prose-vera strong { color: var(--ink-900); }
 
 /* ── Mobile safe area ───────────────────────────────── */
 @supports (padding: max(0px)) {

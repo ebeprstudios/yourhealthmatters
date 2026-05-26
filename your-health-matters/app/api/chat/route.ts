@@ -1,13 +1,18 @@
 // app/api/chat/route.ts - Dr. Vera AI chat endpoint
+//
+// ⚠️ FOUNDER REVIEW REQUESTED:
+//   The opening line of GLOBAL_SYSTEM below is the new transparency
+//   disclosure required by the Phase 2A decision (Q2). Erica should
+//   approve the exact wording before merge.
 
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 
 const client = new Anthropic()
 
-const GLOBAL_SYSTEM = `You are Dr. Vera, CNS (Certified Nutrition Specialist) and CHN (Certified Holistic Nutritionist) with 30+ years of clinical experience across four continents. You have studied food-as-medicine traditions in West Africa, Southeast Asia, Ayurvedic India, Traditional Chinese Medicine, the Mediterranean, the Amazon, and the Caribbean. You teach anatomy and body systems to lay communities and clinical practitioners globally.
+const GLOBAL_SYSTEM = `You are Dr. Vera Holloway — the teaching voice of Your Health Matters. You are openly framed as an educational persona created by Erica Ehiwe to bring multi-tradition holistic medicine to a broader audience. The protocols, mechanisms, and food-as-medicine guidance you share are grounded in research drawn from West African, Ayurvedic, Traditional Chinese Medicine, Mediterranean, Caribbean, and Amazonian traditions, and in Erica's ongoing training as a Certified Nutrition Specialist. You are not a substitute for a reader's own physician. If a user asks directly whether you are a real practitioner, answer honestly: you are an educational teaching persona, and the clinical information you share should always be verified with a licensed provider before being applied. You only need to acknowledge this once per conversation when relevant — otherwise, teach.
 
-VOICE: Warm, authoritative, mechanism-driven. Always explain WHY something works, not just that it works. Be specific - name exact foods, herbs, dosages, timing. Speak from clinical experience. No filler. No generic motivational language.
+VOICE: Warm, authoritative, mechanism-driven. Always explain WHY something works, not just that it works. Be specific - name exact foods, herbs, dosages, timing. Speak from the depth of the traditions and clinical literature you draw on. No filler. No generic motivational language.
 
 FORMATTING RULES: Never use em dashes (—) in any response. Use a simple hyphen (-) or a period instead. Never use markdown tables. Use bullet points with a simple dash only. Keep responses clean and readable on mobile.
 
@@ -28,6 +33,8 @@ KEY KNOWLEDGE:
 
 Be generous with specific, actionable, mechanism-driven answers. The people asking you these questions deserve real information.`
 
+const MODEL = process.env.ANTHROPIC_MODEL || 'claude-opus-4-7'
+
 export async function POST(req: NextRequest) {
   try {
     const { message, history, pageScope } = await req.json()
@@ -40,11 +47,11 @@ export async function POST(req: NextRequest) {
       ? `${GLOBAL_SYSTEM}\n\nPAGE CONTEXT: ${pageScope}\nFocus your answers on the topics covered in this specific guide while still drawing on your full clinical knowledge when relevant.`
       : GLOBAL_SYSTEM
 
-    // Build conversation history
+    // Build conversation history (last 8 exchanges)
     const messages: Array<{ role: 'user' | 'assistant'; content: string }> = []
 
     if (history && Array.isArray(history)) {
-      for (const msg of history.slice(-8)) { // Keep last 8 exchanges for context
+      for (const msg of history.slice(-8)) {
         if (msg.role && msg.content) {
           messages.push({ role: msg.role, content: msg.content })
         }
@@ -54,7 +61,7 @@ export async function POST(req: NextRequest) {
     messages.push({ role: 'user', content: message })
 
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: MODEL,
       max_tokens: 1024,
       system: systemPrompt,
       messages,

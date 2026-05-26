@@ -2,11 +2,18 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import type { Guide } from '@/lib/guides'
+import type { Guide } from '@/lib/types'
 
 interface GuideCardProps {
   guide: Guide
   index: number
+}
+
+const tierLabel: Record<Guide['tier'], string> = {
+  foundational: 'Foundational',
+  specialty: 'Specialty',
+  advanced: 'Advanced',
+  devotional: 'Devotional',
 }
 
 export default function GuideCard({ guide, index }: GuideCardProps) {
@@ -23,57 +30,82 @@ export default function GuideCard({ guide, index }: GuideCardProps) {
     return () => observer.disconnect()
   }, [])
 
+  const description =
+    guide.description.length > 120
+      ? guide.description.slice(0, 120) + '…'
+      : guide.description
+
+  const accent = guide.accentColor || 'var(--ink-700)'
+
   return (
     <div
       ref={ref}
-      className="reveal"
+      className="reveal h-full"
       style={{ transitionDelay: `${(index % 3) * 80}ms` }}
     >
-      <Link href={`/guides/${guide.slug}`}>
-        <div className="guide-card bg-white rounded-2xl overflow-hidden border border-stone-100 cursor-pointer group h-full flex flex-col">
+      <Link
+        href={`/guides/${guide.slug}`}
+        className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--zone-peak)] rounded-2xl"
+        aria-label={`Open guide: ${guide.title}`}
+      >
+        <div
+          className="guide-card overflow-hidden border h-full flex flex-col"
+          style={{
+            backgroundColor: 'var(--paper-raised)',
+            borderColor: 'var(--ink-100)',
+            borderRadius: 'var(--radius-lg)',
+            boxShadow: 'var(--shadow-card)',
+          }}
+        >
           {/* Color header */}
-          <div className="px-5 py-6 relative overflow-hidden" style={{ backgroundColor: guide.accentColor }}>
-            {/* Decorative circle */}
+          <div className="px-5 py-6 relative overflow-hidden" style={{ backgroundColor: accent }}>
             <div className="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-white/5" />
             <div className="absolute -right-2 -bottom-6 w-16 h-16 rounded-full bg-white/5" />
-
-            <div className="relative flex items-start justify-between">
-              <span className="text-4xl">{guide.icon}</span>
-              <span className="text-xs font-medium bg-white/20 text-white px-2.5 py-1 rounded-full">
-                {guide.badge}
-              </span>
+            <div className="relative flex items-start justify-between gap-3">
+              <span className="text-4xl" aria-hidden="true">{guide.icon ?? '📘'}</span>
+              {guide.badge && (
+                <span className="text-xs font-medium bg-white/20 text-white px-2.5 py-1 rounded-full whitespace-nowrap">
+                  {guide.badge}
+                </span>
+              )}
             </div>
-            <h3 className="font-serif font-bold text-white mt-3 text-lg leading-tight group-hover:text-gold-300 transition-colors">
+            <h3 className="font-serif font-bold text-white mt-3 text-lg leading-tight">
               {guide.title}
             </h3>
+            {guide.comingSoon && (
+              <span className="absolute top-3 left-3 text-[10px] font-semibold uppercase tracking-wider bg-white/95 text-stone-800 px-2 py-0.5 rounded-full">
+                Coming Soon
+              </span>
+            )}
           </div>
 
           {/* Body */}
-          <div className="px-5 py-4 flex-1 flex flex-col justify-between">
-            <p className="text-stone-500 text-sm leading-relaxed mb-4">
-              {guide.description.length > 120
-                ? guide.description.slice(0, 120) + '…'
-                : guide.description}
+          <div className="px-5 py-4 flex-1 flex flex-col justify-between" style={{ color: 'var(--ink-700)' }}>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--ink-500)' }}>
+              {description}
             </p>
 
-            {/* Key facts */}
-            <div className="space-y-1.5 mb-4">
-              {guide.keyFacts.slice(0, 2).map((fact, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
-                  <span className="text-xs text-stone-600">{fact}</span>
-                </div>
-              ))}
-            </div>
+            {guide.keyFacts && guide.keyFacts.length > 0 && (
+              <div className="space-y-1.5 mb-4">
+                {guide.keyFacts.slice(0, 2).map((fact, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <span className="mt-0.5 flex-shrink-0" style={{ color: accent }} aria-hidden="true">✦</span>
+                    <span className="text-xs" style={{ color: 'var(--ink-700)' }}>{fact}</span>
+                  </div>
+                ))}
+              </div>
+            )}
 
-            {/* Footer */}
-            <div className="flex items-center justify-between pt-3 border-t border-stone-100">
-              <span className="text-xs font-medium text-forest-600 bg-forest-50 px-2.5 py-1 rounded-full">
-                {guide.category}
+            <div
+              className="flex items-center justify-between pt-3 border-t"
+              style={{ borderColor: 'var(--ink-100)' }}
+            >
+              <span className="text-xs font-medium px-2.5 py-1 rounded-full" style={{ color: accent, backgroundColor: 'var(--paper-sunk)' }}>
+                {tierLabel[guide.tier]}
               </span>
-              <span className="text-xs text-stone-400 flex items-center gap-1 group-hover:text-forest-600 transition-colors">
+              <span className="text-xs flex items-center gap-1" style={{ color: 'var(--ink-500)' }}>
                 Read guide
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
                 </svg>
               </span>
