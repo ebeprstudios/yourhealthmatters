@@ -149,6 +149,14 @@ export interface Guide {
   chatScope?: string;
   companionPdfPath?: string; // e.g. quick-reference cheatsheet attached to a parent guide
   comingSoon?: boolean; // true when PDF not yet placed in /public/pdfs
+  /**
+   * Email-gated guide. When true, the GuideDownloadGate component shows
+   * the lead-magnet form modal instead of a direct download link.
+   * Foundational + Devotional guides are ungated; Specialty + Advanced are gated.
+   * If unset, treat as false (ungated) — see lib/data/guides.ts for the
+   * authoritative tier→gated mapping.
+   */
+  gated?: boolean;
 }
 
 // ---------- CLINICAL RULES ----------

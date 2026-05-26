@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import Nav from '@/components/layout/Nav'
 import DrVeraChat from '@/components/chat/DrVeraChat'
 import DisclaimerFooter from '@/components/ui/DisclaimerFooter'
+import GuideDownloadGate from '@/components/guides/GuideDownloadGate'
 import { guides, getGuideBySlug } from '@/lib/data'
 import type { Guide } from '@/lib/types'
 
@@ -97,25 +98,7 @@ export default function GuidePage({ params }: Props) {
           )}
 
           <div className="mt-8 flex flex-wrap gap-3">
-            {!guide.comingSoon ? (
-              <a
-                href={guide.pdfPath}
-                download
-                className="inline-flex items-center gap-2 bg-white font-semibold px-5 py-2.5 rounded-full hover:bg-stone-50 transition-all hover:scale-105 active:scale-95 text-sm shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                style={{ color: accent }}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                  <polyline points="7 10 12 15 17 10"/>
-                  <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Download Printable PDF
-              </a>
-            ) : (
-              <span className="inline-flex items-center gap-2 bg-white/20 text-white font-medium px-5 py-2.5 rounded-full text-sm">
-                PDF Coming Soon
-              </span>
-            )}
+            <GuideDownloadGate guide={guide} variant="detail" />
             {guide.companionPdfPath && (
               <a
                 href={guide.companionPdfPath}
@@ -256,21 +239,11 @@ export default function GuidePage({ params }: Props) {
                   <span className="text-3xl block mb-2" aria-hidden="true">{guide.icon ?? '📘'}</span>
                   <p className="font-serif font-bold text-lg mb-1">Printable PDF</p>
                   <p className="text-white/70 text-xs mb-4">
-                    Download for your kitchen counter or to share with your physician
+                    {guide.gated
+                      ? 'Free with email — for your kitchen counter or to share with your physician'
+                      : 'Download for your kitchen counter or to share with your physician'}
                   </p>
-                  <a
-                    href={guide.pdfPath}
-                    download
-                    className="inline-flex items-center gap-2 bg-white font-semibold px-5 py-2.5 rounded-full transition-all text-sm w-full justify-center hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                    style={{ color: accent }}
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                      <polyline points="7 10 12 15 17 10"/>
-                      <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                    Download PDF
-                  </a>
+                  <GuideDownloadGate guide={guide} variant="detail" />
                 </div>
               )}
             </div>

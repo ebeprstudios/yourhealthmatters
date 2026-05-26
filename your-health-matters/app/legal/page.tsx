@@ -1,14 +1,16 @@
 import Nav from '@/components/layout/Nav'
 import Link from 'next/link'
 
+const LAST_UPDATED = 'May 26, 2026'
+
 export default function LegalPage() {
   const year = new Date().getFullYear()
   return (
     <main className="min-h-screen bg-cream">
       <Nav />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-20">
-        <h1 className="font-serif text-4xl text-forest-900 mb-2">Legal</h1>
-        <p className="text-stone-400 text-sm mb-12">Last updated: April {year}</p>
+        <h1 className="font-serif text-4xl text-forest-900 mb-2">Legal &amp; Privacy</h1>
+        <p className="text-stone-400 text-sm mb-12">Last updated: {LAST_UPDATED}</p>
 
         <section className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm mb-6">
           <h2 className="font-serif text-2xl text-forest-900 mb-4">Copyright Notice</h2>
@@ -83,11 +85,101 @@ export default function LegalPage() {
           </p>
         </section>
 
+        <section id="privacy" className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm mb-6">
+          <h2 className="font-serif text-2xl text-forest-900 mb-4">Privacy Policy</h2>
+
+          <h3 className="font-serif text-lg text-forest-900 mb-2 mt-4">What we collect</h3>
+          <ul className="space-y-2 mb-4 text-stone-600 text-sm leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span><strong className="text-stone-800">When you download a guide:</strong> your first name and email address.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span><strong className="text-stone-800">When you subscribe to the newsletter:</strong> your email address (and optionally your first name).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span><strong className="text-stone-800">When you visit the site:</strong> standard server logs (IP address, browser user agent, timestamps) for security and abuse prevention.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>We do <strong className="text-stone-800">not</strong> collect health information, payment information, or any identifying data beyond name and email.</span>
+            </li>
+          </ul>
+
+          <h3 className="font-serif text-lg text-forest-900 mb-2 mt-6">Why we collect it</h3>
+          <ul className="space-y-2 mb-4 text-stone-600 text-sm leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>To deliver the guide you requested.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>To send occasional educational emails from Your Health Guide.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>Your data is never sold, never shared with advertisers, and never used for purposes beyond what is described here.</span>
+            </li>
+          </ul>
+
+          <h3 className="font-serif text-lg text-forest-900 mb-2 mt-6">Who processes it</h3>
+          <ul className="space-y-2 mb-4 text-stone-600 text-sm leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span><strong className="text-stone-800">Resend</strong> handles email delivery. Based in the United States.{' '}
+                <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-forest-600 underline">View Resend&apos;s privacy policy</a>.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span><strong className="text-stone-800">Vercel</strong> hosts the website and serves these pages. Based in the United States.{' '}
+                <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-forest-600 underline">View Vercel&apos;s privacy policy</a>.
+              </span>
+            </li>
+          </ul>
+
+          <h3 className="font-serif text-lg text-forest-900 mb-2 mt-6">Your rights</h3>
+          <ul className="space-y-2 mb-4 text-stone-600 text-sm leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>Unsubscribe from email at any time using the link at the bottom of every message we send.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>Request access to, correction of, or deletion of the data we hold on you by emailing{' '}
+                <a href="mailto:privacy@yourhealthguide.co" className="text-forest-600 underline">privacy@yourhealthguide.co</a>.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span><strong className="text-stone-800">EU / UK residents:</strong> under GDPR you have additional rights including data portability and the right to lodge a complaint with your supervisory authority.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span><strong className="text-stone-800">California residents:</strong> under CCPA you have additional rights including the right to know what we have collected about you and the right to request deletion.</span>
+            </li>
+          </ul>
+
+          <h3 className="font-serif text-lg text-forest-900 mb-2 mt-6">Data retention</h3>
+          <ul className="space-y-2 mb-2 text-stone-600 text-sm leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>Email addresses are retained until you unsubscribe or request deletion.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-forest-500 mt-0.5 flex-shrink-0">✦</span>
+              <span>Server logs are retained for 90 days, then deleted.</span>
+            </li>
+          </ul>
+        </section>
+
         <section className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm">
-          <h2 className="font-serif text-2xl text-forest-900 mb-4">Permissions & Contact</h2>
+          <h2 className="font-serif text-2xl text-forest-900 mb-4">Permissions &amp; Contact</h2>
           <p className="text-stone-600 leading-relaxed text-sm mb-6">
-            For permissions requests, licensing inquiries, or to report unauthorized use of this content,
-            please reach out directly.
+            For permissions requests, licensing inquiries, privacy requests, or to report unauthorized use of this content, email{' '}
+            <a href="mailto:privacy@yourhealthguide.co" className="text-forest-600 underline">privacy@yourhealthguide.co</a>.
           </p>
           <p className="text-stone-400 text-sm">
             © {year} Erica Ehiwe · All rights reserved ·{' '}
