@@ -7,6 +7,7 @@ const PRIMARY_LINKS = [
   { href: '/guides', label: 'Guides' },
   { href: '/systems', label: 'Systems' },
   { href: '/insulin-zones', label: 'Insulin Zones' },
+  { href: '/sleep-guide', label: 'Sleep Guide' },
   { href: '/shopping-list', label: 'Shopping List' },
   { href: '/subscribe', label: 'Subscribe' },
 ]

@@ -682,6 +682,24 @@ export const guides: Guide[] = [
     comingSoon: true,
   },
 
+  {
+    id: "g-14b",
+    slug: "breakfast-combinations",
+    title: "Breakfast Combinations",
+    subtitle:
+      "Morning food pairings that stabilize the insulin curve for the rest of the day",
+    description:
+      "A short reference of breakfast combinations engineered to lock in steady glucose, protein, and fiber from the very first meal — the most leveraged eating decision of the day.",
+    pdfPath: "/pdfs/breakfast_combinations.pdf",
+    organSystems: ["blood-glucose", "gut", "adrenal", "heart"],
+    level: 2,
+    tier: "specialty",
+    badge: "Morning Protocol",
+    icon: "🍳",
+    accentColor: "#D89B2A",
+    comingSoon: true,
+  },
+
   // ────────────────────────────────────────────────────────────────────
   // ADVANCED — Level 3, multi-system protocols (gated in Phase 2C)
   // ────────────────────────────────────────────────────────────────────
