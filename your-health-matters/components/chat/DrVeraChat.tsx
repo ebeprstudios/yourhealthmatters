@@ -212,18 +212,28 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
           style={{ height: compact ? '380px' : '340px' }}
         >
           {messages.length === 0 && (
-            <div className="text-center pt-6">
-              <div className="text-4xl mb-3">🌿</div>
-              <p className="text-forest-900 font-semibold text-sm font-serif mb-1">
-                Ask Dr. Vera anything
-              </p>
-              <p className="text-stone-400 text-xs leading-relaxed">
-                {pageScope
-                  ? 'Ask me about the topics in this guide, or any holistic health question.'
-                  : 'Nutrition, herbs, body systems, healing protocols - ask anything.'
-                }
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+            <div className="pt-2">
+              {/* Founder-approved opening line. Renders as Dr. Vera's first
+                  user-visible message; subsequent turns do not repeat the
+                  persona disclosure (handled by the system prompt). */}
+              <div className="flex justify-start">
+                <div className="w-7 h-7 rounded-full bg-forest-900 flex items-center justify-center text-sm mr-2 flex-shrink-0 mt-1" aria-hidden="true">
+                  🌿
+                </div>
+                <div className="max-w-[82%] rounded-2xl px-4 py-3 text-sm leading-relaxed bg-white border border-stone-200 text-stone-700">
+                  Welcome. I&apos;m Dr. Vera — the teaching voice of Your
+                  Health Matters. I&apos;m an educational persona created
+                  to share multi-tradition holistic medicine in a warm and
+                  accessible way. The research is real. The warmth is by
+                  design. What&apos;s on your mind today?
+                </div>
+              </div>
+              {pageScope && (
+                <p className="text-stone-400 text-xs leading-relaxed mt-4 text-center italic">
+                  Questions on this page are scoped to its guide topics.
+                </p>
+              )}
+              <div className="mt-5 flex flex-wrap gap-2 justify-center">
                 {[
                   'What lowers LDL naturally?',
                   'Best foods for kidneys',

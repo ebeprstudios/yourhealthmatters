@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const system = organSystems.find((s) => s.slug === params.slug)
   if (!system) return { title: 'System Not Found' }
   return {
-    title: `${system.name} | Your Health Matters`,
+    title: `${system.name} | Your Health Guide`,
     description: `${system.oneLineSummary} — explore the foods, herbs, juices, and salads that support ${system.name.toLowerCase()} health.`,
   }
 }

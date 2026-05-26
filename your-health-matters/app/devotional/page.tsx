@@ -5,7 +5,7 @@ import DisclaimerFooter from '@/components/ui/DisclaimerFooter'
 import { tieredGuides } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Devotional | Your Health Matters',
+  title: 'Devotional | Your Health Guide',
   description:
     'A quiet shelf of devotional reflections paired with daily renewal practices, for readers whose healing journey is anchored in scripture. Linked from the footer.',
 }
@@ -95,7 +95,7 @@ export default function DevotionalPage() {
             className="text-sm underline"
             style={{ color: 'var(--zone-peak)' }}
           >
-            ← Back to Your Health Matters
+            ← Back to Your Health Guide
           </Link>
         </div>
       </div>

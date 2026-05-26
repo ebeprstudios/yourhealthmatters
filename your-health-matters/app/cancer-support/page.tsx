@@ -310,7 +310,7 @@ export default function CancerSupportPage() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm mb-1">Copyright {new Date().getFullYear()} Erica Ehiwe - All Rights Reserved</p>
           <p className="text-xs text-forest-700">
-            Your Health Matters - Educational purposes only. Not medical advice.
+            Your Health Guide - Educational purposes only. Not medical advice.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-xs text-forest-700 mt-3">
             <a href="/legal" className="hover:text-forest-400 underline">Legal and Copyright</a>

@@ -5,7 +5,7 @@ import ShoppingListForm from '@/components/shopping/ShoppingListForm'
 import { organSystems, foods } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Shopping List Generator | Your Health Matters',
+  title: 'Shopping List Generator | Your Health Guide',
   description:
     'Pick one or more organ systems and a protocol level. Get a printable shopping list of the foods, herbs, fruits, and vegetables that support those systems.',
 }

@@ -100,7 +100,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-forest-700/60 backdrop-blur-sm border border-forest-500/40 rounded-full px-4 py-1.5 animate-fade-in">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-forest-200 text-xs font-medium tracking-wide">
-              Your Health Matters
+              Your Health Guide
             </span>
           </div>
           <div className="inline-flex items-center gap-2 bg-yellow-500/15 backdrop-blur-sm border border-yellow-500/40 rounded-full px-4 py-1.5 animate-fade-in">

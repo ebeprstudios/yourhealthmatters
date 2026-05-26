@@ -1,7 +1,7 @@
 import type { Guide } from "@/lib/types";
 
 /**
- * The full Your Health Matters guide library.
+ * The full Your Health Guide guide library.
  *
  * Tiers:
  *   foundational — Level 1. The educational backbone. Every reader starts here.

@@ -159,7 +159,7 @@ export default function ShoppingListForm({ organSystems, foods }: ShoppingListFo
         >
           <header className="mb-6 pb-4" style={{ borderBottom: 'var(--border-hairline)' }}>
             <p className="text-xs uppercase tracking-widest" style={{ color: 'var(--ink-500)' }}>
-              Your Health Matters · Shopping List
+              Your Health Guide · Shopping List
             </p>
             <h2 className="font-serif text-2xl mt-1" style={{ color: 'var(--ink-900)' }}>
               {selectedSystems.map((s) => s.name).join(' · ')}

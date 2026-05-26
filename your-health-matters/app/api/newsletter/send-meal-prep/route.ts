@@ -44,7 +44,7 @@ function buildMealPrepHTML(week: ReturnType<typeof getMealPrepWeek>, weekNum: nu
   <!-- Header -->
   <div style="background:${week.color};border-radius:16px;padding:28px;text-align:center;margin-bottom:20px">
     <p style="font-size:36px;margin:0 0 8px">${week.emoji}</p>
-    <p style="color:rgba(255,255,255,0.7);font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 8px">Your Health Matters - Saturday Meal Prep</p>
+    <p style="color:rgba(255,255,255,0.7);font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 8px">Your Health Guide - Saturday Meal Prep</p>
     <h1 style="color:white;font-size:22px;margin:0 0 6px;font-family:Georgia,serif">${week.theme}</h1>
     <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:0;font-style:italic">${week.tagline}</p>
   </div>
@@ -131,7 +131,7 @@ function buildMealPrepHTML(week: ReturnType<typeof getMealPrepWeek>, weekNum: nu
   <!-- CTA -->
   <div style="background:#085041;border-radius:12px;padding:20px;text-align:center;margin-bottom:20px">
     <p style="color:#5dcaa5;font-size:13px;margin:0 0 8px">Read the full ${week.theme} guide</p>
-    <a href="https://yourhealthmatters.ebeprstudios.com"
+    <a href="https://yourhealthguide.co"
        style="display:inline-block;background:white;color:#085041;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:bold;text-decoration:none">
       Explore All Guides
     </a>
@@ -140,8 +140,8 @@ function buildMealPrepHTML(week: ReturnType<typeof getMealPrepWeek>, weekNum: nu
   <!-- Footer -->
   <div style="text-align:center;padding:16px 0">
     <p style="color:#9c9890;font-size:12px;margin:0 0 4px;line-height:1.7">
-      Your Health Matters - Weekly Meal Prep Edition<br>
-      yourhealthmatters.ebeprstudios.com
+      Your Health Guide - Weekly Meal Prep Edition<br>
+      yourhealthguide.co
     </p>
     <p style="color:#c3c0b8;font-size:11px;margin:0">
       Copyright ${new Date().getFullYear()} Erica Ehiwe - All Rights Reserved<br>
@@ -162,7 +162,7 @@ export async function GET(req: NextRequest) {
   }
 
   const RESEND_API_KEY = process.env.RESEND_API_KEY
-  const FROM_EMAIL = 'Your Health Matters <onboarding@resend.dev>'
+  const FROM_EMAIL = 'Your Health Guide <onboarding@resend.dev>'
 
   if (!RESEND_API_KEY) {
     return NextResponse.json({ error: 'RESEND_API_KEY not configured' }, { status: 500 })

@@ -72,7 +72,7 @@ export default function Home() {
         style={{ backgroundColor: 'var(--paper-sunk)' }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
-          {/* About Erica */}
+          {/* About Erica + Dr. Vera persona disclosure (single flowing block) */}
           <div>
             <span
               className="text-xs font-semibold tracking-widest uppercase mb-3 block"
@@ -84,58 +84,40 @@ export default function Home() {
               Erica Ehiwe
             </h2>
             <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
-              Your Health Matters is built by Erica Ehiwe — researcher,
-              educator, and student of holistic medicine in active training
-              as a Certified Nutrition Specialist. The work here draws from
-              West African, Ayurvedic, Traditional Chinese Medicine,
-              Mediterranean, Caribbean, and Amazonian traditions, integrated
-              with modern clinical research.
+              I built Your Health Guide as a place to share the research
+              I&apos;ve spent years inside of — how the body works, what
+              food does inside it, and how healing traditions across the
+              world have understood that relationship for centuries.
+              I&apos;m training as a Certified Nutrition Specialist, and
+              this site is where I bring together what I&apos;m learning.
+            </p>
+            <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
+              The research spans West African food medicine, Ayurvedic
+              tradition, Traditional Chinese Medicine, Mediterranean
+              protocols, Caribbean herbal lineages, and Southeast Asian
+              botanical knowledge — integrated with modern clinical
+              research.
+            </p>
+            <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
+              <strong style={{ color: 'var(--ink-900)' }}>
+                About Dr. Vera Holloway.
+              </strong>{' '}
+              Dr. Vera is the teaching voice of this platform — an
+              educational persona I created to bring multi-tradition
+              holistic medicine into a warm, accessible conversation. The
+              protocols, mechanisms, and food-as-medicine guidance you
+              find here are rooted in my research and the traditions I
+              draw from. Dr. Vera is the voice. The science is real. The
+              credentials I&apos;m still earning.
             </p>
             <p
               className="text-sm italic leading-relaxed"
               style={{ color: 'var(--ink-500)' }}
             >
-              We believe the body deserves to be honored — fed, rested, and
-              listened to. That belief is rooted in many traditions,
-              including our own.
-            </p>
-          </div>
-
-          {/* About Dr. Vera — transparency disclosure */}
-          <div
-            className="rounded-2xl p-6 sm:p-8"
-            style={{
-              backgroundColor: 'var(--paper-raised)',
-              border: 'var(--border-hairline)',
-              boxShadow: 'var(--shadow-card)',
-            }}
-          >
-            <span
-              className="text-xs font-semibold tracking-widest uppercase mb-3 block"
-              style={{ color: 'var(--zone-peak)' }}
-            >
-              About Dr. Vera Holloway
-            </span>
-            <h2 className="font-serif text-2xl mb-4" style={{ color: 'var(--ink-900)' }}>
-              The teaching voice of this platform
-            </h2>
-            <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
-              Dr. Vera Holloway is the teaching voice of Your Health Matters
-              — an educational persona created by Erica Ehiwe to bring
-              multi-tradition holistic medicine to a broader audience.
-            </p>
-            <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
-              The protocols, mechanisms, and food-as-medicine guidance you
-              find here are grounded in research drawn from West African,
-              Ayurvedic, Traditional Chinese Medicine, Mediterranean,
-              Caribbean, and Amazonian traditions, and in Erica&apos;s
-              ongoing training as a Certified Nutrition Specialist.
-            </p>
-            <p className="leading-relaxed text-sm" style={{ color: 'var(--ink-500)' }}>
-              Every guide is educational, not medical advice. If you are
-              managing a diagnosed condition or taking prescribed
-              medication, always consult your physician before making
-              changes.
+              The body is honored when we feed it well. Understanding how
+              it works — how to nourish it, protect it, and restore it —
+              is, in my tradition and many others, one of the deepest acts
+              of stewardship we can offer. That is what this work is for.
             </p>
           </div>
 
@@ -161,7 +143,7 @@ export default function Home() {
               {
                 icon: '🌿',
                 title: 'Ask Dr. Vera',
-                desc: 'Chat available on every page to answer your holistic health questions.',
+                desc: 'Educational chat assistant available on every page to answer your holistic health questions.',
               },
             ].map(({ icon, title, desc }) => (
               <div
@@ -245,9 +227,9 @@ export default function Home() {
             className="max-w-lg mx-auto leading-relaxed"
             style={{ color: 'var(--ink-500)' }}
           >
-            Dr. Vera is an educational teaching persona trained on the full
-            guide library and 30+ years of multi-tradition holistic
-            knowledge. Ask any holistic health question.
+            Dr. Vera is an educational teaching persona built on the full
+            guide library and the multi-tradition holistic research behind
+            it. Ask any holistic health question.
           </p>
         </div>
         <DrVeraChat compact />

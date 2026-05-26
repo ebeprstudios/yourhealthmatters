@@ -5,7 +5,7 @@ import DisclaimerFooter from '@/components/ui/DisclaimerFooter'
 import { organSystems } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'The 18 Organ Systems | Your Health Matters',
+  title: 'The 18 Organ Systems | Your Health Guide',
   description:
     'Dr. Vera Holloway\'s master teaching framework — the 18 organ systems, color-coded across the entire site. Each system has its own landing page with the foods, herbs, juices, and salads that support it.',
 }

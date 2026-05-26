@@ -1,5 +1,5 @@
 /**
- * Your Health Matters — Data layer barrel export
+ * Your Health Guide — Data layer barrel export
  * Import any data from `@/lib/data`
  */
 

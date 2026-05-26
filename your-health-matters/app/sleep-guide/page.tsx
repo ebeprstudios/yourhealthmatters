@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
-  title: 'What Your Body Does While You Sleep | Your Health Matters',
+  title: 'What Your Body Does While You Sleep | Your Health Guide',
   description:
     'An interactive clinical teaching by Dr. Vera Holloway. Explore all 5 sleep stages, 8 organ repair systems, and 5 sleep scenarios — from ideal sleep to sleep deprivation. Understand what actually happens when you close your eyes.',
   keywords: [

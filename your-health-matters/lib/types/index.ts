@@ -1,5 +1,5 @@
 /**
- * Your Health Matters — Type definitions
+ * Your Health Guide — Type definitions
  * All data models live here. Import from `@/lib/types`.
  */
 

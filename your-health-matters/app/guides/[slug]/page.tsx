@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getGuideBySlug(params.slug)
   if (!guide) return { title: 'Guide Not Found' }
   return {
-    title: `${guide.title} | Your Health Matters`,
+    title: `${guide.title} | Your Health Guide`,
     description: guide.description,
   }
 }

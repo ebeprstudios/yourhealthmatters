@@ -42,13 +42,14 @@ export default function Nav() {
               className="font-serif font-bold text-base leading-tight transition-colors"
               style={{ color: scrolled ? 'var(--ink-900)' : 'white' }}
             >
-              Your Health Matters
+              Your Health Guide
+              <sup className="text-[0.55em] font-normal align-super ml-0.5" aria-label="trademark">™</sup>
             </p>
             <p
-              className="text-xs leading-tight transition-colors"
+              className="text-xs italic leading-tight transition-colors"
               style={{ color: scrolled ? 'var(--ink-500)' : 'rgba(255,255,255,0.75)' }}
             >
-              Holistic Health Research &amp; Education
+              Because your health matters
             </p>
           </div>
         </Link>

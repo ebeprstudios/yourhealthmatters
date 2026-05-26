@@ -1,4 +1,4 @@
-# Your Health Matters — by Erica Ehiwe
+# Your Health Guide — by Erica Ehiwe
 
 A Next.js web application presenting ten evidence-based healing guides with an AI-powered Dr. Vera Holloway chat assistant on every page.
 

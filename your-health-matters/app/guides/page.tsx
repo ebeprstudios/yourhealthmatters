@@ -6,9 +6,9 @@ import { tieredGuides } from '@/lib/data'
 import type { Guide } from '@/lib/types'
 
 export const metadata: Metadata = {
-  title: 'The Guide Library | Your Health Matters',
+  title: 'The Guide Library | Your Health Guide',
   description:
-    'Categorized healing guides from Your Health Matters — Foundational educational guides, condition-specific Specialty guides, and Advanced multi-system protocols.',
+    'Categorized healing guides from Your Health Guide — Foundational educational guides, condition-specific Specialty guides, and Advanced multi-system protocols.',
 }
 
 interface SectionProps {
