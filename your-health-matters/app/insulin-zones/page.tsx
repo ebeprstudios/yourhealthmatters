@@ -6,7 +6,7 @@ import ZoneTimeline from '@/components/insulin/ZoneTimeline'
 import { insulinZones } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'The Insulin Time Zones | Your Health Matters',
+  title: 'The Insulin Time Zones | Your Health Guide',
   description:
     'Insulin sensitivity follows a predictable daily curve. The same meal at 8am and 6pm produces a 2–3x difference in glucose response. Learn the four zones — Peak, Declining, Caution, and Closed — and how to eat with the curve.',
 }

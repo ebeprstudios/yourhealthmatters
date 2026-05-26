@@ -78,7 +78,7 @@ export default function LegalPage() {
             consultation, diagnosis, or treatment.
           </p>
           <p className="text-stone-600 leading-relaxed text-sm">
-            Erica Ehiwe and Your Health Matters are not liable for any health decisions made based on
+            Erica Ehiwe and Your Health Guide are not liable for any health decisions made based on
             responses from this chat tool.
           </p>
         </section>
@@ -96,7 +96,7 @@ export default function LegalPage() {
         </section>
       </div>
       <footer className="bg-forest-950 text-forest-400 text-center py-8 px-4">
-        <p className="text-sm">© {year} Your Health Matters · Erica Ehiwe</p>
+        <p className="text-sm">© {year} Your Health Guide · Erica Ehiwe</p>
       </footer>
     </main>
   )

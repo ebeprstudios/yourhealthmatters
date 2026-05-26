@@ -48,7 +48,7 @@ export default function NewsletterPopup() {
               Your Health. Every Week.
             </h2>
             <p className="text-forest-300 text-sm">
-              From Erica Ehiwe - Your Health Matters
+              From Erica Ehiwe - Your Health Guide
             </p>
           </div>
 

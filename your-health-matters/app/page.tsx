@@ -84,7 +84,7 @@ export default function Home() {
               Erica Ehiwe
             </h2>
             <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
-              I built Your Health Matters as a place to share the research
+              I built Your Health Guide as a place to share the research
               I&apos;ve spent years inside of — how the body works, what
               food does inside it, and how healing traditions across the
               world have understood that relationship for centuries.

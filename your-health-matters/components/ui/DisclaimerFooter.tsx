@@ -16,7 +16,7 @@ export default function DisclaimerFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 border-b" style={{ borderColor: 'var(--ink-100)' }}>
           <div>
             <p className="font-serif text-lg mb-2" style={{ color: 'var(--ink-900)' }}>
-              Your Health Matters
+              Your Health Guide
             </p>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-500)' }}>
               Holistic Health Research and Education — grounded in West African,

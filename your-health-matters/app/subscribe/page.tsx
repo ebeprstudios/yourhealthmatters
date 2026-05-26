@@ -4,9 +4,9 @@ import NewsletterForm from '@/components/ui/NewsletterForm'
 import DisclaimerFooter from '@/components/ui/DisclaimerFooter'
 
 export const metadata: Metadata = {
-  title: 'Subscribe | Your Health Matters',
+  title: 'Subscribe | Your Health Guide',
   description:
-    'Every week: one mechanism-driven teaching from Your Health Matters — food as medicine, body systems, and protocols drawn from West African, Ayurvedic, TCM, Mediterranean, Caribbean, and Amazonian traditions. Scripture reflections are an optional second subscription.',
+    'Every week: one mechanism-driven teaching from Your Health Guide — food as medicine, body systems, and protocols drawn from West African, Ayurvedic, TCM, Mediterranean, Caribbean, and Amazonian traditions. Scripture reflections are an optional second subscription.',
 }
 
 export default function SubscribePage() {
