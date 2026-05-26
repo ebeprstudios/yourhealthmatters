@@ -1,6 +1,10 @@
 import Nav from '@/components/layout/Nav'
 import DrVeraChat from '@/components/chat/DrVeraChat'
+import GuideDownloadGate from '@/components/guides/GuideDownloadGate'
+import { getGuideBySlug } from '@/lib/data'
 import Link from 'next/link'
+
+const cancerGuide = getGuideBySlug('cancer-patient-protocol')
 
 const chatScope = `You are Dr. Vera answering questions specifically about cancer patient nutrition. 
 Focus on: Vitamin K-safe foods for warfarin patients, liver support during chemotherapy, 
@@ -84,19 +88,9 @@ export default function CancerSupportPage() {
             ))}
           </div>
 
-          {/* Download */}
+          {/* Download — email-gated */}
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="/pdfs/cancer_patient_protocol.pdf"
-              download
-              className="inline-flex items-center gap-2 bg-white text-rose-900 font-semibold px-5 py-2.5 rounded-full hover:bg-cream transition-all text-sm shadow-lg"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              Download Full Protocol PDF
-            </a>
+            {cancerGuide && <GuideDownloadGate guide={cancerGuide} variant="detail" />}
             <Link href="/#guides" className="inline-flex items-center gap-2 bg-white/15 text-white font-medium px-5 py-2.5 rounded-full hover:bg-white/25 transition-all text-sm">
               All Guides
             </Link>
@@ -270,25 +264,14 @@ export default function CancerSupportPage() {
                 <DrVeraChat compact pageScope={chatScope} />
               </div>
 
-              {/* Download card */}
+              {/* Download card — email-gated */}
               <div className="rounded-2xl p-5 text-white text-center" style={{ backgroundColor: '#4A0E0E' }}>
                 <span className="text-3xl block mb-2">🎗️</span>
                 <p className="font-serif font-bold text-lg mb-1">Full Protocol PDF</p>
                 <p className="text-white/70 text-xs mb-4">
-                  Complete guide including safe foods, avoid list, daily schedule, supplement protocol, and daily juice formula
+                  Free with email. Complete guide including safe foods, avoid list, daily schedule, supplement protocol, and daily juice formula.
                 </p>
-                <a
-                  href="/pdfs/cancer_patient_protocol.pdf"
-                  download
-                  className="inline-flex items-center gap-2 bg-white text-rose-900 font-semibold px-5 py-2.5 rounded-full hover:bg-cream transition-all text-sm w-full justify-center"
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                  </svg>
-                  Download PDF
-                </a>
+                {cancerGuide && <GuideDownloadGate guide={cancerGuide} variant="detail" />}
               </div>
 
               {/* Disclaimer */}
