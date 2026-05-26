@@ -1,0 +1,170 @@
+/* ============================================================
+   Your Health Matters — Design Tokens
+   Single source of truth for color, spacing, type, radius, shadow.
+   Every component must use these variables. No raw hex values.
+   ============================================================ */
+
+:root {
+  /* ---------- INSULIN ZONE PALETTE (FIXED) ---------- */
+  --zone-peak: #1F5E3A;          /* Peak Zone — deep forest green */
+  --zone-declining: #D89B2A;     /* Declining Zone — amber */
+  --zone-caution: #C76B4A;       /* Caution Zone — terracotta */
+  --zone-closed: #2E2A6B;        /* Closed Zone — indigo */
+
+  /* Companion tones for backgrounds and surfaces */
+  --zone-peak-soft: #E8F0E8;
+  --zone-declining-soft: #FAEFD7;
+  --zone-caution-soft: #F7E5DD;
+  --zone-closed-soft: #E3E1ED;
+
+  /* ---------- 18 ORGAN SYSTEM PALETTE ----------
+     ⚠️ Confirm these against the existing PDF library before shipping.
+     These are proposed values; the canonical set lives in the printed guides. */
+  --system-heart: #B5273E;
+  --system-heart-soft: #F5DDE2;
+  --system-kidneys: #7A1F2B;
+  --system-kidneys-soft: #ECD6D9;
+  --system-blood-glucose: #D4A017;
+  --system-blood-glucose-soft: #F7EBC4;
+  --system-liver: #8B4513;
+  --system-liver-soft: #EFDBC8;
+  --system-anti-inflammatory: #7BA382;
+  --system-anti-inflammatory-soft: #E5EFE2;
+  --system-gut: #C76B4A;
+  --system-gut-soft: #F7E5DD;
+  --system-artery-health: #E07856;
+  --system-artery-health-soft: #FAE3D8;
+  --system-cellular-health: #2E8B8B;
+  --system-cellular-health-soft: #DCEDED;
+  --system-brain: #6B3D7A;
+  --system-brain-soft: #E6DCEB;
+  --system-skin: #E8A580;
+  --system-skin-soft: #FBE7D8;
+  --system-lymphatic: #9EB7B5;
+  --system-lymphatic-soft: #E5EBEA;
+  --system-adrenal: #CC6633;
+  --system-adrenal-soft: #F4DCCC;
+  --system-blood-health: #8B1A1A;
+  --system-blood-health-soft: #EDD3D3;
+  --system-eyes: #4A6B8A;
+  --system-eyes-soft: #DDE4EB;
+  --system-thyroid: #3FA0A5;
+  --system-thyroid-soft: #DAECEE;
+  --system-immune: #1F7A4D;
+  --system-immune-soft: #D7E6DD;
+  --system-bones-joints: #D4C5A0;
+  --system-bones-joints-soft: #F0EBD9;
+  --system-lungs: #5C9EAD;
+  --system-lungs-soft: #DEEAEE;
+
+  /* ---------- NEUTRAL PALETTE ---------- */
+  --ink-900: #1A1814;            /* primary text */
+  --ink-700: #3F3A33;            /* secondary text */
+  --ink-500: #6B6258;            /* tertiary / metadata */
+  --ink-300: #B5ADA2;            /* disabled / hints */
+  --ink-100: #E8E3DA;            /* subtle borders */
+
+  --paper: #FBF8F2;              /* canvas — warm off-white */
+  --paper-raised: #FFFFFF;       /* cards */
+  --paper-sunk: #F4EFE6;         /* recessed surfaces */
+
+  /* ---------- TYPE SCALE ----------
+     Three sizes per viewport. Hold the line. */
+  --type-display: clamp(2rem, 4vw, 3rem);
+  --type-headline: clamp(1.5rem, 2.5vw, 2rem);
+  --type-body: 1.0625rem;        /* 17px — comfortable read */
+  --type-small: 0.9375rem;       /* 15px — metadata */
+
+  --leading-display: 1.15;
+  --leading-body: 1.65;          /* generous for educational reading */
+
+  /* The Next.js next/font loader in app/layout.tsx exposes Inter and
+     Playfair Display via --font-inter and --font-playfair. Token names
+     below point at those variables so the rest of the codebase only
+     references --font-sans / --font-serif. */
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-playfair), "Fraunces", "Source Serif Pro", Georgia, serif;
+
+  /* ---------- SEMANTIC CALLOUT SURFACES ----------
+     Backgrounds for clinical callouts (Section 7 of the brand prompt).
+     Color carries meaning here, not aesthetic. */
+  --callout-clinical: #EAF2EB;     /* gentle green-tint surface */
+  --callout-warning: #FBE9DD;      /* terracotta-tint surface  */
+  --callout-firststep: #F4EFE6;    /* paper-sunk variant       */
+
+  /* ---------- LAYOUT CONTAINERS ---------- */
+  --container-max: 72rem;
+  --container-narrow: 56rem;
+  --container-prose-max: 38rem;
+
+  /* ---------- Z-INDEX SCALE ---------- */
+  --z-base: 1;
+  --z-popover: 20;
+  --z-modal: 40;
+  --z-toast: 60;
+
+  /* ---------- SPACING SCALE ----------
+     Breathing room is content. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* ---------- RADIUS ---------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---------- SHADOW ---------- */
+  --shadow-card: 0 1px 2px rgba(26, 24, 20, 0.04), 0 4px 12px rgba(26, 24, 20, 0.06);
+  --shadow-raised: 0 4px 8px rgba(26, 24, 20, 0.06), 0 12px 32px rgba(26, 24, 20, 0.08);
+
+  /* ---------- BORDERS ---------- */
+  --border-hairline: 1px solid var(--ink-100);
+  --border-emphasis: 1px solid var(--ink-300);
+
+  /* ---------- TIMING ---------- */
+  --ease-soft: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --dur-fast: 150ms;
+  --dur-medium: 280ms;
+  --dur-slow: 500ms;
+}
+
+/* ---------- DARK MODE (OPTIONAL — DEFINE LATER) ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Defer dark mode tokens until Phase 2B. The educational content reads
+       best in light first; dark mode requires its own color audit to ensure
+       organ system colors retain meaning. */
+  }
+}
+
+/* ---------- TYPOGRAPHY BASE ---------- */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  color: var(--ink-900);
+  background-color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  line-height: var(--leading-display);
+  color: var(--ink-900);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--type-display); margin-bottom: var(--space-5); }
+h2 { font-size: var(--type-headline); margin-bottom: var(--space-4); }
+h3 { font-size: 1.25rem; margin-bottom: var(--space-3); }
+
+p { margin-bottom: var(--space-4); }
