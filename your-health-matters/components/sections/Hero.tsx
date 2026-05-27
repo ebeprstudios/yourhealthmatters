@@ -3,9 +3,19 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 
+/**
+ * Homepage hero — the two-doorway thesis.
+ *
+ * "Your body is one organism. There are two doorways into it."
+ *
+ * Cards are deliberately equal weight. Color signals doorway, not hierarchy.
+ * No emoji on cards (warm but not casual). Mobile stacks vertically.
+ */
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
+  // Ambient particle animation preserved from the prior hero — texture only,
+  // not the message. The message is the architecture.
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -17,7 +27,8 @@ export default function Hero() {
       x: number; y: number; vx: number; vy: number
       r: number; opacity: number; color: string; life: number; maxLife: number
     }> = []
-    const colors = ['#5dcaa5', '#3a8f63', '#d4a017', '#1D9E75', '#94c9ac']
+    // Palette spans both doorways — green for food, aubergine for mind.
+    const colors = ['#5dcaa5', '#3a8f63', '#6b5b95', '#3d2a5a', '#a88a3d']
 
     function resize() {
       if (!canvas) return
@@ -42,7 +53,7 @@ export default function Hero() {
     function animate() {
       if (!canvas || !ctx) return
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight)
-      if (Math.random() < 0.12) spawn()
+      if (Math.random() < 0.10) spawn()
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i]
         p.x += p.vx; p.y += p.vy; p.life++
@@ -51,7 +62,7 @@ export default function Hero() {
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.fillStyle = p.color
-        ctx.globalAlpha = p.opacity * 0.7
+        ctx.globalAlpha = p.opacity * 0.6
         ctx.fill()
         ctx.globalAlpha = 1
         if (p.life >= p.maxLife || p.y < -10) particles.splice(i, 1)
@@ -66,110 +77,150 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-forest-900 wave-divider">
+    <section
+      className="relative flex items-center justify-center overflow-hidden wave-divider py-20 sm:py-24"
+      style={{
+        minHeight: '100vh',
+        // Deep ink background bridging both doorway palettes
+        background:
+          'linear-gradient(180deg, #1a1a2e 0%, #1f1b2e 40%, #1d2e22 100%)',
+      }}
+    >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-radial from-forest-700/40 via-transparent to-forest-950/60 pointer-events-none" />
 
-      {/* Floating botanical elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {['🌿', '🌱', '🍃', '✦', '🌿', '🍃', '✦', '🌱'].map((el, i) => (
-          <span key={i}
-            className={`absolute text-2xl opacity-10 select-none ${
-              i % 3 === 0 ? 'animate-float' : i % 3 === 1 ? 'animate-float-delay' : 'animate-float-slow'
-            }`}
-            style={{ left: `${8 + i * 12}%`, top: `${15 + (i % 4) * 18}%`, fontSize: `${1.2 + (i % 3) * 0.4}rem` }}
-          >
-            {el}
-          </span>
-        ))}
-      </div>
+      <div className="relative z-10 px-4 sm:px-6 max-w-6xl mx-auto">
 
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-
-        {/* Scripture banner - Hosea 4:6 */}
-        <div className="inline-flex items-center gap-3 bg-forest-800/70 backdrop-blur-sm border border-yellow-500/30 rounded-full px-5 py-2.5 mb-5 animate-fade-in">
-          <span className="text-yellow-400 text-sm">📖</span>
-          <span className="text-yellow-200 text-xs sm:text-sm font-medium italic">
-            "My people are destroyed for lack of knowledge."
-          </span>
-          <span className="text-yellow-400 text-xs font-semibold whitespace-nowrap">Hosea 4:6</span>
-        </div>
-
-        {/* Badges */}
-        <div className="flex flex-wrap justify-center gap-2 mb-6">
-          <div className="inline-flex items-center gap-2 bg-forest-700/60 backdrop-blur-sm border border-forest-500/40 rounded-full px-4 py-1.5 animate-fade-in">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-forest-200 text-xs font-medium tracking-wide">
-              Your Health Guide
-            </span>
-          </div>
-          <div className="inline-flex items-center gap-2 bg-yellow-500/15 backdrop-blur-sm border border-yellow-500/40 rounded-full px-4 py-1.5 animate-fade-in">
-            <span className="text-yellow-400 text-xs">✦</span>
-            <span className="text-yellow-200 text-xs font-medium tracking-wide">
-              New healing guides added every month
-            </span>
-          </div>
-        </div>
-
-        {/* Headline */}
+        {/* Headline — two stacked H1 lines */}
         <h1
-          className="font-serif text-white mb-6 animate-fade-up"
-          style={{ fontSize: 'clamp(2.4rem, 6vw, 4rem)', lineHeight: 1.1 }}
+          className="font-serif text-white mb-8 text-center animate-fade-up"
+          style={{ fontSize: 'clamp(2rem, 5.5vw, 3.75rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
         >
-          Food is Medicine.
+          Your body is one organism.
           <br />
-          <span className="text-yellow-400">Learn to Use It.</span>
+          There are two doorways into it.
         </h1>
 
-        {/* Subheadline */}
-        <p
-          className="text-forest-200 mb-10 max-w-2xl mx-auto animate-fade-up leading-relaxed"
-          style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', animationDelay: '0.15s', opacity: 0, animationFillMode: 'forwards' }}
-        >
-          Eleven evidence-based healing guides covering nutrition, herbs, body systems, and daily
-          protocols - researched and created by <strong className="text-white">Erica Ehiwe</strong>.
-          Ask Dr. Vera any question about your health.
-        </p>
-
-        {/* CTA buttons */}
+        {/* Sub-paragraph — three drafted paragraphs verbatim */}
         <div
-          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
+          className="text-center mb-14 max-w-3xl mx-auto animate-fade-up space-y-4"
+          style={{ animationDelay: '0.15s', opacity: 0, animationFillMode: 'forwards' }}
+        >
+          <p className="leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)', fontSize: 'clamp(1rem, 1.6vw, 1.15rem)' }}>
+            One is what you put in it — food, herbs, juices, the cellular biology that reaches your bloodstream through your gut. The other is what you direct at it — perception, language, the sentences you wrap around your own thoughts, the way your nervous system decides whether a moment is safe or dangerous.
+          </p>
+          <p className="leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)', fontSize: 'clamp(1rem, 1.6vw, 1.15rem)' }}>
+            Both doorways open into the same body. Both have measurable biology on the other side. The mind moves the body in six seconds. Food moves it in twenty minutes. Neither is metaphor. Neither is optional.
+          </p>
+          <p className="leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)', fontSize: 'clamp(1rem, 1.6vw, 1.15rem)' }}>
+            This site teaches both — with the same rigor, in the same voice, by the same practitioner. Choose your doorway. The destination is the same.
+          </p>
+        </div>
+
+        {/* Two doorway cards — equal weight, side by side on desktop, stacked on mobile */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7 mb-14 animate-fade-up"
           style={{ animationDelay: '0.3s', opacity: 0, animationFillMode: 'forwards' }}
         >
-          <Link href="/#guides"
-            className="px-8 py-3.5 bg-white text-forest-900 font-semibold rounded-full hover:bg-cream transition-all hover:scale-105 active:scale-95 shadow-lg">
-            Explore the Guides
-          </Link>
-          <Link href="/#chat"
-            className="px-8 py-3.5 bg-forest-700/60 backdrop-blur-sm text-white font-semibold rounded-full border border-forest-400/40 hover:bg-forest-700 transition-all hover:scale-105 active:scale-95">
-            🌿 Ask Dr. Vera
-          </Link>
+          {/* LEFT — Food as Medicine */}
+          <DoorwayCard
+            eyebrow="FOOD AS MEDICINE"
+            subhead="What you put in the body."
+            body="Eighteen organ systems. Hundreds of foods, herbs, and juices mapped to the cellular work they do. Insulin timing. Patient protocols. Cultural wisdom from six healing traditions."
+            cta="Enter Food as Medicine"
+            href="/food-as-medicine"
+            accent="#3a8f63"
+            accentSoft="rgba(58, 143, 99, 0.18)"
+            accentBorder="rgba(58, 143, 99, 0.45)"
+          />
+          {/* RIGHT — Mind as Medicine */}
+          <DoorwayCard
+            eyebrow="MIND AS MEDICINE"
+            subhead="What you direct at the body."
+            body="The loop your nervous system runs every day — perception, language, binary thinking, stored charge, set-point — and how to retrain it at any station."
+            cta="Enter Mind as Medicine"
+            href="/mind-as-medicine"
+            accent="#6b5b95"
+            accentSoft="rgba(107, 91, 149, 0.20)"
+            accentBorder="rgba(107, 91, 149, 0.50)"
+          />
         </div>
 
-        {/* Stats */}
+        {/* Closing italic byline */}
         <div
-          className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-8 max-w-sm sm:max-w-md mx-auto animate-fade-up"
-          style={{ animationDelay: '0.45s', opacity: 0, animationFillMode: 'forwards' }}
+          className="text-center max-w-3xl mx-auto animate-fade-up"
+          style={{ animationDelay: '0.5s', opacity: 0, animationFillMode: 'forwards' }}
         >
-          {[
-            { n: '11', label: 'Healing Guides' },
-            { n: '18', label: 'Organ Systems' },
-            { n: '9',  label: 'Global Traditions' },
-          ].map(({ n, label }) => (
-            <div key={n} className="text-center">
-              <p className="text-2xl sm:text-3xl font-serif font-bold text-yellow-400">{n}</p>
-              <p className="text-forest-300 text-xs mt-1">{label}</p>
-            </div>
-          ))}
+          <p className="italic leading-relaxed" style={{ color: 'rgba(255,255,255,0.78)', fontSize: 'clamp(0.95rem, 1.4vw, 1.05rem)' }}>
+            The body knows what the mind is doing. The mind feels what the food is doing. Healing is not a single doorway — it is the moment you stop treating them as separate.
+          </p>
+          <p className="mt-3 text-sm font-medium" style={{ color: 'rgba(255,255,255,0.55)' }}>
+            — Dr. Vera Holloway, CNS + CHN
+          </p>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-          <polyline points="6 9 12 15 18 9"/>
-        </svg>
       </div>
     </section>
+  )
+}
+
+interface DoorwayCardProps {
+  eyebrow: string
+  subhead: string
+  body: string
+  cta: string
+  href: string
+  accent: string
+  accentSoft: string
+  accentBorder: string
+}
+
+function DoorwayCard({ eyebrow, subhead, body, cta, href, accent, accentSoft, accentBorder }: DoorwayCardProps) {
+  return (
+    <Link
+      href={href}
+      className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-transparent rounded-2xl"
+      style={{ outline: 'none' }}
+      aria-label={cta}
+    >
+      <div
+        className="h-full rounded-2xl p-7 sm:p-9 transition-transform duration-300 group-hover:-translate-y-1"
+        style={{
+          backgroundColor: accentSoft,
+          backdropFilter: 'blur(8px)',
+          border: `1px solid ${accentBorder}`,
+          boxShadow: '0 1px 3px rgba(0,0,0,0.2), 0 12px 32px rgba(0,0,0,0.25)',
+        }}
+      >
+        <p
+          className="text-xs font-bold tracking-[0.18em] mb-3"
+          style={{ color: accent }}
+        >
+          {eyebrow}
+        </p>
+        <p
+          className="font-serif text-white mb-4"
+          style={{ fontSize: 'clamp(1.35rem, 2.2vw, 1.6rem)', lineHeight: 1.25 }}
+        >
+          {subhead}
+        </p>
+        <p
+          className="leading-relaxed mb-7"
+          style={{ color: 'rgba(255,255,255,0.78)', fontSize: 'clamp(0.95rem, 1.4vw, 1.02rem)' }}
+        >
+          {body}
+        </p>
+        <div className="inline-flex items-center gap-2 font-semibold text-sm" style={{ color: 'white' }}>
+          <span
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full transition-colors"
+            style={{ backgroundColor: accent, color: 'white' }}
+          >
+            {cta}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </Link>
   )
 }

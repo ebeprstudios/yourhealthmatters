@@ -157,6 +157,19 @@ export interface Guide {
    * authoritative tier→gated mapping.
    */
   gated?: boolean;
+  /**
+   * Which doorway into the body this guide teaches.
+   *   "food" — what you put in the body (cellular biology via gut)
+   *   "mind" — what you direct at the body (nervous-system biology)
+   * Required on every guide. The thesis governs: one organism, two doorways.
+   */
+  doorway: "food" | "mind";
+  /**
+   * For mind-doorway guides only: which station of the six-station loop
+   * this guide teaches. See lib/data/stations.ts for the canonical
+   * definitions. Optional because food-doorway guides do not have stations.
+   */
+  station?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 // ---------- CLINICAL RULES ----------
