@@ -39,6 +39,7 @@ export const guides: Guide[] = [
     ],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "Daily Protocol",
     icon: "🌿",
@@ -106,6 +107,7 @@ export const guides: Guide[] = [
     organSystems: ["blood-glucose", "liver", "adrenal"],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "4 Time Zones",
     icon: "📊",
@@ -183,6 +185,7 @@ export const guides: Guide[] = [
     ],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "180 Cards",
     icon: "🥦",
@@ -243,6 +246,7 @@ export const guides: Guide[] = [
     ],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "180 Cards",
     icon: "🍊",
@@ -305,6 +309,7 @@ export const guides: Guide[] = [
     ],
     level: 2,
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "180 Herbs + Safety",
     icon: "🌱",
@@ -366,6 +371,7 @@ export const guides: Guide[] = [
     ],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "64 Recipes",
     icon: "🥤",
@@ -424,6 +430,7 @@ export const guides: Guide[] = [
     ],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "47 Salads",
     icon: "🥗",
@@ -479,6 +486,7 @@ export const guides: Guide[] = [
     ],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "75+ Foods · 9 Traditions",
     icon: "🌍",
@@ -521,6 +529,7 @@ export const guides: Guide[] = [
     organSystems: ["liver", "lymphatic", "brain", "immune", "adrenal"],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "4 Phases · 11 Hours",
     icon: "🌙",
@@ -572,6 +581,7 @@ export const guides: Guide[] = [
     ],
     level: "all",
     tier: "foundational",
+    doorway: "food",
     gated: false,
     badge: "4 Phases · 13 Hours",
     icon: "☀️",
@@ -626,6 +636,7 @@ export const guides: Guide[] = [
     organSystems: ["heart", "artery-health", "adrenal", "lungs"],
     level: 2,
     tier: "specialty",
+    doorway: "food",
     gated: true,
     badge: "Cardiac Recovery",
     icon: "❤️",
@@ -645,6 +656,7 @@ export const guides: Guide[] = [
     organSystems: ["blood-glucose", "gut", "heart"],
     level: 2,
     tier: "specialty",
+    doorway: "food",
     gated: true,
     badge: "Diabetes Support",
     icon: "🌾",
@@ -670,6 +682,7 @@ export const guides: Guide[] = [
     ],
     level: 2,
     tier: "specialty",
+    doorway: "food",
     gated: true,
     badge: "7-Day Protocol",
     icon: "🔄",
@@ -689,6 +702,8 @@ export const guides: Guide[] = [
     organSystems: ["brain", "adrenal", "gut", "anti-inflammatory"],
     level: 2,
     tier: "specialty",
+    doorway: "mind",
+    station: 5,
     gated: true,
     badge: "Nervous System",
     icon: "🧠",
@@ -708,6 +723,7 @@ export const guides: Guide[] = [
     organSystems: ["blood-glucose", "gut", "adrenal", "heart"],
     level: 2,
     tier: "specialty",
+    doorway: "food",
     badge: "Morning Protocol",
     icon: "🍳",
     accentColor: "#D89B2A",
@@ -739,6 +755,7 @@ export const guides: Guide[] = [
     ],
     level: 3,
     tier: "advanced",
+    doorway: "food",
     gated: true,
     badge: "Advanced · v4",
     icon: "🗓️",
@@ -757,6 +774,7 @@ export const guides: Guide[] = [
     organSystems: ["liver", "immune", "heart", "lymphatic", "blood-health"],
     level: 3,
     tier: "advanced",
+    doorway: "food",
     gated: true,
     badge: "Advanced · Clinical",
     icon: "🎗️",
@@ -826,6 +844,8 @@ export const guides: Guide[] = [
     organSystems: ["brain"],
     level: "all",
     tier: "devotional",
+    doorway: "mind",
+    station: 6,
     gated: false,
     badge: "Devotional",
     icon: "📖",
@@ -843,6 +863,8 @@ export const guides: Guide[] = [
     organSystems: ["brain"],
     level: "all",
     tier: "devotional",
+    doorway: "mind",
+    station: 3,
     gated: false,
     badge: "Devotional",
     icon: "✍️",
@@ -861,6 +883,8 @@ export const guides: Guide[] = [
     organSystems: ["brain", "adrenal"],
     level: 2,
     tier: "specialty",
+    doorway: "mind",
+    station: 1,
     gated: true,
     badge: "Mind-Body",
     icon: "🧠",
@@ -889,3 +913,14 @@ export const tieredGuides = {
 
 // Public-library guides exclude devotional (devotional is surfaced at /devotional only)
 export const libraryGuides = guides.filter((g) => g.tier !== "devotional");
+
+// ───────── doorway / station helpers ─────────
+
+/** Every guide that teaches the food doorway. */
+export const foodGuides = guides.filter((g) => g.doorway === "food");
+
+/** Every guide that teaches the mind doorway. */
+export const mindGuides = guides.filter((g) => g.doorway === "mind");
+
+export const getGuidesByStation = (station: 1 | 2 | 3 | 4 | 5 | 6): Guide[] =>
+  guides.filter((g) => g.doorway === "mind" && g.station === station);

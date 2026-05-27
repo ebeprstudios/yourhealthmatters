@@ -12,3 +12,4 @@ export * from "./salads";
 export * from "./protocols";
 export * from "./clinical-rules";
 export * from "./testimonials";
+export * from "./stations";

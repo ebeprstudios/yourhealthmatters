@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
+// Top nav: four items only. One organism, two doorways, plus home + about.
+// The five secondary tools (Systems, Insulin Zones, Sleep Guide, Shopping
+// List, Subscribe) live in the footer.
 const PRIMARY_LINKS = [
-  { href: '/guides', label: 'Guides' },
-  { href: '/systems', label: 'Systems' },
-  { href: '/insulin-zones', label: 'Insulin Zones' },
-  { href: '/sleep-guide', label: 'Sleep Guide' },
-  { href: '/shopping-list', label: 'Shopping List' },
-  { href: '/subscribe', label: 'Subscribe' },
+  { href: '/', label: 'Home' },
+  { href: '/food-as-medicine', label: 'Food as Medicine' },
+  { href: '/mind-as-medicine', label: 'Mind as Medicine' },
+  { href: '/#about', label: 'About' },
 ]
 
 export default function Nav() {
