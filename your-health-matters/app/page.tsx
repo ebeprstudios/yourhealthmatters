@@ -7,6 +7,7 @@
 
 import Nav from '@/components/layout/Nav'
 import Hero from '@/components/sections/Hero'
+import ToolsStrip from '@/components/sections/ToolsStrip'
 import GuideCard from '@/components/ui/GuideCard'
 import DrVeraChat from '@/components/chat/DrVeraChat'
 import NewsletterForm from '@/components/ui/NewsletterForm'
@@ -25,6 +26,9 @@ export default function Home() {
       <Nav />
       <NewsletterPopup />
       <Hero />
+
+      {/* Tools strip — sits between the hero's byline and the guide library */}
+      <ToolsStrip />
 
       {/* Featured guides preview */}
       <section id="guides" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">

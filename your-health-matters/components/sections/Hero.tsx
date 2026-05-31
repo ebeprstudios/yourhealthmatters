@@ -154,7 +154,7 @@ export default function Hero() {
             The body knows what the mind is doing. The mind feels what the food is doing. Healing is not a single doorway — it is the moment you stop treating them as separate.
           </p>
           <p className="mt-3 text-sm font-medium" style={{ color: 'rgba(255,255,255,0.55)' }}>
-            — Dr. Vera Holloway, CNS + CHN
+            — Dr. Vera Holloway
           </p>
         </div>
       </div>

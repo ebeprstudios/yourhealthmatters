@@ -3,11 +3,10 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-// Top nav: four items only. One organism, two doorways, plus home + about.
-// The five secondary tools (Systems, Insulin Zones, Sleep Guide, Shopping
-// List, Subscribe) live in the footer.
+// Top nav text links. The wordmark on the left handles "Home" — no
+// redundant Home link in the bar. Ask Dr. Vera + Subscribe live in the
+// dedicated right-side CTA group below this list.
 const PRIMARY_LINKS = [
-  { href: '/', label: 'Home' },
   { href: '/food-as-medicine', label: 'Food as Medicine' },
   { href: '/mind-as-medicine', label: 'Mind as Medicine' },
   { href: '/#about', label: 'About' },
@@ -78,6 +77,17 @@ export default function Nav() {
           >
             Ask Dr. Vera
           </Link>
+          {/* Subscribe — filled button, the rightmost item, conversion focus */}
+          <Link
+            href="/subscribe"
+            className="text-sm font-semibold px-4 py-2 rounded-full transition-all hover:opacity-90"
+            style={{
+              backgroundColor: scrolled ? 'var(--zone-peak)' : 'white',
+              color: scrolled ? 'white' : 'var(--zone-peak)',
+            }}
+          >
+            Subscribe
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -121,6 +131,15 @@ export default function Nav() {
             style={{ color: 'var(--zone-peak)' }}
           >
             🌿 Ask Dr. Vera
+          </Link>
+          {/* Subscribe stays visually distinct on mobile too — filled */}
+          <Link
+            href="/subscribe"
+            onClick={() => setMenuOpen(false)}
+            className="block text-sm font-semibold py-2.5 px-4 mt-2 rounded-full text-center"
+            style={{ backgroundColor: 'var(--zone-peak)', color: 'white' }}
+          >
+            Subscribe
           </Link>
         </div>
       )}

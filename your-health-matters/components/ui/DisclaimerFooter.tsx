@@ -27,7 +27,7 @@ export default function DisclaimerFooter() {
               Your Health Guide<sup className="text-[0.55em] align-super">™</sup>
             </p>
             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--ink-700)' }}>
-              One body. Two doorways. Educational stewardship from Dr. Vera Holloway, CNS + CHN.
+              One body. Two doorways. Educational stewardship from Dr. Vera, the teaching voice of Your Health Guide.
             </p>
             <p className="text-xs leading-relaxed" style={{ color: 'var(--ink-500)' }}>
               Grounded in West African, Ayurvedic, TCM, Mediterranean, Caribbean, and Amazonian traditions.
