@@ -8,7 +8,7 @@ import { STATIONS, getGuidesByStation } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'Mind as Medicine | Your Health Guide',
   description:
-    'The loop your nervous system runs every day — perception, language, binary thinking, stored charge, set-point — and how to retrain it at any station.',
+    'The loop your nervous system runs every day, perception, language, binary thinking, stored charge, set-point, and how to retrain it at any station.',
 }
 
 // Mind tab palette
@@ -35,10 +35,10 @@ export default function MindAsMedicinePage() {
             Mind as Medicine
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl mb-4 leading-tight" style={{ color: MIND.ink }}>
-            The loop your nervous system runs — and how to retrain it at every station
+            The loop your nervous system runs, and how to retrain it at every station
           </h1>
           <p className="text-lg leading-relaxed max-w-3xl" style={{ color: MIND.inkSoft }}>
-            Every mind-wing guide on this site teaches one truth at a different point along the same circuit. A thought arrives, the mind sorts it, language wraps it, the body answers it, the answer is stored, the storage becomes the default — and the default decides what the next thought becomes. Interrupt the loop anywhere and the wheel slows. Train the set-point and it reorients entirely. This is the unified architecture. The guides below are the stations.
+            Every mind-wing guide on this site teaches one truth at a different point along the same circuit. A thought arrives, the mind sorts it, language wraps it, the body answers it, the answer is stored, the storage becomes the default, and the default decides what the next thought becomes. Interrupt the loop anywhere and the wheel slows. Train the set-point and it reorients entirely. This is the unified architecture. The guides below are the stations.
           </p>
         </div>
       </header>
@@ -73,10 +73,10 @@ export default function MindAsMedicinePage() {
       <section className="py-14" style={{ backgroundColor: MIND.highlightBg }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <p className="leading-relaxed mb-4" style={{ color: MIND.inkSoft, fontSize: '1.05rem' }}>
-            New loops, new sub-systems, and new guides get added to this tab as they are discovered. The architecture is alive. Bookmark this page — it will keep growing.
+            New loops, new sub-systems, and new guides get added to this tab as they are discovered. The architecture is alive. Bookmark this page. It will keep growing.
           </p>
           <p className="text-sm font-medium" style={{ color: MIND.accent }}>
-            — Dr. Vera Holloway
+            Dr. Vera Holloway
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ function PlaceholderCard({ stationNumber }: { stationNumber: number }) {
       }}
     >
       <p className="font-serif text-lg mb-2" style={{ color: MIND.accent }}>
-        Station {stationNumber} — Guide forthcoming
+        Station {stationNumber}, Guide forthcoming
       </p>
       <p className="text-sm leading-relaxed" style={{ color: MIND.inkSoft }}>
         This station of the loop is named here so the architecture is visible. A guide teaching this station is in development.

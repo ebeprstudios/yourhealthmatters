@@ -17,7 +17,7 @@ export const organSystems: OrganSystem[] = [
     colorHex: "#B5273E",
     oneLineSummary: "The tireless pump that runs your entire circulatory life.",
     whatItDoes:
-      "Your heart moves roughly 2,000 gallons of blood through your body every day. It carries oxygen, nutrients, hormones, and immune cells to every cell — and carries waste away.",
+      "Your heart moves roughly 2,000 gallons of blood through your body every day. It carries oxygen, nutrients, hormones, and immune cells to every cell, and carries waste away.",
     signsOfDistress: [
       "High blood pressure",
       "Chest tightness or pressure",
@@ -28,7 +28,7 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["pomegranate", "hibiscus", "garlic", "leafy-greens", "walnuts"],
     topHerbs: ["hawthorn", "hibiscus", "garlic"],
     practicalFirstStep:
-      "Start your morning with 8oz of hibiscus tea — its anthocyanins gently support healthy blood pressure.",
+      "Start your morning with 8oz of hibiscus tea. Its anthocyanins gently support healthy blood pressure.",
   },
   {
     id: "os-02",
@@ -57,7 +57,7 @@ export const organSystems: OrganSystem[] = [
     colorHex: "#D4A017",
     oneLineSummary: "The fuel-balance system that decides your daily energy.",
     whatItDoes:
-      "Your pancreas, liver, and muscle cells coordinate insulin and glucagon to keep blood sugar steady — too high damages vessels and nerves, too low starves the brain.",
+      "Your pancreas, liver, and muscle cells coordinate insulin and glucagon to keep blood sugar steady, too high damages vessels and nerves, too low starves the brain.",
     signsOfDistress: [
       "Energy crashes 1–2 hours after meals",
       "Strong sugar or carb cravings",
@@ -75,7 +75,7 @@ export const organSystems: OrganSystem[] = [
     slug: "liver",
     name: "Liver",
     colorHex: "#8B4513",
-    oneLineSummary: "The body's chemical processing plant — running 500+ functions at once.",
+    oneLineSummary: "The body's chemical processing plant, running 500+ functions at once.",
     whatItDoes:
       "Your liver detoxifies, makes bile to digest fat, builds cholesterol and proteins, stores vitamins and minerals, and regulates blood sugar. In TCM, the liver clock runs from 1–3am.",
     signsOfDistress: [
@@ -88,7 +88,7 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["beets", "dandelion-greens", "artichoke", "lemon", "milk-thistle"],
     topHerbs: ["milk-thistle", "dandelion-root", "burdock", "schisandra"],
     practicalFirstStep:
-      "Begin tomorrow with 16oz of warm water with the juice of one lemon and a pinch of sea salt — gentle hepatic activation before breakfast.",
+      "Begin tomorrow with 16oz of warm water with the juice of one lemon and a pinch of sea salt, gentle hepatic activation before breakfast.",
   },
   {
     id: "os-05",
@@ -97,7 +97,7 @@ export const organSystems: OrganSystem[] = [
     colorHex: "#7BA382",
     oneLineSummary: "The cooling system that quiets the fire beneath chronic disease.",
     whatItDoes:
-      "Inflammation is your body's healing response. When it becomes chronic — driven by diet, stress, and toxins — it underlies heart disease, diabetes, autoimmunity, and cognitive decline.",
+      "Inflammation is your body's healing response. When it becomes chronic, driven by diet, stress, and toxins. It underlies heart disease, diabetes, autoimmunity, and cognitive decline.",
     signsOfDistress: [
       "Joint stiffness in the morning",
       "Skin redness or flares",
@@ -108,14 +108,14 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["turmeric", "ginger", "tart-cherries", "wild-salmon", "extra-virgin-olive-oil"],
     topHerbs: ["turmeric", "ginger", "boswellia", "wild-oregano-oil"],
     practicalFirstStep:
-      "Add ½ teaspoon of turmeric to your morning juice — and always pair it with a pinch of black pepper. The piperine in pepper raises curcumin absorption by roughly 2,000%.",
+      "Add ½ teaspoon of turmeric to your morning juice, and always pair it with a pinch of black pepper. The piperine in pepper raises curcumin absorption by roughly 2,000%.",
   },
   {
     id: "os-06",
     slug: "gut",
     name: "Gut",
     colorHex: "#C76B4A",
-    oneLineSummary: "The second brain — where 70% of immunity and most of your serotonin live.",
+    oneLineSummary: "The second brain. Where 70% of immunity and most of your serotonin live.",
     whatItDoes:
       "Your gut microbiome digests food, trains your immune system, manufactures B vitamins and short-chain fatty acids, and communicates directly with the brain via the vagus nerve.",
     signsOfDistress: [
@@ -128,7 +128,7 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["fermented-vegetables", "bone-broth", "okra", "psyllium", "ginger"],
     topHerbs: ["slippery-elm", "marshmallow-root", "licorice-root", "ginger"],
     practicalFirstStep:
-      "Begin or end one meal per day with a fermented food — a tablespoon of sauerkraut, kimchi, or coconut yogurt — to deliver live cultures to the colon.",
+      "Begin or end one meal per day with a fermented food, a tablespoon of sauerkraut, kimchi, or coconut yogurt, to deliver live cultures to the colon.",
   },
   {
     id: "os-07",
@@ -155,7 +155,7 @@ export const organSystems: OrganSystem[] = [
     slug: "cellular-health",
     name: "Cellular Health",
     colorHex: "#2E8B8B",
-    oneLineSummary: "Every system in this guide begins here — at the level of the cell.",
+    oneLineSummary: "Every system in this guide begins here, at the level of the cell.",
     whatItDoes:
       "Your 37 trillion cells each contain mitochondria that produce energy, membranes that protect, and DNA that codes everything you are. Cellular damage is upstream of every disease.",
     signsOfDistress: [
@@ -168,7 +168,7 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["blueberries", "wild-salmon", "leafy-greens", "broccoli-sprouts", "extra-virgin-olive-oil"],
     topHerbs: ["coq10", "alpha-lipoic-acid", "resveratrol", "pqq"],
     practicalFirstStep:
-      "Eat a small handful of wild blueberries with breakfast — their anthocyanins protect mitochondrial membranes from oxidative damage.",
+      "Eat a small handful of wild blueberries with breakfast. Their anthocyanins protect mitochondrial membranes from oxidative damage.",
   },
   {
     id: "os-09",
@@ -195,7 +195,7 @@ export const organSystems: OrganSystem[] = [
     slug: "skin",
     name: "Skin",
     colorHex: "#E8A580",
-    oneLineSummary: "Your largest organ — and a mirror of what's happening inside.",
+    oneLineSummary: "Your largest organ, and a mirror of what's happening inside.",
     whatItDoes:
       "Skin protects you, regulates temperature, synthesizes vitamin D, and is in constant dialogue with your gut, liver, and hormones.",
     signsOfDistress: [
@@ -217,7 +217,7 @@ export const organSystems: OrganSystem[] = [
     colorHex: "#9EB7B5",
     oneLineSummary: "The silent drainage system that clears cellular waste.",
     whatItDoes:
-      "Your lymphatic system carries immune cells, removes waste from tissues, and absorbs dietary fats. Unlike blood, it has no pump — movement is the pump.",
+      "Your lymphatic system carries immune cells, removes waste from tissues, and absorbs dietary fats. Unlike blood, it has no pump, movement is the pump.",
     signsOfDistress: [
       "Puffiness in the face on waking",
       "Sluggish digestion",
@@ -228,7 +228,7 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["citrus", "leafy-greens", "ginger", "cranberries", "turmeric"],
     topHerbs: ["cleavers", "red-clover", "calendula", "echinacea"],
     practicalFirstStep:
-      "Walk for 10 minutes after every meal. Movement is the lymph's pump — there is no substitute.",
+      "Walk for 10 minutes after every meal. Movement is the lymph's pump. There is no substitute.",
   },
   {
     id: "os-12",
@@ -268,7 +268,7 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["beets", "dark-leafy-greens", "grass-fed-liver", "lentils", "pumpkin-seeds"],
     topHerbs: ["nettle", "yellow-dock", "moringa", "spirulina"],
     practicalFirstStep:
-      "Pair every iron-rich plant food with lemon or apple cider vinegar — the acid increases iron absorption by 2–3 times.",
+      "Pair every iron-rich plant food with lemon or apple cider vinegar, the acid increases iron absorption by 2–3 times.",
   },
   {
     id: "os-14",
@@ -277,7 +277,7 @@ export const organSystems: OrganSystem[] = [
     colorHex: "#4A6B8A",
     oneLineSummary: "Two highly metabolic organs that depend on the same nutrients as your brain.",
     whatItDoes:
-      "Your retina contains some of the body's highest concentrations of polyunsaturated fats. The macula is built from lutein and zeaxanthin — pigments your body cannot make.",
+      "Your retina contains some of the body's highest concentrations of polyunsaturated fats. The macula is built from lutein and zeaxanthin, pigments your body cannot make.",
     signsOfDistress: [
       "Trouble adjusting to dim light",
       "Eye strain from screens",
@@ -308,14 +308,14 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["brazil-nuts", "seaweed", "wild-fish", "pumpkin-seeds", "eggs"],
     topHerbs: ["ashwagandha", "bladderwrack", "guggul"],
     practicalFirstStep:
-      "If you have a thyroid condition, cook your cruciferous vegetables (broccoli, kale, cabbage) before eating — heat reduces compounds that can interfere with thyroid hormone production.",
+      "If you have a thyroid condition, cook your cruciferous vegetables (broccoli, kale, cabbage) before eating, heat reduces compounds that can interfere with thyroid hormone production.",
   },
   {
     id: "os-16",
     slug: "immune",
     name: "Immune",
     colorHex: "#1F7A4D",
-    oneLineSummary: "A standing army of cells, signals, and barriers — most of it lives in your gut.",
+    oneLineSummary: "A standing army of cells, signals, and barriers. Most of it lives in your gut.",
     whatItDoes:
       "Your immune system distinguishes self from non-self, neutralizes pathogens, clears damaged cells, and remembers past invaders. 70% of immune tissue surrounds the gut.",
     signsOfDistress: [
@@ -357,7 +357,7 @@ export const organSystems: OrganSystem[] = [
     colorHex: "#5C9EAD",
     oneLineSummary: "The exchange surface where the outer world meets the inner world.",
     whatItDoes:
-      "Your lungs move 11,000 liters of air a day across a surface roughly the size of a tennis court. They extract oxygen and release carbon dioxide — the body's most constant act of trade.",
+      "Your lungs move 11,000 liters of air a day across a surface roughly the size of a tennis court. They extract oxygen and release carbon dioxide, the body's most constant act of trade.",
     signsOfDistress: [
       "Shortness of breath on light exertion",
       "Frequent throat clearing",
@@ -368,7 +368,7 @@ export const organSystems: OrganSystem[] = [
     topFoods: ["onions", "garlic", "ginger", "apples", "leafy-greens"],
     topHerbs: ["mullein", "thyme", "elecampane", "tiger-milk-mushroom"],
     practicalFirstStep:
-      "Practice five minutes of slow nasal breathing each morning — four counts in, six counts out. The longer exhale activates the parasympathetic nervous system.",
+      "Practice five minutes of slow nasal breathing each morning, four counts in, six counts out. The longer exhale activates the parasympathetic nervous system.",
   },
 ];
 

@@ -78,7 +78,7 @@ export default function FoodAsMedicineLibrary() {
             className="max-w-2xl text-lg leading-relaxed"
             style={{ color: 'var(--ink-700)' }}
           >
-            What you put in the body — eighteen organ systems, hundreds of
+            What you put in the body, eighteen organ systems, hundreds of
             foods, herbs, and juices mapped to the cellular work they do.
             Foundational guides start every reader; Specialty guides focus
             on a specific condition; Advanced protocols run multiple
@@ -99,7 +99,7 @@ export default function FoodAsMedicineLibrary() {
           id="specialty"
           label="Section B · Level 2"
           title="Specialty Guides"
-          summary="Condition-specific food protocols for readers with a particular focus — heart-rate recovery, blood glucose, weekly resets, breakfast pairings."
+          summary="Condition-specific food protocols for readers with a particular focus, heart-rate recovery, blood glucose, weekly resets, breakfast pairings."
           guides={foodSpecialty}
         />
         <GuideSection

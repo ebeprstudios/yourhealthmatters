@@ -29,7 +29,7 @@ export const insulinZones: InsulinZone[] = [
       "Highly processed carbohydrates eaten alone",
     ],
     whyItMatters:
-      "Insulin sensitivity is highest in the morning. Your body handles natural sugars from fruit and starches most efficiently between waking and early afternoon — this is when fruit juices belong.",
+      "Insulin sensitivity is highest in the morning. Your body handles natural sugars from fruit and starches most efficiently between waking and early afternoon. This is when fruit juices belong.",
   },
   {
     id: "iz-02",

@@ -49,7 +49,7 @@ export default function GuideCard({ guide, index }: GuideCardProps) {
           boxShadow: 'var(--shadow-card)',
         }}
       >
-        {/* Color header — clickable area into the guide detail page */}
+        {/* Color header, clickable area into the guide detail page */}
         <Link
           href={detailHref}
           className="block relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--zone-peak)]"

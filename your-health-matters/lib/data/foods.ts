@@ -18,14 +18,14 @@ export const foods: Food[] = [
     type: "vegetable",
     activeCompounds: ["betalains", "dietary nitrates", "folate"],
     mechanism:
-      "Beets are rich in dietary nitrates that the body converts to nitric oxide — gently relaxing blood vessel walls and supporting endothelial health. Betalains are powerful liver-supporting antioxidants. The deep red color signals high anthocyanin content.",
+      "Beets are rich in dietary nitrates that the body converts to nitric oxide, gently relaxing blood vessel walls and supporting endothelial health. Betalains are powerful liver-supporting antioxidants. The deep red color signals high anthocyanin content.",
     organSystems: ["heart", "artery-health", "liver", "blood-health"],
     insulinZones: ["peak", "declining"],
     preparationNotes:
       "Juice raw for full nitrate availability. Roast for a sweeter, gentler effect.",
     pairings: ["lemon", "ginger", "carrot"],
     cautions: [
-      "Can temporarily turn urine and stool pink — this is harmless",
+      "Can temporarily turn urine and stool pink. This is harmless",
       "If you have kidney stones, consult your physician (oxalate content)",
     ],
     culturalTradition: "Mediterranean and Eastern European folk medicine",
@@ -41,7 +41,7 @@ export const foods: Food[] = [
     organSystems: ["kidneys", "skin", "lymphatic"],
     insulinZones: ["peak", "declining", "caution"],
     preparationNotes:
-      "Juice with the skin on — most of the silica and minerals sit just under the skin.",
+      "Juice with the skin on. Most of the silica and minerals sit just under the skin.",
     pairings: ["celery", "lemon", "mint"],
   },
   {
@@ -51,7 +51,7 @@ export const foods: Food[] = [
     type: "vegetable",
     activeCompounds: ["apigenin", "luteolin", "phthalides", "natural sodium"],
     mechanism:
-      "Celery's apigenin and luteolin gently calm inflammation. Its natural sodium salts support adrenal and kidney function — very different from added table salt.",
+      "Celery's apigenin and luteolin gently calm inflammation. Its natural sodium salts support adrenal and kidney function, very different from added table salt.",
     organSystems: ["kidneys", "adrenal", "anti-inflammatory", "lymphatic"],
     insulinZones: ["peak", "declining", "caution"],
     preparationNotes:
@@ -83,7 +83,7 @@ export const foods: Food[] = [
     ],
     insulinZones: ["peak", "declining", "caution"],
     preparationNotes:
-      "Eat raw in salads with EVOO and lemon. Lightly cooked also works — and is required for thyroid patients eating cruciferous greens.",
+      "Eat raw in salads with EVOO and lemon. Lightly cooked also works, and is required for thyroid patients eating cruciferous greens.",
     pairings: ["extra-virgin-olive-oil", "lemon", "garlic"],
     cautions: ["Thyroid patients: cook cruciferous greens before eating"],
   },
@@ -142,7 +142,7 @@ export const foods: Food[] = [
     type: "herb",
     activeCompounds: ["curcumin", "turmerones"],
     mechanism:
-      "Curcumin blocks NF-κB, the master inflammation switch, and supports liver phase II detoxification. Its bioavailability is poor on its own — black pepper raises absorption by ~2,000%, and dietary fat further improves it.",
+      "Curcumin blocks NF-κB, the master inflammation switch, and supports liver phase II detoxification. Its bioavailability is poor on its own, black pepper raises absorption by ~2,000%, and dietary fat further improves it.",
     organSystems: [
       "anti-inflammatory",
       "liver",
@@ -155,7 +155,7 @@ export const foods: Food[] = [
     cautions: [
       "ALWAYS pair with black pepper",
       "Pair with fat for full absorption",
-      "May potentiate blood thinners — consult physician if on warfarin",
+      "May potentiate blood thinners, consult physician if on warfarin",
     ],
     drugInteractions: ["warfarin", "aspirin", "anticoagulants"],
     culturalTradition: "Ayurvedic medicine (daily food in India)",
@@ -208,7 +208,7 @@ export const foods: Food[] = [
     organSystems: ["immune", "lungs", "gut"],
     insulinZones: ["peak", "declining", "caution"],
     pairings: ["honey", "olive-oil"],
-    cautions: ["Use food-grade only. Very potent — dilute properly."],
+    cautions: ["Use food-grade only. Very potent, dilute properly."],
     drugInteractions: [
       "Generally safe with most medications including warfarin and statins",
     ],

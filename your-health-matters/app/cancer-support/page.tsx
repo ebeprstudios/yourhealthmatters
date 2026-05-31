@@ -88,7 +88,7 @@ export default function CancerSupportPage() {
             ))}
           </div>
 
-          {/* Download — email-gated */}
+          {/* Download, email-gated */}
           <div className="mt-8 flex flex-wrap gap-3">
             {cancerGuide && <GuideDownloadGate guide={cancerGuide} variant="detail" />}
             <Link href="/#guides" className="inline-flex items-center gap-2 bg-white/15 text-white font-medium px-5 py-2.5 rounded-full hover:bg-white/25 transition-all text-sm">
@@ -264,7 +264,7 @@ export default function CancerSupportPage() {
                 <DrVeraChat compact pageScope={chatScope} />
               </div>
 
-              {/* Download card — email-gated */}
+              {/* Download card, email-gated */}
               <div className="rounded-2xl p-5 text-white text-center" style={{ backgroundColor: '#4A0E0E' }}>
                 <span className="text-3xl block mb-2">🎗️</span>
                 <p className="font-serif font-bold text-lg mb-1">Full Protocol PDF</p>

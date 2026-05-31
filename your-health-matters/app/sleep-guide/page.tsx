@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 export const metadata: Metadata = {
   title: 'What Your Body Does While You Sleep | Your Health Guide',
   description:
-    'An interactive clinical teaching by Dr. Vera Holloway. Explore all 5 sleep stages, 8 organ repair systems, and 5 sleep scenarios — from ideal sleep to sleep deprivation. Understand what actually happens when you close your eyes.',
+    'An interactive clinical teaching by Dr. Vera Holloway. Explore all 5 sleep stages, 8 organ repair systems, and 5 sleep scenarios, from ideal sleep to sleep deprivation. Understand what actually happens when you close your eyes.',
   keywords: [
     'sleep stages', 'what happens when you sleep', 'sleep and healing',
     'sleep and hormones', 'growth hormone sleep', 'liver clock', 'glymphatic system',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'What Your Body Does While You Sleep',
-    description: 'An interactive clinical teaching — 5 sleep stages, 8 organ systems repairing, 5 real sleep scenarios.',
+    description: 'An interactive clinical teaching5 sleep stages, 8 organ systems repairing, 5 real sleep scenarios.',
     type: 'article',
   },
 };

@@ -9,9 +9,9 @@ interface ShoppingListFormProps {
 }
 
 const LEVEL_LABEL: Record<Exclude<ProtocolLevel, never>, string> = {
-  1: 'Level 1 — Starter',
-  2: 'Level 2 — Intermediate',
-  3: 'Level 3 — Pro',
+  1: 'Level 1, Starter',
+  2: 'Level 2, Intermediate',
+  3: 'Level 3, Pro',
 }
 
 /**
@@ -48,7 +48,7 @@ export default function ShoppingListForm({ organSystems, foods }: ShoppingListFo
 
   return (
     <div className="space-y-8">
-      {/* Selection panel — hidden from print */}
+      {/* Selection panel, hidden from print */}
       <section
         className="no-print rounded-2xl p-6"
         style={{ backgroundColor: 'var(--paper-raised)', border: 'var(--border-hairline)', boxShadow: 'var(--shadow-card)' }}
@@ -184,7 +184,7 @@ export default function ShoppingListForm({ organSystems, foods }: ShoppingListFo
             <p>
               Educational only. Not medical advice. Always consult your
               physician before making changes to your diet, supplements, or
-              medications — especially if you are pregnant, nursing, on
+              medications, especially if you are pregnant, nursing, on
               prescription medications, or managing a chronic condition.
             </p>
           </footer>

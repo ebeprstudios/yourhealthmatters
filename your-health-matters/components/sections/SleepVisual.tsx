@@ -45,9 +45,9 @@ const SLEEP_STAGES = [
     systems: [
       'Cellular DNA repair peaks (PARP enzymes max)',
       'Mitochondria rebuilt in every cell',
-      'Autophagy — damaged protein removal',
+      'Autophagy, damaged protein removal',
       'Telomeres partially restored',
-      'Glymphatic system fully active — beta-amyloid flushed'
+      'Glymphatic system fully active, beta-amyloid flushed'
     ],
     hormone: 'Growth Hormone pulses'
   },
@@ -56,10 +56,10 @@ const SLEEP_STAGES = [
     color: '#ff8c42', icon: '🌅', depth: 30,
     systems: [
       'Testosterone peaks just before waking',
-      'Cortisol surges — dawn phenomenon',
+      'Cortisol surges, dawn phenomenon',
       'Procedural memory consolidation finalizes',
       'Leptin signals tomorrow\'s satiety',
-      'Ghrelin rises — morning hunger awakens'
+      'Ghrelin rises, morning hunger awakens'
     ],
     hormone: 'Cortisol peaks (dawn)'
   }
@@ -79,14 +79,14 @@ const SCENARIOS = [
       { label: 'Morning State', status: '✅ Clean + clear', detail: 'No inflammation, stable hormones, sharp cognition' }
     ],
     warning: null,
-    advice: 'This is the gold standard. Your body runs its full pharmaceutical factory — detox, repair, consolidate, restore. Every system gets its full window.'
+    advice: 'This is the gold standard. Your body runs its full pharmaceutical factory, detox, repair, consolidate, restore. Every system gets its full window.'
   },
   {
     id: 'late', label: 'Late Eating', icon: '🍽️', color: '#ff6b6b',
     bedtime: '11:00 PM', wakeTime: '7:00 AM', lastMeal: '9:30 PM', fastHours: '1.5 hrs', quality: 38,
     subtitle: 'Heavy carbs + fats at 9pm · Glucose spike before sleep',
     outcomes: [
-      { label: 'Liver Detox', status: '❌ Blocked 3–4 hrs', detail: 'Liver busy digesting — detoxification delayed completely' },
+      { label: 'Liver Detox', status: '❌ Blocked 3–4 hrs', detail: 'Liver busy digesting, detoxification delayed completely' },
       { label: 'Growth Hormone', status: '❌ Reduced 60%', detail: 'Insulin spike directly suppresses GH release at sleep onset' },
       { label: 'Brain Cleaning', status: '⚠️ Partial only', detail: 'Metabolic competition delays glymphatic system startup' },
       { label: 'Fasting Glucose', status: '❌ 115–130 mg/dL', detail: 'Liver runs gluconeogenesis all night. Wakes elevated.' },
@@ -94,7 +94,7 @@ const SCENARIOS = [
       { label: 'Morning State', status: '❌ Foggy + craving', detail: 'Inflammation high. Broken appetite. Carb cravings by 8am.' }
     ],
     warning: '3–4 AM CRASH: Glucose crashes to 65–75 mg/dL. Adrenaline floods the system. You wake up unable to fall back asleep.',
-    advice: 'Every hour earlier you stop eating gives your liver more time to detox instead of digest. The kitchen closes at 7pm for a biological reason — not a rule.'
+    advice: 'Every hour earlier you stop eating gives your liver more time to detox instead of digest. The kitchen closes at 7pm for a biological reason, not a rule.'
   },
   {
     id: 'stress', label: 'High Stress', icon: '⚡', color: '#f4c56a',
@@ -102,10 +102,10 @@ const SCENARIOS = [
     subtitle: 'High cortisol · Racing thoughts · Late bedtime',
     outcomes: [
       { label: 'Liver Detox', status: '⚠️ Partially blocked', detail: 'High cortisol elevates liver glucose output, competing with detox' },
-      { label: 'Growth Hormone', status: '❌ Suppressed', detail: 'Cortisol directly blocks GH secretion — no repair signal sent' },
+      { label: 'Growth Hormone', status: '❌ Suppressed', detail: 'Cortisol directly blocks GH secretion, no repair signal sent' },
       { label: 'Brain Cleaning', status: '⚠️ Reduced 40%', detail: 'Sympathetic activation delays deep sleep entry significantly' },
       { label: 'Fasting Glucose', status: '⚠️ 100–115 mg/dL', detail: 'Cortisol-driven gluconeogenesis elevates overnight glucose' },
-      { label: 'Immune System', status: '❌ Suppressed', detail: 'Cortisol is anti-inflammatory — blocks NK cell activation' },
+      { label: 'Immune System', status: '❌ Suppressed', detail: 'Cortisol is anti-inflammatory, blocks NK cell activation' },
       { label: 'Morning State', status: '⚠️ Wired-tired', detail: 'High cortisol + poor sleep = exhausted but cannot rest' }
     ],
     warning: 'CORTISOL FLOOD: Stress keeps your sympathetic nervous system active. Your body thinks it is still daytime. Deep repair cannot begin.',
@@ -123,8 +123,8 @@ const SCENARIOS = [
       { label: 'Insulin Resistance', status: '❌ Spikes to pre-diabetic', detail: 'One night sleep-deprived = insulin resistance of pre-diabetic state.' },
       { label: 'Appetite Hormones', status: '❌ Completely broken', detail: 'Ghrelin +15%, Leptin -15%. Hungry all day. Cravings all day.' }
     ],
-    warning: 'CRITICAL: After ONE night of 3.5 hrs sleep — immune drops 70%, insulin resistance spikes, beta-amyloid accumulates in the brain. This is not tiredness. This is organ damage.',
-    advice: 'Sleep deprivation is not a badge of honor. It is measurable metabolic and neurological damage. Prioritize sleep as medicine — it is the single most powerful intervention available.'
+    warning: 'CRITICAL: After ONE night of 3.5 hrs sleep, immune drops 70%, insulin resistance spikes, beta-amyloid accumulates in the brain. This is not tiredness. This is organ damage.',
+    advice: 'Sleep deprivation is not a badge of honor. It is measurable metabolic and neurological damage. Prioritize sleep as medicine. It is the single most powerful intervention available.'
   },
   {
     id: 'protocol', label: 'Dr. Vera Protocol', icon: '🌿', color: '#69db7c',
@@ -135,7 +135,7 @@ const SCENARIOS = [
       { label: '7:00 PM', status: '🔒 Kitchen closes', detail: 'Water, herbal tea, and lemon only from here until morning.' },
       { label: '9:00 PM', status: '📵 Screens off', detail: 'Blue light suppresses melatonin. Dark room activates pineal gland.' },
       { label: '9:30 PM', status: '🫖 Sleep prep', detail: 'Magnesium glycinate 400mg + chamomile tea. Nervous system shifts.' },
-      { label: '10:30 PM', status: '😴 Sleep onset', detail: 'Perfectly timed for 11pm liver clock activation — detox begins.' },
+      { label: '10:30 PM', status: '😴 Sleep onset', detail: 'Perfectly timed for 11pm liver clock activation, detox begins.' },
       { label: '6:00 AM', status: '🌅 Wake clean', detail: '16oz water + sea salt + lemon. Fasting glucose 80–90 mg/dL.' }
     ],
     warning: null,
@@ -144,12 +144,12 @@ const SCENARIOS = [
 ];
 
 const ORGANS = [
-  { organ: 'Brain', color: '#7c6aff', icon: '🧠', action: 'Glymphatic cleaning flushes beta-amyloid + tau proteins. The brain\'s ONLY cleaning mechanism — only works during sleep.', timing: 'All night, peaks hrs 3–6' },
+  { organ: 'Brain', color: '#7c6aff', icon: '🧠', action: 'Glymphatic cleaning flushes beta-amyloid + tau proteins. The brain\'s ONLY cleaning mechanism, only works during sleep.', timing: 'All night, peaks hrs 3–6' },
   { organ: 'Liver', color: '#4ecdc4', icon: '🟢', action: 'Cytochrome P450 detox peak. Filters blood, processes hormones, metabolizes toxins and waste products.', timing: '11pm–3am (liver clock)' },
   { organ: 'Immune System', color: '#ff6b9d', icon: '🛡️', action: 'T-cell + NK cell production peaks. Cytokine signaling. Repair of damaged and infected tissue.', timing: 'Stage 3 deep sleep' },
   { organ: 'Skin', color: '#f4c56a', icon: '✨', action: 'Collagen synthesis peaks. Cellular turnover at highest rate. Growth hormone drives dermal repair.', timing: 'First 90 minutes' },
   { organ: 'Gut', color: '#69db7c', icon: '🌿', action: 'Microbiome rebalancing. Intestinal lining (epithelium) regenerates. Enzyme systems reset for tomorrow.', timing: 'Hours 2–5' },
-  { organ: 'Heart', color: '#ff4757', icon: '❤️', action: 'Blood pressure dips 10–20 mmHg (nocturnal dipping). Endothelium repairs. Vessel wall regeneration.', timing: 'Immediate — Stage 1' },
+  { organ: 'Heart', color: '#ff4757', icon: '❤️', action: 'Blood pressure dips 10–20 mmHg (nocturnal dipping). Endothelium repairs. Vessel wall regeneration.', timing: 'Immediate, Stage 1' },
   { organ: 'Muscles', color: '#ff8c42', icon: '💪', action: 'Growth hormone drives micro-tear repair. Protein synthesis. Glycogen replenishment for next day.', timing: 'Deep sleep cycles' },
   { organ: 'Bones', color: '#a8dadc', icon: '🦴', action: 'Calcium deposition. Osteoblast activity peaks. Bone remodeling and density restoration.', timing: 'Hours 3–7' }
 ];
@@ -166,7 +166,7 @@ const DISRUPTORS = [
 const NONNEG = [
   { rule: 'Kitchen Closes 7pm', why: 'Gives your liver 3+ hours before sleep to detox, not digest', icon: '🔒' },
   { rule: 'Sleep by 10–11pm', why: 'Aligns with the liver clock peak (11pm–3am) and growth hormone window', icon: '🌙' },
-  { rule: 'No Screens 30 Min Before Bed', why: 'Blue light suppresses melatonin — the master repair trigger', icon: '📵' },
+  { rule: 'No Screens 30 Min Before Bed', why: 'Blue light suppresses melatonin, the master repair trigger', icon: '📵' },
   { rule: '12–16 Hour Overnight Fast', why: 'Empty gut = liver detoxes, autophagy runs, brain cleans itself', icon: '⏳' }
 ];
 
@@ -221,7 +221,7 @@ export default function SleepVisual() {
         .yhm-stab { cursor:pointer; transition:all .3s ease; font-family:Georgia,serif; }
       `}</style>
 
-      {/* Starfield — client only */}
+      {/* Starfield (client only) */}
       {mounted && (
         <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
           {stars.map((s, i) => (
@@ -258,7 +258,7 @@ export default function SleepVisual() {
         {/* ── SLEEP STAGE EXPLORER ── */}
         <section style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '22px', padding: '32px 28px', marginBottom: '48px' }}>
           <p style={{ fontSize: '11px', letterSpacing: '0.18em', color: '#6b7280', textTransform: 'uppercase', textAlign: 'center', marginBottom: '22px' }}>
-            The 5 Sleep Stages — Tap to Explore
+            The 5 Sleep Stages · Tap to Explore
           </p>
 
           {/* Stage tabs */}
@@ -323,7 +323,7 @@ export default function SleepVisual() {
         {/* ── SCENARIO EXPLORER ── */}
         <section style={{ marginBottom: '48px' }}>
           <p style={{ fontSize: '11px', letterSpacing: '0.18em', color: '#6b7280', textTransform: 'uppercase', textAlign: 'center', marginBottom: '18px' }}>
-            5 Sleep Scenarios — What Actually Changes
+            5 Sleep Scenarios · What Actually Changes
           </p>
 
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '24px' }}>

@@ -63,7 +63,7 @@ export const protocols: Protocol[] = [
       {
         order: 7,
         time: "7:00pm",
-        action: "Kitchen closes — no more food",
+        action: "Kitchen closes, no more food",
         rationale:
           "Begins the 12–16 hour overnight fast required for autophagy, liver detox, and lymphatic clearance.",
       },
@@ -87,7 +87,7 @@ export const protocols: Protocol[] = [
       {
         order: 1,
         time: "On waking",
-        action: "16oz water with lemon (no grapefruit — warfarin interaction)",
+        action: "16oz water with lemon (no grapefruit, warfarin interaction)",
         rationale:
           "Standard morning rehydration. Grapefruit must be avoided entirely with warfarin.",
       },
@@ -100,8 +100,8 @@ export const protocols: Protocol[] = [
       },
     ],
     keyRules: [
-      "NO grapefruit — interferes with warfarin",
-      "Cooked vegetables only — no raw",
+      "NO grapefruit, interferes with warfarin",
+      "Cooked vegetables only, no raw",
       "Turkey tail mushroom (immune support, well-studied in oncology)",
       "Turmeric ALWAYS with black pepper",
       "Vitamin K1/K2 intake stable (no large day-to-day shifts) while on warfarin",
@@ -144,7 +144,7 @@ export const protocols: Protocol[] = [
     ],
     keyRules: [
       "ALL fat-soluble compounds must pair with dietary fat (turmeric, carotenoids, vitamins A/D/E/K, betalains)",
-      "Fish oil with food only — never empty stomach",
+      "Fish oil with food only, never empty stomach",
       "Beet juice 5–10 minutes after fish oil for absorption synergy",
       "Smaller, more frequent meals due to reduced bile reserve",
     ],

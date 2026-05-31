@@ -77,7 +77,7 @@ export default function Nav() {
           >
             Ask Dr. Vera
           </Link>
-          {/* Subscribe — filled button, the rightmost item, conversion focus */}
+          {/* Subscribe, filled button, the rightmost item, conversion focus */}
           <Link
             href="/subscribe"
             className="text-sm font-semibold px-4 py-2 rounded-full transition-all hover:opacity-90"
@@ -132,7 +132,7 @@ export default function Nav() {
           >
             🌿 Ask Dr. Vera
           </Link>
-          {/* Subscribe stays visually distinct on mobile too — filled */}
+          {/* Subscribe stays visually distinct on mobile too, filled */}
           <Link
             href="/subscribe"
             onClick={() => setMenuOpen(false)}
