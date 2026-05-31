@@ -6,13 +6,13 @@ import DrVeraChat from '@/components/chat/DrVeraChat'
 import InnerCourtroom from './InnerCourtroom'
 
 export const metadata: Metadata = {
-  title: 'The Inner Courtroom | Mind as Medicine | Your Health Guide',
+  title: 'The Inner Courtroom | Station 2 Deep-Dive | Mind as Medicine',
   description:
-    'How the mind forms an inner courtroom — judge, prosecutor, and jury — and renders secret verdicts about your worth. A Root Work teaching from Dr. Vera Holloway, CNS + CHN.',
+    'A deep-dive on Station 2 (Binary Collapse): how the mind sorts an ambiguous reality into a verdict about your worth — judge, prosecutor, and jury — and what breaks the cycle. From Dr. Vera Holloway, CNS + CHN.',
   openGraph: {
-    title: 'The Inner Courtroom · Root Work',
+    title: 'The Inner Courtroom · Station 2 Deep-Dive',
     description:
-      'Inside the mind, a trial is always running. Learn how the inner courtroom forms, how it sustains itself, and what breaks the cycle.',
+      'The courtroom is binary collapse dramatized: "she pulled away" becomes "I have been replaced." Learn how the verdict is rendered — and how to reopen the case.',
   },
 }
 
@@ -21,10 +21,10 @@ export default function Page() {
     <main className="min-h-screen" style={{ backgroundColor: '#fbf9fd' }}>
       <Nav />
 
-      {/* Breadcrumb — clears the fixed nav, sits above the component's own header */}
+      {/* Back-link — returns to Station 2 on the Mind as Medicine page */}
       <div className="max-w-[760px] mx-auto px-5 pt-24 pb-0">
         <Link
-          href="/root-work"
+          href="/mind-as-medicine#station-2"
           className="inline-flex items-center gap-1.5 text-xs transition-colors"
           style={{ color: 'var(--ink-500)' }}
         >
@@ -40,7 +40,7 @@ export default function Page() {
             <line x1="19" y1="12" x2="5" y2="12" />
             <polyline points="12 5 5 12 12 19" />
           </svg>
-          Root Work
+          Mind as Medicine · Station 2
         </Link>
       </div>
 
