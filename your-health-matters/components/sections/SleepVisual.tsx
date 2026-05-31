@@ -250,7 +250,7 @@ export default function SleepVisual() {
             What Your Body Does<br />While You Sleep
           </h1>
           <p style={{ fontSize: '13px', color: '#6b7280', fontStyle: 'italic', letterSpacing: '0.08em' }}>
-            A Clinical Teaching · Dr. Vera Holloway, CNS + CHN · Your Health Guide
+            A Clinical Teaching · Dr. Vera Holloway · Your Health Guide
           </p>
           <div style={{ width: '60px', height: '1px', background: 'linear-gradient(90deg, transparent, #a78bfa, transparent)', margin: '18px auto 0' }} />
         </header>
@@ -461,7 +461,7 @@ export default function SleepVisual() {
         {/* Footer */}
         <footer style={{ textAlign: 'center', marginTop: '48px', fontSize: '11px', color: '#374151', lineHeight: 1.9 }}>
           ⚕️ Educational information only · Not medical advice<br />
-          Dr. Vera Holloway, CNS + CHN · Your Health Guide
+          Dr. Vera Holloway · Your Health Guide
         </footer>
       </div>
     </div>

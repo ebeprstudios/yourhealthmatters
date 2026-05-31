@@ -26,6 +26,79 @@ export default function Home() {
       <NewsletterPopup />
       <Hero />
 
+      {/* Tools strip — interactive references between the doorways and the library */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-4">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-3xl sm:text-4xl mb-3" style={{ color: 'var(--ink-900)' }}>
+            Tools to support the work.
+          </h2>
+          <p className="max-w-xl mx-auto leading-relaxed italic" style={{ color: 'var(--ink-500)' }}>
+            Interactive references that turn the guides into something you can use.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {[
+            {
+              icon: '🔬',
+              title: 'The 18 Organ Systems',
+              body: 'Every system in the body, color-coded, with the foods and herbs that support each one.',
+              cta: 'Explore the systems',
+              href: '/systems',
+            },
+            {
+              icon: '🕐',
+              title: 'Insulin Time Zones',
+              body: "An interactive timeline of your body's four daily energy windows.",
+              cta: 'Open the zones',
+              href: '/insulin-zones',
+            },
+            {
+              icon: '🧺',
+              title: 'Shopping List Generator',
+              body: 'Pick an organ system or a protocol. Get a printable list.',
+              cta: 'Generate a list',
+              href: '/shopping-list',
+            },
+            {
+              icon: '🌙',
+              title: 'Sleep Guide',
+              body: 'What the body does overnight, and how to support each stage.',
+              cta: 'Open the guide',
+              href: '/sleep-guide',
+            },
+          ].map(({ icon, title, body, cta, href }) => (
+            <Link
+              key={href}
+              href={href}
+              className="group flex flex-col rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-md"
+              style={{
+                backgroundColor: 'var(--paper-raised)',
+                border: 'var(--border-hairline)',
+              }}
+            >
+              <span className="text-3xl mb-4" aria-hidden="true">{icon}</span>
+              <p className="font-serif text-lg mb-2" style={{ color: 'var(--ink-900)' }}>
+                {title}
+              </p>
+              <p className="text-sm leading-relaxed mb-5 flex-1" style={{ color: 'var(--ink-500)' }}>
+                {body}
+              </p>
+              <span
+                className="inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: 'var(--zone-peak)' }}
+              >
+                {cta}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Featured guides preview */}
       <section id="guides" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-14">

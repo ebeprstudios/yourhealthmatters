@@ -197,8 +197,8 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
             🌿
           </div>
           <div>
-            <p className="text-white font-semibold text-sm font-serif">Dr. Vera, CNS</p>
-            <p className="text-forest-300 text-xs">Holistic Nutrition Specialist</p>
+            <p className="text-white font-semibold text-sm font-serif">Dr. Vera</p>
+            <p className="text-forest-300 text-xs">Teaching Voice · Your Health Guide</p>
           </div>
           <div className="ml-auto flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />

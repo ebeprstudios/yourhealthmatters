@@ -87,7 +87,7 @@ export default function MindAsMedicinePage() {
             New loops, new sub-systems, and new guides get added to this tab as they are discovered. The architecture is alive. Bookmark this page — it will keep growing.
           </p>
           <p className="text-sm font-medium" style={{ color: MIND.accent }}>
-            — Dr. Vera Holloway, CNS + CHN
+            — Dr. Vera Holloway
           </p>
         </div>
       </section>

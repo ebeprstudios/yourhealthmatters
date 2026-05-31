@@ -8,7 +8,7 @@ import InnerCourtroom from './InnerCourtroom'
 export const metadata: Metadata = {
   title: 'The Inner Courtroom | Station 2 Deep-Dive | Mind as Medicine',
   description:
-    'A deep-dive on Station 2 (Binary Collapse): how the mind sorts an ambiguous reality into a verdict about your worth — judge, prosecutor, and jury — and what breaks the cycle. From Dr. Vera Holloway, CNS + CHN.',
+    'A deep-dive on Station 2 (Binary Collapse): how the mind sorts an ambiguous reality into a verdict about your worth — judge, prosecutor, and jury — and what breaks the cycle. From Dr. Vera Holloway.',
   openGraph: {
     title: 'The Inner Courtroom · Station 2 Deep-Dive',
     description:

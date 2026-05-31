@@ -3,11 +3,10 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-// Top nav: four items only. One organism, two doorways, plus home + about.
-// The five secondary tools (Systems, Insulin Zones, Sleep Guide, Shopping
-// List, Subscribe) live in the footer.
+// Top nav: the two doorways + About, then Ask Dr. Vera and a Subscribe CTA.
+// The logo links home (so no redundant "Home" item). The four secondary
+// tools (Systems, Insulin Zones, Sleep Guide, Shopping List) live in the footer.
 const PRIMARY_LINKS = [
-  { href: '/', label: 'Home' },
   { href: '/food-as-medicine', label: 'Food as Medicine' },
   { href: '/mind-as-medicine', label: 'Mind as Medicine' },
   { href: '/#about', label: 'About' },
@@ -78,6 +77,13 @@ export default function Nav() {
           >
             Ask Dr. Vera
           </Link>
+          <Link
+            href="/subscribe"
+            className="text-sm font-semibold px-4 py-2 rounded-full transition-all"
+            style={{ backgroundColor: 'var(--zone-peak)', color: 'white' }}
+          >
+            Subscribe
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -121,6 +127,14 @@ export default function Nav() {
             style={{ color: 'var(--zone-peak)' }}
           >
             🌿 Ask Dr. Vera
+          </Link>
+          <Link
+            href="/subscribe"
+            onClick={() => setMenuOpen(false)}
+            className="block text-center text-sm font-semibold py-2.5 mt-2 rounded-full"
+            style={{ backgroundColor: 'var(--zone-peak)', color: 'white' }}
+          >
+            Subscribe
           </Link>
         </div>
       )}

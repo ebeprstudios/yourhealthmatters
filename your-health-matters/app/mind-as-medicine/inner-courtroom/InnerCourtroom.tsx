@@ -252,7 +252,7 @@ export default function InnerCourtroom() {
 
         {/* ---------------- Byline + disclaimer ---------------- */}
         <footer className="court-footer">
-          <p className="byline">Dr. Vera Holloway, CNS + CHN</p>
+          <p className="byline">Dr. Vera Holloway</p>
           <p className="byline-sub">Researched by Erica Ehiwe · Your Health Guide · Mind as Medicine</p>
           <p className="disclaimer">
             Educational only — not a substitute for therapy, counsel, or pastoral care. If you are
