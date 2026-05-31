@@ -69,6 +69,40 @@ export default function MindAsMedicinePage() {
         </div>
       </section>
 
+      {/* Root Work band */}
+      <section className="py-12" style={{ backgroundColor: '#fbf9fd' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <a
+            href="/root-work"
+            className="block rounded-2xl p-6 sm:p-8 transition-all hover:shadow-md group"
+            style={{
+              backgroundColor: MIND.cardBg,
+              border: `1px solid ${MIND.cardBorder}`,
+              borderLeft: `4px solid ${MIND.accent}`,
+            }}
+          >
+            <div className="flex items-start gap-4">
+              <span className="text-3xl flex-shrink-0" aria-hidden="true">🌱</span>
+              <div className="flex-1">
+                <p className="text-xs font-bold tracking-[0.18em] uppercase mb-2" style={{ color: MIND.accentSoft }}>
+                  Root Work
+                </p>
+                <h2 className="font-serif text-2xl sm:text-3xl mb-2" style={{ color: MIND.ink }}>
+                  The work beneath the loop
+                </h2>
+                <p className="text-sm sm:text-base leading-relaxed mb-4" style={{ color: MIND.inkSoft }}>
+                  The stations name the mechanics. Root Work examines the meaning the loop was built
+                  to protect — the beliefs and verdicts underneath. Start with The Inner Courtroom.
+                </p>
+                <span className="inline-block text-sm font-medium underline" style={{ color: MIND.accent }}>
+                  Enter Root Work →
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
       {/* Closing band */}
       <section className="py-14" style={{ backgroundColor: MIND.highlightBg }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
