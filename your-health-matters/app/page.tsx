@@ -115,7 +115,7 @@ export default function Home() {
             className="max-w-xl mx-auto leading-relaxed"
             style={{ color: 'var(--ink-500)' }}
           >
-            Foundational, Specialty, and Advanced guides — each a rich web
+            Foundational, Specialty, and Advanced guides, each a rich web
             page and a printable PDF. Browse the full library below or jump
             straight to the categorized index.
           </p>
@@ -158,7 +158,7 @@ export default function Home() {
             </h2>
             <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
               I built Your Health Guide as a place to share the research
-              I&apos;ve spent years inside of — how the body works, what
+              I&apos;ve spent years inside of: how the body works, what
               food does inside it, and how healing traditions across the
               world have understood that relationship for centuries.
               I&apos;m training as a Certified Nutrition Specialist, and
@@ -168,14 +168,14 @@ export default function Home() {
               The research spans West African food medicine, Ayurvedic
               tradition, Traditional Chinese Medicine, Mediterranean
               protocols, Caribbean herbal lineages, and Southeast Asian
-              botanical knowledge — integrated with modern clinical
+              botanical knowledge, integrated with modern clinical
               research.
             </p>
             <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
               <strong style={{ color: 'var(--ink-900)' }}>
                 About Dr. Vera Holloway.
               </strong>{' '}
-              Dr. Vera is the teaching voice of this platform — an
+              Dr. Vera is the teaching voice of this platform, an
               educational persona I created to bring multi-tradition
               holistic medicine into a warm, accessible conversation. The
               protocols, mechanisms, and food-as-medicine guidance you
@@ -188,7 +188,7 @@ export default function Home() {
               style={{ color: 'var(--ink-500)' }}
             >
               The body is honored when we feed it well. Understanding how
-              it works — how to nourish it, protect it, and restore it —
+              it works (how to nourish it, protect it, and restore it)
               is, in my tradition and many others, one of the deepest acts
               of stewardship we can offer. That is what this work is for.
             </p>

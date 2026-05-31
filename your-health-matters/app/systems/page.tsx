@@ -7,7 +7,7 @@ import { organSystems } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'The 18 Organ Systems | Your Health Guide',
   description:
-    'Dr. Vera Holloway\'s master teaching framework — the 18 organ systems, color-coded across the entire site. Each system has its own landing page with the foods, herbs, juices, and salads that support it.',
+    'Dr. Vera Holloway\'s master teaching framework: the 18 organ systems, color-coded across the entire site. Each system has its own landing page with the foods, herbs, juices, and salads that support it.',
 }
 
 export default function SystemsHubPage() {
@@ -28,7 +28,7 @@ export default function SystemsHubPage() {
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed" style={{ color: 'var(--ink-700)' }}>
             Every guide on this site is mapped to one or more of these 18
-            systems. Each system has its own color — the same color follows
+            systems. Each system has its own color, and that color follows
             the system across every guide, juice, salad, and protocol. Pick
             the system your body is asking about and the page will show you
             the foods, herbs, juices, and salads that support it.

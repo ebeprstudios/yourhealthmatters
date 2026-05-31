@@ -89,7 +89,7 @@ export default function DisclaimerFooter() {
             <strong style={{ color: 'var(--ink-900)' }}>Medical Disclaimer.</strong>{' '}
             This content is educational and does not substitute for the care of
             your own physician. Always consult your healthcare provider before
-            making changes to your diet, supplement routine, or medications —
+            making changes to your diet, supplement routine, or medications,
             especially if you are pregnant, nursing, on prescription medications,
             or managing a chronic condition.
           </p>

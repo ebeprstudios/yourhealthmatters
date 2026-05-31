@@ -4,12 +4,12 @@ A Next.js web application presenting ten evidence-based healing guides with an A
 
 ## What's Inside
 
-- **10 healing guide pages** — each with full web content, key facts, and a PDF download button
-- **Dr. Vera chat** — scoped to each guide's topics + full holistic health knowledge
-- **Global floating chat** — available on every page for any health question
-- **Animated landing page** — particle canvas, scroll-reveal cards, floating elements
-- **Fully mobile responsive** — designed for phones first
-- **PDF downloads** — every guide links to its printable PDF
+- **10 healing guide pages**: each with full web content, key facts, and a PDF download button
+- **Dr. Vera chat**: scoped to each guide's topics + full holistic health knowledge
+- **Global floating chat**: available on every page for any health question
+- **Animated landing page**: particle canvas, scroll-reveal cards, floating elements
+- **Fully mobile responsive**: designed for phones first
+- **PDF downloads**: every guide links to its printable PDF
 
 ## Tech Stack
 
@@ -66,7 +66,7 @@ public/pdfs/
 1. Open `lib/guides.ts`
 2. Add a new object to the `guides` array following the existing pattern
 3. Add your PDF to `public/pdfs/`
-4. That's it — the guide card and page are generated automatically
+4. That's it: the guide card and page are generated automatically
 
 ## Deploy to Vercel
 

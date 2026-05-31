@@ -25,7 +25,7 @@ export const clinicalRules: ClinicalRule[] = [
   {
     id: "cr-j-03",
     category: "juice",
-    rule: "Ceylon cinnamon only — never cassia",
+    rule: "Ceylon cinnamon only, never cassia",
     mechanism:
       "Cassia cinnamon contains coumarin, which can be hepatotoxic in regular doses. Ceylon cinnamon is the safe daily choice.",
     appliesTo: ["cinnamon"],
@@ -81,12 +81,12 @@ export const clinicalRules: ClinicalRule[] = [
     category: "salad",
     rule: "Minimum 1 tablespoon of fresh herbs",
     mechanism:
-      "Fresh herbs (parsley, cilantro, dill, basil, mint) deliver concentrated polyphenols and chlorophyll. They are not garnish — they are medicine.",
+      "Fresh herbs (parsley, cilantro, dill, basil, mint) deliver concentrated polyphenols and chlorophyll. They are not garnish. They are medicine.",
   },
   {
     id: "cr-s-05",
     category: "salad",
-    rule: "Cruciferous vegetables raw — except for thyroid patients",
+    rule: "Cruciferous vegetables raw, except for thyroid patients",
     mechanism:
       "Raw cruciferous vegetables (kale, broccoli, cabbage, Brussels sprouts) contain goitrogenic compounds that can interfere with thyroid hormone synthesis. Cooking deactivates them.",
     appliesTo: ["kale", "broccoli", "cabbage", "brussels-sprouts"],

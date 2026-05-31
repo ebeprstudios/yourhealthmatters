@@ -221,7 +221,7 @@ export default function DrVeraChat({ pageScope, compact = false }: DrVeraChatPro
                   🌿
                 </div>
                 <div className="max-w-[82%] rounded-2xl px-4 py-3 text-sm leading-relaxed bg-white border border-stone-200 text-stone-700">
-                  Welcome. I&apos;m Dr. Vera — the teaching voice of Your
+                  Welcome. I&apos;m Dr. Vera, the teaching voice of Your
                   Health Guide. I&apos;m an educational persona created
                   to share multi-tradition holistic medicine in a warm and
                   accessible way. The research is real. The warmth is by

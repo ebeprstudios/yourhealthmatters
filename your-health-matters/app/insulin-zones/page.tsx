@@ -8,7 +8,7 @@ import { insulinZones } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'The Insulin Time Zones | Your Health Guide',
   description:
-    'Insulin sensitivity follows a predictable daily curve. The same meal at 8am and 6pm produces a 2–3x difference in glucose response. Learn the four zones — Peak, Declining, Caution, and Closed — and how to eat with the curve.',
+    'Insulin sensitivity follows a predictable daily curve. The same meal at 8am and 6pm produces a 2–3x difference in glucose response. Learn the four zones (Peak, Declining, Caution, and Closed) and how to eat with the curve.',
 }
 
 export default function InsulinZonesPage() {
@@ -31,7 +31,7 @@ export default function InsulinZonesPage() {
             Your body handles the same food differently across the day.
             Insulin sensitivity peaks in the morning and falls steadily until
             the kitchen closes at 7pm. Tap a zone in the bar below to see
-            what to eat — and what to leave for tomorrow morning.
+            what to eat, and what to leave for tomorrow morning.
           </p>
         </div>
       </header>
@@ -56,7 +56,7 @@ export default function InsulinZonesPage() {
         <ClinicalCallout variant="firststep" title="Practical First Step">
           For the next seven days, eat your largest meal between 11am and
           1pm. Move it earlier than you usually would. Then notice your
-          energy in the late afternoon — it will tell you what your body
+          energy in the late afternoon. It will tell you what your body
           has been asking for all along.
         </ClinicalCallout>
       </div>

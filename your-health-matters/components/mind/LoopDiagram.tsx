@@ -198,7 +198,7 @@ function ChainLoop() {
       {/* Return arrow back to Station 1 */}
       <li className="text-center pt-2" aria-hidden="true">
         <p className="text-sm" style={{ color: '#a88a3d' }}>
-          ↻ back to Station 1 — the loop closes
+          ↻ back to Station 1: the loop closes
         </p>
       </li>
     </ol>

@@ -25,7 +25,7 @@ export const guides: Guide[] = [
     slug: "holistic-health-cheatsheet",
     title: "Holistic Health Cheat Sheet",
     subtitle:
-      "Your complete daily protocol — cholesterol, glucose, and kidney health",
+      "Your complete daily protocol: cholesterol, glucose, and kidney health",
     description:
       "The master daily reference for managing LDL/HDL cholesterol, blood glucose stability, and kidney function simultaneously through food, timing, and supplement protocols.",
     pdfPath: "/pdfs/holistic_health_cheatsheet.pdf",
@@ -54,16 +54,16 @@ export const guides: Guide[] = [
       {
         heading: "The Three-Goal Framework",
         content: [
-          "Most health protocols address one condition at a time. This guide addresses three simultaneously — because the body does not operate in isolation. Cholesterol, blood glucose, and kidney function are deeply interconnected.",
+          "Most health protocols address one condition at a time. This guide addresses three simultaneously, because the body does not operate in isolation. Cholesterol, blood glucose, and kidney function are deeply interconnected.",
           "The foods and timing protocols in this guide are selected specifically because they serve all three goals at once rather than helping one while harming another.",
         ],
       },
       {
         heading: "Raising HDL and Lowering LDL",
         content: [
-          "HDL acts as a reverse cholesterol transporter — it picks up excess cholesterol from arterial walls and returns it to the liver for clearance. Raising HDL is as important as lowering LDL, and is achieved through specific foods: avocado, extra virgin olive oil, walnuts, flaxseed, edamame, berries, and pomegranate.",
-          "Pomegranate is unique — it is the only food shown to simultaneously raise HDL AND reverse existing arterial plaque through its punicalagin compounds.",
-          "LDL reduction is primarily a fiber story. Soluble fiber from oats, psyllium, lentils, apples, and flaxseed binds bile acids in the gut before they can reabsorb, forcing the liver to convert more cholesterol into new bile — directly lowering circulating LDL.",
+          "HDL acts as a reverse cholesterol transporter: it picks up excess cholesterol from arterial walls and returns it to the liver for clearance. Raising HDL is as important as lowering LDL, and is achieved through specific foods: avocado, extra virgin olive oil, walnuts, flaxseed, edamame, berries, and pomegranate.",
+          "Pomegranate is unique: it is the only food shown to simultaneously raise HDL AND reverse existing arterial plaque through its punicalagin compounds.",
+          "LDL reduction is primarily a fiber story. Soluble fiber from oats, psyllium, lentils, apples, and flaxseed binds bile acids in the gut before they can reabsorb, forcing the liver to convert more cholesterol into new bile, directly lowering circulating LDL.",
         ],
       },
       {
@@ -85,7 +85,7 @@ export const guides: Guide[] = [
         heading: "The Daily Protocol",
         content: [
           "Rising: 16oz water with sea salt and fresh lemon juice.",
-          "Morning: Cucumber celery juice (skin on both) — kidney flush and hydration.",
+          "Morning: Cucumber celery juice (skin on both) for kidney flush and hydration.",
           "Breakfast: Egg whites with leafy greens and avocado.",
           "With every meal: ACV in water before. Chromium Picolinate with. 10–15 minute walk after.",
           "Kitchen closes at 7pm. The overnight fasting window is when the liver completes its deepest detox work.",
@@ -102,7 +102,7 @@ export const guides: Guide[] = [
     title: "Insulin Activity Guide",
     subtitle: "The 24-hour curve that determines when every food heals or harms",
     description:
-      "A complete visual and clinical guide to the daily insulin sensitivity curve — showing exactly when to eat fruit, juice, carbohydrates, and healing foods for maximum benefit.",
+      "A complete visual and clinical guide to the daily insulin sensitivity curve, showing exactly when to eat fruit, juice, carbohydrates, and healing foods for maximum benefit.",
     pdfPath: "/pdfs/insulin_activity.pdf",
     organSystems: ["blood-glucose", "liver", "adrenal"],
     level: "all",
@@ -116,14 +116,14 @@ export const guides: Guide[] = [
       "Insulin sensitivity peaks 9–10am",
       "Same meal = 2–3x more glucose spike at 6pm vs 8am",
       "Fruit is medicine before 2pm, triglycerides after 9pm",
-      "Walk 10 min after meals — free glucose intervention",
+      "Walk 10 min after meals: free glucose intervention",
     ],
     sections: [
       {
         heading: "Why Timing Matters More Than You Think",
         content: [
           "The same food produces dramatically different effects in the body depending on when it is eaten. A banana at 8am enters a metabolic environment where insulin sensitivity is at its daily maximum.",
-          "The same banana eaten at 9pm enters an environment where insulin sensitivity is near its daily minimum. The fructose now bypasses glucose metabolism and routes directly to the liver for triglyceride synthesis — raising LDL and increasing cardiovascular risk overnight.",
+          "The same banana eaten at 9pm enters an environment where insulin sensitivity is near its daily minimum. The fructose now bypasses glucose metabolism and routes directly to the liver for triglyceride synthesis, raising LDL and increasing cardiovascular risk overnight.",
         ],
       },
       {
@@ -160,7 +160,7 @@ export const guides: Guide[] = [
     title: "Complete Vegetable Guide",
     subtitle: "180 vegetables mapped across all 18 organ systems",
     description:
-      "Every major healing vegetable organized by the body system it most powerfully supports — from heart and kidneys to brain, lungs, and cellular repair.",
+      "Every major healing vegetable organized by the body system it most powerfully supports, from heart and kidneys to brain, lungs, and cellular repair.",
     pdfPath: "/pdfs/complete_vegetable_guide.pdf",
     companionPdfPath: "/pdfs/vegetable_cheatsheet.pdf",
     organSystems: [
@@ -194,24 +194,24 @@ export const guides: Guide[] = [
       "Spinach spans 13 organ systems",
       "Broccoli sulforaphane activates Nrf2 antioxidant switch",
       "Watercress has highest antioxidant density of any vegetable",
-      "Lion's Mane — only food that regenerates myelin",
+      "Lion's Mane: only food that regenerates myelin",
     ],
     sections: [
       {
         heading: "Why Vegetables Are Medicine",
         content: [
-          "The difference between a vegetable and a pharmaceutical is largely a matter of concentration and delivery mechanism. Broccoli sulforaphane activates the Nrf2 pathway — the master antioxidant switch that governs over 200 protective genes.",
-          "Kale's bile acid binding activity removes LDL cholesterol from the gut before it absorbs — the same mechanism as cholestyramine, a prescription cholesterol medication.",
+          "The difference between a vegetable and a pharmaceutical is largely a matter of concentration and delivery mechanism. Broccoli sulforaphane activates the Nrf2 pathway, the master antioxidant switch that governs over 200 protective genes.",
+          "Kale's bile acid binding activity removes LDL cholesterol from the gut before it absorbs, the same mechanism as cholestyramine, a prescription cholesterol medication.",
         ],
       },
       {
         heading: "The 18 Organ Systems Framework",
         content: [
-          "This guide organizes all vegetables by their primary organ system target. Many vegetables span multiple systems. Spinach appears in 13 of the 18 systems — making it the most cross-system healing vegetable catalogued.",
+          "This guide organizes all vegetables by their primary organ system target. Many vegetables span multiple systems. Spinach appears in 13 of the 18 systems, making it the most cross-system healing vegetable catalogued.",
         ],
       },
       {
-        heading: "Raw vs Cooked — The Critical Distinction",
+        heading: "Raw vs Cooked: The Critical Distinction",
         content: [
           "Broccoli and all cruciferous vegetables: chop and wait 40 minutes before cooking. This allows the myrosinase enzyme to convert glucoraphanin to sulforaphane before heat neutralizes the enzyme.",
           "Thyroid patients: all cruciferous vegetables must be cooked. Raw glucosinolates compete with iodine for thyroid uptake.",
@@ -229,7 +229,7 @@ export const guides: Guide[] = [
     title: "Complete Fruit Guide",
     subtitle: "180 fruits mapped across 18 organ systems with insulin timing",
     description:
-      "Every major healing fruit organized by organ system — with critical insulin timing guidance showing when each fruit heals and when it harms.",
+      "Every major healing fruit organized by organ system, with critical insulin timing guidance showing when each fruit heals and when it harms.",
     pdfPath: "/pdfs/complete_fruit_guide.pdf",
     organSystems: [
       "heart",
@@ -253,25 +253,25 @@ export const guides: Guide[] = [
     accentColor: "#7C2D12",
     keyFacts: [
       "Kiwi spans 13 organ systems",
-      "Pomegranate reverses arterial plaque — unique in the plant kingdom",
-      "Elderberry blocks viral cell entry — only fruit with this mechanism",
+      "Pomegranate reverses arterial plaque: unique in the plant kingdom",
+      "Elderberry blocks viral cell entry: only fruit with this mechanism",
       "All high-sugar fruit: morning window only",
     ],
     sections: [
       {
-        heading: "Fruit Is Medicine — In the Right Window",
+        heading: "Fruit Is Medicine: In the Right Window",
         content: [
           "Fruit has been unfairly demonized in low-carbohydrate frameworks that fail to account for timing. The fiber, polyphenols, enzymes, and micronutrients in whole fruit fundamentally alter how the sugar is metabolized. But timing still matters.",
-          "In the morning Peak Zone, fruit fructose is efficiently converted to glucose and glycogen — fuel for the body and brain. After 9pm, the same fructose routes to hepatic lipogenesis — the liver converts it directly to triglycerides, raising LDL overnight.",
+          "In the morning Peak Zone, fruit fructose is efficiently converted to glucose and glycogen, fuel for the body and brain. After 9pm, the same fructose routes to hepatic lipogenesis: the liver converts it directly to triglycerides, raising LDL overnight.",
         ],
       },
       {
         heading: "The Most Powerful Healing Fruits",
         content: [
-          "Pomegranate: the only food shown to simultaneously raise HDL, lower LDL, AND reverse existing arterial plaque. Urolithin A triggers mitophagy — the cellular process of clearing damaged mitochondria.",
-          "Kiwi: spans 13 organ systems. Actinidin — most studied natural compound for gastric emptying.",
+          "Pomegranate: the only food shown to simultaneously raise HDL, lower LDL, AND reverse existing arterial plaque. Urolithin A triggers mitophagy, the cellular process of clearing damaged mitochondria.",
+          "Kiwi: spans 13 organ systems. Actinidin is the most studied natural compound for gastric emptying.",
           "Elderberry: the only fruit compound proven to physically block viral entry into cells.",
-          "Blueberries: pterostilbene activates sirtuins — longevity proteins. Anthocyanins cross the blood-brain barrier and stimulate BDNF within 12 weeks of daily consumption.",
+          "Blueberries: pterostilbene activates sirtuins, the longevity proteins. Anthocyanins cross the blood-brain barrier and stimulate BDNF within 12 weeks of daily consumption.",
         ],
       },
     ],
@@ -285,7 +285,7 @@ export const guides: Guide[] = [
     title: "Complete Herb Guide",
     subtitle: "180 herbs with dosages, preparations, and organ system targets",
     description:
-      "A clinical reference for 180 medicinal herbs organized by organ system — including exact dosages, preparation methods, safety profiles, and herb-drug interactions.",
+      "A clinical reference for 180 medicinal herbs organized by organ system, including exact dosages, preparation methods, safety profiles, and herb-drug interactions.",
     pdfPath: "/pdfs/complete_herb_guide.pdf",
     organSystems: [
       "heart",
@@ -316,31 +316,31 @@ export const guides: Guide[] = [
     accentColor: "#064E3B",
     keyFacts: [
       "Berberine clinically comparable to low-dose statins",
-      "Ashwagandha reduces cortisol 28% — RCT confirmed",
+      "Ashwagandha reduces cortisol 28%: RCT confirmed",
       "Turmeric + black pepper = 2000% absorption increase",
       "Milk thistle silymarin: gold standard liver protection",
     ],
     sections: [
       {
-        heading: "Herbs Are Not Supplements — They Are Medicine",
+        heading: "Herbs Are Not Supplements: They Are Medicine",
         content: [
-          "The distinction between a supplement and a medicine is largely regulatory, not biochemical. Berberine activates AMPK — the same cellular pathway as metformin, the most prescribed diabetes medication in the world.",
-          "Milk thistle silymarin is used in European hospitals as a treatment for Amanita mushroom poisoning. The evidence base for silymarin is not complementary — it is clinical.",
+          "The distinction between a supplement and a medicine is largely regulatory, not biochemical. Berberine activates AMPK, the same cellular pathway as metformin, the most prescribed diabetes medication in the world.",
+          "Milk thistle silymarin is used in European hospitals as a treatment for Amanita mushroom poisoning. The evidence base for silymarin is not complementary. It is clinical.",
         ],
       },
       {
         heading: "Key Herbs for the Three Core Goals",
         content: [
-          "Cholesterol: Berberine (500mg 2–3x/day with meals) — inhibits PCSK9 and activates AMPK simultaneously.",
-          "Blood Glucose: Ceylon cinnamon (1g/day — always Ceylon, never Cassia) — cinnamaldehyde activates GLUT4 glucose transporters. Gymnema sylvestre (400mg before meals) — blocks sugar absorption at the intestinal level.",
-          "Kidneys: Dandelion root — potassium-sparing diuretic. Chanca piedra — phyllanthin inhibits calcium oxalate crystal formation.",
+          "Cholesterol: Berberine (500mg 2–3x/day with meals) inhibits PCSK9 and activates AMPK simultaneously.",
+          "Blood Glucose: Ceylon cinnamon (1g/day, always Ceylon, never Cassia) activates GLUT4 glucose transporters via cinnamaldehyde. Gymnema sylvestre (400mg before meals) blocks sugar absorption at the intestinal level.",
+          "Kidneys: Dandelion root is a potassium-sparing diuretic. Chanca piedra phyllanthin inhibits calcium oxalate crystal formation.",
         ],
       },
       {
         heading: "Critical Safety Information",
         content: [
           "Blood thinners + garlic/ginger/fish oil/vitamin E = increased bleeding risk.",
-          "Diabetes medication + berberine/cinnamon/bitter melon = enhanced hypoglycemic effect — monitor glucose carefully.",
+          "Diabetes medication + berberine/cinnamon/bitter melon = enhanced hypoglycemic effect: monitor glucose carefully.",
           "SSRIs + St. John's Wort = serotonin syndrome risk.",
           "For anyone on multiple medications, run every herb through an herb-drug interaction checker before beginning.",
         ],
@@ -356,7 +356,7 @@ export const guides: Guide[] = [
     title: "Healing Juice Recipe Guide",
     subtitle: "64 therapeutic juice recipes mapped to insulin time zones",
     description:
-      "Sixty-four healing juice recipes organized by organ system and insulin zone — with preparation rules, mechanisms, and exact timing for maximum therapeutic benefit.",
+      "Sixty-four healing juice recipes organized by organ system and insulin zone, with preparation rules, mechanisms, and exact timing for maximum therapeutic benefit.",
     pdfPath: "/pdfs/juice_recipe_guide.pdf",
     organSystems: [
       "heart",
@@ -386,7 +386,7 @@ export const guides: Guide[] = [
       {
         heading: "Juicing as Concentrated Medicine",
         content: [
-          "Fresh juice delivers the therapeutic compounds of 10–15 servings of vegetables in a single glass — without the digestive work of breaking down fiber.",
+          "Fresh juice delivers the therapeutic compounds of 10–15 servings of vegetables in a single glass, without the digestive work of breaking down fiber.",
           "The key distinction between therapeutic juicing and wellness juicing is precision: exact ingredients, exact quantities, exact timing, and exact preparation rules that preserve the active compounds.",
         ],
       },
@@ -395,11 +395,11 @@ export const guides: Guide[] = [
         content: [
           "Rule 1: Drink within 20 minutes. Oxidation begins immediately after pressing.",
           "Rule 2: Turmeric always with black pepper. Piperine increases curcumin absorption by 2000%.",
-          "Rule 3: Ceylon cinnamon only — never Cassia. Cassia contains high coumarin levels that can cause liver damage with daily use.",
+          "Rule 3: Ceylon cinnamon only, never Cassia. Cassia contains high coumarin levels that can cause liver damage with daily use.",
           "Rule 4: Cucumber and celery always with skin on. The silica lives primarily in the skin.",
-          "Rule 5: Add powdered herbs after juicing — never through the juicer.",
+          "Rule 5: Add powdered herbs after juicing, never through the juicer.",
           "Rule 6: Fat-soluble compounds require dietary fat. Blend turmeric juice with coconut oil or consume alongside avocado.",
-          "Rule 7: Cilantro must be fresh and raw — always. Its chelating compounds are heat-volatile.",
+          "Rule 7: Cilantro must be fresh and raw, always. Its chelating compounds are heat-volatile.",
           "Rule 8: When using cilantro for chelation, always pair with chlorella.",
         ],
       },
@@ -414,7 +414,7 @@ export const guides: Guide[] = [
     title: "Healing Salad Guide",
     subtitle: "47 therapeutic salads organized by organ system",
     description:
-      "Forty-seven healing salads — each a precise combination of vegetables, herbs, fruits, and dressings engineered to target specific organ systems with maximum bioavailability.",
+      "Forty-seven healing salads, each a precise combination of vegetables, herbs, fruits, and dressings engineered to target specific organ systems with maximum bioavailability.",
     pdfPath: "/pdfs/healing_salad_guide-2.pdf",
     organSystems: [
       "heart",
@@ -436,8 +436,8 @@ export const guides: Guide[] = [
     icon: "🥗",
     accentColor: "#166534",
     keyFacts: [
-      "Eat salad first — fiber buffers everything after",
-      "EVOO + lemon in every dressing — iron absorption +300%",
+      "Eat salad first: fiber buffers everything after",
+      "EVOO + lemon in every dressing: iron absorption +300%",
       "Turmeric in dressing always with black pepper",
       "Each salad targets a specific organ system",
     ],
@@ -454,7 +454,7 @@ export const guides: Guide[] = [
         content: [
           "Every salad is built on the same framework: Greens Base + Vegetables + Herbs + Fruit (morning meals only) + Dressing.",
           "Greens Base: kale, spinach, arugula, watercress, romaine, dandelion, beet greens.",
-          "Fresh Herbs: one tablespoon of fresh herbs is a therapeutic dose — not a garnish.",
+          "Fresh Herbs: one tablespoon of fresh herbs is a therapeutic dose, not a garnish.",
           "Dressing: always olive oil. Always lemon or ACV. Always black pepper if turmeric is present. Never bottled dressings.",
         ],
       },
@@ -468,9 +468,9 @@ export const guides: Guide[] = [
     slug: "healing-foods-guide",
     title: "Healing Foods Reference Guide",
     subtitle:
-      "Lean proteins, leafy greens, complex carbs, healthy fats — plus global healing foods",
+      "Lean proteins, leafy greens, complex carbs, healthy fats, plus global healing foods",
     description:
-      "A comprehensive reference for 75+ healing foods across four categories — including global foods from West African, Ayurvedic, TCM, Caribbean, and Amazon traditions not found in standard Western nutrition.",
+      "A comprehensive reference for 75+ healing foods across four categories, including global foods from West African, Ayurvedic, TCM, Caribbean, and Amazon traditions not found in standard Western nutrition.",
     pdfPath: "/pdfs/healing_foods_guide.pdf",
     organSystems: [
       "heart",
@@ -502,14 +502,14 @@ export const guides: Guide[] = [
         heading: "Beyond Western Nutrition",
         content: [
           "Western nutrition science has catalogued approximately 8% of the healing properties that traditional medicine systems have documented across millennia.",
-          "This guide intentionally crosses those boundaries. Every food from a non-Western tradition is marked with its origin — not as an exotic curiosity but as a clinical acknowledgment that these traditions discovered real mechanisms through observation long before the tools to explain them existed.",
+          "This guide intentionally crosses those boundaries. Every food from a non-Western tradition is marked with its origin, not as an exotic curiosity but as a clinical acknowledgment that these traditions discovered real mechanisms through observation long before the tools to explain them existed.",
         ],
       },
       {
-        heading: "Forbidden Rice — The Emperor's Grain",
+        heading: "Forbidden Rice: The Emperor's Grain",
         content: [
           "Black rice was reserved for Chinese Emperors and forbidden to commoners who grew it under penalty. The black pigment contains more anthocyanin per gram than blueberries.",
-          "Glycemic index of 42–45 — meaningfully lower than brown rice at 68. When cooled overnight, resistant starch increases further.",
+          "Glycemic index of 42–45, meaningfully lower than brown rice at 68. When cooled overnight, resistant starch increases further.",
         ],
       },
     ],
@@ -522,9 +522,9 @@ export const guides: Guide[] = [
     slug: "overnight-body-repair",
     title: "What Your Body Does While You Sleep",
     subtitle:
-      "The 7pm–6am overnight repair window — why the fast is non-negotiable",
+      "The 7pm–6am overnight repair window: why the fast is non-negotiable",
     description:
-      "A complete visual and clinical guide to the overnight repair cycle — GH pulses, liver Phase II detox, autophagy, glymphatic brain flush, and exactly what to eat (or not eat) in each phase.",
+      "A complete visual and clinical guide to the overnight repair cycle: GH pulses, liver Phase II detox, autophagy, glymphatic brain flush, and exactly what to eat (or not eat) in each phase.",
     pdfPath: "/pdfs/overnight_body_visual.pdf",
     organSystems: ["liver", "lymphatic", "brain", "immune", "adrenal"],
     level: "all",
@@ -536,7 +536,7 @@ export const guides: Guide[] = [
     accentColor: "#1B2A5C",
     keyFacts: [
       "GH pulses at 70–80% of daily total during first sleep cycle",
-      "Autophagy peaks at 12–3am — halted immediately by food",
+      "Autophagy peaks at 12–3am: halted immediately by food",
       "Glymphatic brain flush only activates during sleep",
       "7pm to 6am = 11 hours = full overnight repair activation",
     ],
@@ -544,7 +544,7 @@ export const guides: Guide[] = [
       {
         heading: "The Overnight Repair Principle",
         content: [
-          "The body cannot repair and digest simultaneously. It always chooses digestion first. When food is present, every repair process — growth hormone secretion, autophagy, liver Phase II detox, glymphatic flushing — is deprioritized or halted entirely.",
+          "The body cannot repair and digest simultaneously. It always chooses digestion first. When food is present, every repair process (growth hormone secretion, autophagy, liver Phase II detox, glymphatic flushing) is deprioritized or halted entirely.",
           "The 11-hour window from 7pm to 6am, properly protected from food, activates a cascade of repair processes that no supplement, medication, or intervention can replicate.",
         ],
       },
@@ -553,7 +553,7 @@ export const guides: Guide[] = [
         content: [
           "Liver Phase II detox reaches its daily peak. Methylation, glucuronidation, and sulfation run at full capacity between 1–3am.",
           "Autophagy reaches its maximum. Cells consume and recycle their own damaged proteins and dysfunctional organelles.",
-          "The glymphatic system activates exclusively during sleep — flushing amyloid-beta proteins, tau proteins, and metabolic waste that accumulate during waking hours.",
+          "The glymphatic system activates exclusively during sleep, flushing amyloid-beta proteins, tau proteins, and metabolic waste that accumulate during waking hours.",
           "Any food consumed during this window halts autophagy immediately.",
         ],
       },
@@ -566,9 +566,9 @@ export const guides: Guide[] = [
     id: "g-10",
     slug: "daytime-body-active",
     title: "What Your Body Does While You're Awake",
-    subtitle: "The 6am–7pm active window — when to eat, move, and heal",
+    subtitle: "The 6am–7pm active window: when to eat, move, and heal",
     description:
-      "A complete visual guide to daytime hormone activity — cortisol peaks, insulin sensitivity windows, muscle performance timing, and exact protocols for each phase of the active day.",
+      "A complete visual guide to daytime hormone activity: cortisol peaks, insulin sensitivity windows, muscle performance timing, and exact protocols for each phase of the active day.",
     pdfPath: "/pdfs/daytime_body_visual.pdf",
     organSystems: [
       "heart",
@@ -587,9 +587,9 @@ export const guides: Guide[] = [
     icon: "☀️",
     accentColor: "#B45309",
     keyFacts: [
-      "Cortisol peaks at 8am — the body's natural ignition",
-      "Insulin sensitivity peaks 9–10am — best nutrient window",
-      "Muscle performance peaks 2–3pm — best exercise window",
+      "Cortisol peaks at 8am: the body's natural ignition",
+      "Insulin sensitivity peaks 9–10am: best nutrient window",
+      "Muscle performance peaks 2–3pm: best exercise window",
       "Melatonin precursors begin rising after 4pm",
     ],
     sections: [
@@ -597,15 +597,15 @@ export const guides: Guide[] = [
         heading: "The Active Day Curve",
         content: [
           "Every hormone in the body follows a predictable daily rhythm. Cortisol peaks at 8am, providing natural energy and mental clarity. Insulin sensitivity peaks between 9–10am. Muscle performance peaks around 2–3pm.",
-          "Eating with this curve — not against it — is the single most impactful change available without any medication or supplement.",
+          "Eating with this curve, not against it, is the single most impactful change available without any medication or supplement.",
         ],
       },
       {
         heading: "Morning Activation (6–9am)",
         content: [
-          "Cortisol peaks at 8am — the natural alarm clock. This is designed morning energy, not stress.",
+          "Cortisol peaks at 8am: the natural alarm clock. This is designed morning energy, not stress.",
           "Insulin sensitivity is at its daily maximum. This is the best window for fruit, high-nutrient dense foods, and all therapeutic juices.",
-          "The rising protocol: 16oz water + sea salt + lemon — then cucumber celery juice — then Insulin Primer juice 15 minutes before breakfast.",
+          "The rising protocol: 16oz water + sea salt + lemon, then cucumber celery juice, then Insulin Primer juice 15 minutes before breakfast.",
         ],
       },
       {
@@ -631,7 +631,7 @@ export const guides: Guide[] = [
     subtitle:
       "Food, breath, and movement protocols that improve heart rate recovery week over week",
     description:
-      "A focused protocol for improving heart rate recovery — the single most predictive marker of cardiovascular longevity — through nutrient timing, vagal-tone breath work, and graded movement.",
+      "A focused protocol for improving heart rate recovery (the single most predictive marker of cardiovascular longevity) through nutrient timing, vagal-tone breath work, and graded movement.",
     pdfPath: "/pdfs/heart_rate_recovery_guide.pdf",
     organSystems: ["heart", "artery-health", "adrenal", "lungs"],
     level: 2,
@@ -649,9 +649,9 @@ export const guides: Guide[] = [
     slug: "quinoa-diabetic-guide",
     title: "Quinoa Diabetic Guide",
     subtitle:
-      "Why quinoa earns the rare green-light for blood glucose patients — and how to prepare it",
+      "Why quinoa earns the rare green-light for blood glucose patients, and how to prepare it",
     description:
-      "A focused guide for type 2 diabetics and insulin-resistance patients on the only grain consistently safe across the insulin curve — covering preparation, pairing, and portion rules.",
+      "A focused guide for type 2 diabetics and insulin-resistance patients on the only grain consistently safe across the insulin curve, covering preparation, pairing, and portion rules.",
     pdfPath: "/pdfs/quinoa_diabetic_guide.pdf",
     organSystems: ["blood-glucose", "gut", "heart"],
     level: 2,
@@ -697,7 +697,7 @@ export const guides: Guide[] = [
     subtitle:
       "Nutrient and nervous-system pathways for chronic anxiety, without sedation",
     description:
-      "An integrative protocol for anxiety that addresses GABA pathways, adrenal load, gut-brain axis, and vagal tone — through food, herb, and breath, never sedation.",
+      "An integrative protocol for anxiety that addresses GABA pathways, adrenal load, gut-brain axis, and vagal tone, through food, herb, and breath, never sedation.",
     pdfPath: "/pdfs/mind_body_anxiety_guide.pdf",
     organSystems: ["brain", "adrenal", "gut", "anti-inflammatory"],
     level: 2,
@@ -718,7 +718,7 @@ export const guides: Guide[] = [
     subtitle:
       "Morning food pairings that stabilize the insulin curve for the rest of the day",
     description:
-      "A short reference of breakfast combinations engineered to lock in steady glucose, protein, and fiber from the very first meal — the most leveraged eating decision of the day.",
+      "A short reference of breakfast combinations engineered to lock in steady glucose, protein, and fiber from the very first meal: the most leveraged eating decision of the day.",
     pdfPath: "/pdfs/breakfast_combinations.pdf",
     organSystems: ["blood-glucose", "gut", "adrenal", "heart"],
     level: 2,
@@ -738,9 +738,9 @@ export const guides: Guide[] = [
     slug: "dr-vera-daily-protocol",
     title: "Dr. Vera Daily Protocol",
     subtitle:
-      "The full advanced daily protocol — version 4, multi-system, clinical-grade",
+      "The full advanced daily protocol: version 4, multi-system, clinical-grade",
     description:
-      "The complete advanced daily protocol used in clinical work — covering rising, morning juicing, midday meals, afternoon wind-down, kitchen-close, and overnight recovery. For readers ready to run all systems together.",
+      "The complete advanced daily protocol used in clinical work, covering rising, morning juicing, midday meals, afternoon wind-down, kitchen-close, and overnight recovery. For readers ready to run all systems together.",
     pdfPath: "/pdfs/Dr_Vera_Daily_Protocol_v4.pdf",
     organSystems: [
       "heart",
@@ -780,10 +780,10 @@ export const guides: Guide[] = [
     icon: "🎗️",
     accentColor: "#4A0E0E",
     keyFacts: [
-      "Every food verified low Vitamin K — warfarin safe",
+      "Every food verified low Vitamin K: warfarin safe",
       "Liver flush protocol safe during chemotherapy",
       "WBC and immune support through food and herbs",
-      "Cardiac-safe with pacemaker — all foods reviewed",
+      "Cardiac-safe with pacemaker: all foods reviewed",
     ],
     sections: [
       {
@@ -797,15 +797,15 @@ export const guides: Guide[] = [
       {
         heading: "The Vitamin K Rule on Warfarin",
         content: [
-          "Vitamin K is not a banned nutrient on warfarin — it is a managed nutrient. The rule is consistency, not elimination. The same amount of the same Vitamin K foods daily allows the physician to calibrate the warfarin dose accurately.",
-          "This protocol keeps Vitamin K LOW rather than just consistent — because during active cancer treatment, food intake and absorption are variable.",
+          "Vitamin K is not a banned nutrient on warfarin. It is a managed nutrient. The rule is consistency, not elimination. The same amount of the same Vitamin K foods daily allows the physician to calibrate the warfarin dose accurately.",
+          "This protocol keeps Vitamin K LOW rather than just consistent, because during active cancer treatment, food intake and absorption are variable.",
           "Foods completely avoided: spinach, kale, moringa leaves, parsley in large amounts, broccoli raw, collard greens, Swiss chard, Brussels sprouts, grapefruit.",
         ],
       },
       {
         heading: "Liver Support During Chemotherapy",
         content: [
-          "Chemotherapy agents are hepatotoxic by design — the liver metabolizes and clears every drug administered.",
+          "Chemotherapy agents are hepatotoxic by design: the liver metabolizes and clears every drug administered.",
           "The morning protocol activates liver bile flow and methylation pathways before the first meal. Artichoke hearts at lunch stimulate bile production. Milk thistle with every meal provides the most evidence-supported liver protection available.",
           "The kitchen closes at 7pm without exception. The liver runs its deepest Phase II detox between 1 and 3am.",
         ],
@@ -822,7 +822,7 @@ export const guides: Guide[] = [
         heading: "The Daily Healing Juice Formula",
         content: [
           "Every morning: small beet + large cucumber (skin on) + 4 stalks celery (skin on) + 1 lemon peeled + fresh ginger + fresh turmeric + pinch of black pepper added after juicing + half teaspoon spirulina stirred in after juicing.",
-          "This formula is specifically safe for warfarin therapy — very low Vitamin K across all ingredients. Drink within 20 minutes of pressing. Peak Zone only — before 10am.",
+          "This formula is specifically safe for warfarin therapy: very low Vitamin K across all ingredients. Drink within 20 minutes of pressing. Peak Zone only, before 10am.",
         ],
       },
     ],
@@ -858,7 +858,7 @@ export const guides: Guide[] = [
     title: "The Language of Becoming",
     subtitle: "A devotional reflection on identity, healing, and renewal",
     description:
-      "A long-form devotional piece on the language of becoming — written for readers walking through transformation and seeking spiritual companionship in the healing process.",
+      "A long-form devotional piece on the language of becoming, written for readers walking through transformation and seeking spiritual companionship in the healing process.",
     pdfPath: "/pdfs/the_language_of_becoming.pdf",
     organSystems: ["brain"],
     level: "all",
@@ -878,7 +878,7 @@ export const guides: Guide[] = [
     subtitle:
       "Neuroplasticity, vagal tone, and the eight-week protocol for retraining an anxious nervous system",
     description:
-      "A clinical mind-body protocol for retraining an anxious nervous system — amygdala threat scanning, vagal tone, heart rate variability, anxiety wave management, and the measurable eight-week markers that say the work is taking hold.",
+      "A clinical mind-body protocol for retraining an anxious nervous system: amygdala threat scanning, vagal tone, heart rate variability, anxiety wave management, and the measurable eight-week markers that say the work is taking hold.",
     pdfPath: "/pdfs/renewing_the_mind_guide.pdf",
     organSystems: ["brain", "adrenal"],
     level: 2,
