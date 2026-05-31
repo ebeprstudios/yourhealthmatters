@@ -63,43 +63,20 @@ export default function MindAsMedicinePage() {
                 mechanism={station.oneLineMechanism}
                 colorHex={station.colorHex}
                 guides={guides}
+                deepDive={
+                  station.number === 2
+                    ? {
+                        href: '/mind-as-medicine/inner-courtroom',
+                        icon: '⚖️',
+                        title: 'The Inner Courtroom',
+                        blurb:
+                          'Binary collapse, dramatized: the mind convenes a courtroom — judge, prosecutor, jury — and renders a verdict about your worth before the evidence is in. An interactive deep-dive on this station.',
+                      }
+                    : undefined
+                }
               />
             )
           })}
-        </div>
-      </section>
-
-      {/* Root Work band */}
-      <section className="py-12" style={{ backgroundColor: '#fbf9fd' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <a
-            href="/root-work"
-            className="block rounded-2xl p-6 sm:p-8 transition-all hover:shadow-md group"
-            style={{
-              backgroundColor: MIND.cardBg,
-              border: `1px solid ${MIND.cardBorder}`,
-              borderLeft: `4px solid ${MIND.accent}`,
-            }}
-          >
-            <div className="flex items-start gap-4">
-              <span className="text-3xl flex-shrink-0" aria-hidden="true">🌱</span>
-              <div className="flex-1">
-                <p className="text-xs font-bold tracking-[0.18em] uppercase mb-2" style={{ color: MIND.accentSoft }}>
-                  Root Work
-                </p>
-                <h2 className="font-serif text-2xl sm:text-3xl mb-2" style={{ color: MIND.ink }}>
-                  The work beneath the loop
-                </h2>
-                <p className="text-sm sm:text-base leading-relaxed mb-4" style={{ color: MIND.inkSoft }}>
-                  The stations name the mechanics. Root Work examines the meaning the loop was built
-                  to protect — the beliefs and verdicts underneath. Start with The Inner Courtroom.
-                </p>
-                <span className="inline-block text-sm font-medium underline" style={{ color: MIND.accent }}>
-                  Enter Root Work →
-                </span>
-              </div>
-            </div>
-          </a>
         </div>
       </section>
 
@@ -120,15 +97,23 @@ export default function MindAsMedicinePage() {
   )
 }
 
+interface DeepDive {
+  href: string
+  icon: string
+  title: string
+  blurb: string
+}
+
 interface StationSectionProps {
   stationNumber: number
   fullName: string
   mechanism: string
   colorHex: string
   guides: ReturnType<typeof getGuidesByStation>
+  deepDive?: DeepDive
 }
 
-function StationSection({ stationNumber, fullName, mechanism, colorHex, guides }: StationSectionProps) {
+function StationSection({ stationNumber, fullName, mechanism, colorHex, guides, deepDive }: StationSectionProps) {
   return (
     <section id={`station-${stationNumber}`} className="scroll-mt-24">
       <header className="mb-5 pb-4" style={{ borderBottom: `2px solid ${colorHex}` }}>
@@ -152,7 +137,41 @@ function StationSection({ stationNumber, fullName, mechanism, colorHex, guides }
           ))}
         </div>
       )}
+
+      {deepDive && <DeepDiveCard deepDive={deepDive} colorHex={colorHex} />}
     </section>
+  )
+}
+
+function DeepDiveCard({ deepDive, colorHex }: { deepDive: DeepDive; colorHex: string }) {
+  return (
+    <a
+      href={deepDive.href}
+      className="block rounded-2xl p-6 sm:p-7 mt-4 transition-all hover:shadow-md"
+      style={{
+        backgroundColor: '#fbfafd',
+        border: `1.5px solid ${colorHex}`,
+        borderLeft: `4px solid ${colorHex}`,
+      }}
+    >
+      <div className="flex items-start gap-4">
+        <span className="text-3xl flex-shrink-0" aria-hidden="true">{deepDive.icon}</span>
+        <div className="flex-1">
+          <p className="text-xs font-bold tracking-[0.18em] uppercase mb-1.5" style={{ color: colorHex }}>
+            Interactive Deep-Dive
+          </p>
+          <h3 className="font-serif text-xl mb-2" style={{ color: MIND.ink }}>
+            {deepDive.title}
+          </h3>
+          <p className="text-sm leading-relaxed mb-3" style={{ color: MIND.inkSoft }}>
+            {deepDive.blurb}
+          </p>
+          <span className="inline-block text-sm font-medium underline" style={{ color: colorHex }}>
+            Enter the courtroom →
+          </span>
+        </div>
+      </div>
+    </a>
   )
 }
 

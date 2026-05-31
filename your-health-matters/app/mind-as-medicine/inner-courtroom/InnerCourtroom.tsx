@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 /* ------------------------------------------------------------------ */
-/*  The Inner Courtroom — Root Work (Mind Wing)                        */
+/*  The Inner Courtroom — Station 2 Deep-Dive (Binary Collapse)        */
 /*  Your Health Guide · Mind as Medicine                             */
 /*                                                                     */
 /*  Self-contained interactive page. No external UI deps.              */
