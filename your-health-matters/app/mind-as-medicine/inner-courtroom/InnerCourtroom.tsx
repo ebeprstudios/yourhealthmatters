@@ -25,7 +25,7 @@ const CHAMBERS: Record<
     tag: "Renders the verdict",
     accent: "#9F8FEF",
     body:
-      "The judge is the part of the mind that decides what an event means about you. It operates automatically, below consciousness. You did not appoint it. You cannot easily fire it. What makes it dangerous is not that it renders verdicts — it's that its verdicts feel like facts. \u201cShe pulled away\u201d becomes \u201cI have been replaced.\u201d The transition from observation to verdict happens in under a second.",
+      "The judge is the part of the mind that decides what an event means about you. It operates automatically, below consciousness. You did not appoint it. You cannot easily fire it. What makes it dangerous is not that it renders verdicts: it's that its verdicts feel like facts. \u201cShe pulled away\u201d becomes \u201cI have been replaced.\u201d The transition from observation to verdict happens in under a second.",
     quote: "Nothing has been proven. No verdict has been reached. A fear has entered the story.",
   },
   prosecutor: {
@@ -186,10 +186,10 @@ export default function InnerCourtroom() {
         )}
 
         {/* ---------------- How it sustains itself ---------------- */}
-        <p className="section-label mt">How it sustains itself — the verdicts it renders</p>
+        <p className="section-label mt">How it sustains itself: the verdicts it renders</p>
 
         <div className="verdict-hall">
-          <p className="verdict-hall-title">Common verdicts — select one to examine it</p>
+          <p className="verdict-hall-title">Common verdicts: select one to examine it</p>
           <div className="verdict-list">
             {(Object.keys(VERDICTS) as VerdictKey[]).map((k) => {
               const v = VERDICTS[k];
@@ -218,7 +218,7 @@ export default function InnerCourtroom() {
         )}
 
         {/* ---------------- Before you begin ---------------- */}
-        <p className="section-label mt">Before you begin — the six-step excavation</p>
+        <p className="section-label mt">Before you begin: the six-step excavation</p>
 
         <ol className="flow-grid">
           {STEPS.map(([num, name], i) => (
@@ -235,7 +235,7 @@ export default function InnerCourtroom() {
         </ol>
 
         {/* ---------------- Root Work ---------------- */}
-        <p className="section-label mt">Root Work — what actually breaks the cycle</p>
+        <p className="section-label mt">Root Work: what actually breaks the cycle</p>
 
         <div className="rw-strip">
           <p className="rw-title">The three separations that free you</p>
@@ -252,10 +252,10 @@ export default function InnerCourtroom() {
 
         {/* ---------------- Byline + disclaimer ---------------- */}
         <footer className="court-footer">
-          <p className="byline">Dr. Vera Holloway, CNS + CHN</p>
+          <p className="byline">Dr. Vera Holloway</p>
           <p className="byline-sub">Researched by Erica Ehiwe · Your Health Guide · Mind as Medicine</p>
           <p className="disclaimer">
-            Educational only — not a substitute for therapy, counsel, or pastoral care. If you are
+            Educational only, not a substitute for therapy, counsel, or pastoral care. If you are
             working with traumatic material, please work alongside a trauma-informed therapist.
           </p>
         </footer>

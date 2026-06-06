@@ -180,7 +180,7 @@ export default function GuidePage({ params }: Props) {
                 Practical First Step
               </h3>
               <p className="leading-relaxed" style={{ color: 'var(--ink-700)' }}>
-                Pick one habit from this guide that you can begin today. One small, repeatable change — practiced for seven days — teaches the body more than a perfect protocol followed for one.
+                Pick one habit from this guide that you can begin today. One small, repeatable change, practiced for seven days, teaches the body more than a perfect protocol followed for one.
               </p>
             </section>
 
@@ -240,7 +240,7 @@ export default function GuidePage({ params }: Props) {
                   <p className="font-serif font-bold text-lg mb-1">Printable PDF</p>
                   <p className="text-white/70 text-xs mb-4">
                     {guide.gated
-                      ? 'Free with email — for your kitchen counter or to share with your physician'
+                      ? 'Free with email: for your kitchen counter or to share with your physician'
                       : 'Download for your kitchen counter or to share with your physician'}
                   </p>
                   <GuideDownloadGate guide={guide} variant="detail" />

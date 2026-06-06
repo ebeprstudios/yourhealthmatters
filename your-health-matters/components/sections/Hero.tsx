@@ -106,13 +106,13 @@ export default function Hero() {
           style={{ animationDelay: '0.15s', opacity: 0, animationFillMode: 'forwards' }}
         >
           <p className="leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)', fontSize: 'clamp(1rem, 1.6vw, 1.15rem)' }}>
-            One is what you put in it — food, herbs, juices, the cellular biology that reaches your bloodstream through your gut. The other is what you direct at it — perception, language, the sentences you wrap around your own thoughts, the way your nervous system decides whether a moment is safe or dangerous.
+            One is what you put in it: food, herbs, juices, the cellular biology that reaches your bloodstream through your gut. The other is what you direct at it: perception, language, the sentences you wrap around your own thoughts, the way your nervous system decides whether a moment is safe or dangerous.
           </p>
           <p className="leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)', fontSize: 'clamp(1rem, 1.6vw, 1.15rem)' }}>
             Both doorways open into the same body. Both have measurable biology on the other side. The mind moves the body in six seconds. Food moves it in twenty minutes. Neither is metaphor. Neither is optional.
           </p>
           <p className="leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)', fontSize: 'clamp(1rem, 1.6vw, 1.15rem)' }}>
-            This site teaches both — with the same rigor, in the same voice, by the same practitioner. Choose your doorway. The destination is the same.
+            This site teaches both, with the same rigor, in the same voice, by the same practitioner. Choose your doorway. The destination is the same.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export default function Hero() {
           <DoorwayCard
             eyebrow="MIND AS MEDICINE"
             subhead="What you direct at the body."
-            body="The loop your nervous system runs every day — perception, language, binary thinking, stored charge, set-point — and how to retrain it at any station."
+            body="The loop your nervous system runs every day (perception, language, binary thinking, stored charge, set-point) and how to retrain it at any station."
             cta="Enter Mind as Medicine"
             href="/mind-as-medicine"
             accent="#6b5b95"
@@ -151,10 +151,10 @@ export default function Hero() {
           style={{ animationDelay: '0.5s', opacity: 0, animationFillMode: 'forwards' }}
         >
           <p className="italic leading-relaxed" style={{ color: 'rgba(255,255,255,0.78)', fontSize: 'clamp(0.95rem, 1.4vw, 1.05rem)' }}>
-            The body knows what the mind is doing. The mind feels what the food is doing. Healing is not a single doorway — it is the moment you stop treating them as separate.
+            The body knows what the mind is doing. The mind feels what the food is doing. Healing is not a single doorway. It is the moment you stop treating them as separate.
           </p>
           <p className="mt-3 text-sm font-medium" style={{ color: 'rgba(255,255,255,0.55)' }}>
-            — Dr. Vera Holloway, CNS + CHN
+            — Dr. Vera Holloway
           </p>
         </div>
       </div>

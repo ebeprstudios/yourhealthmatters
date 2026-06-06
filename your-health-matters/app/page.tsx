@@ -26,6 +26,79 @@ export default function Home() {
       <NewsletterPopup />
       <Hero />
 
+      {/* Tools strip — interactive references between the doorways and the library */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-4">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-3xl sm:text-4xl mb-3" style={{ color: 'var(--ink-900)' }}>
+            Tools to support the work.
+          </h2>
+          <p className="max-w-xl mx-auto leading-relaxed italic" style={{ color: 'var(--ink-500)' }}>
+            Interactive references that turn the guides into something you can use.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {[
+            {
+              icon: '🔬',
+              title: 'The 18 Organ Systems',
+              body: 'Every system in the body, color-coded, with the foods and herbs that support each one.',
+              cta: 'Explore the systems',
+              href: '/systems',
+            },
+            {
+              icon: '🕐',
+              title: 'Insulin Time Zones',
+              body: "An interactive timeline of your body's four daily energy windows.",
+              cta: 'Open the zones',
+              href: '/insulin-zones',
+            },
+            {
+              icon: '🧺',
+              title: 'Shopping List Generator',
+              body: 'Pick an organ system or a protocol. Get a printable list.',
+              cta: 'Generate a list',
+              href: '/shopping-list',
+            },
+            {
+              icon: '🌙',
+              title: 'Sleep Guide',
+              body: 'What the body does overnight, and how to support each stage.',
+              cta: 'Open the guide',
+              href: '/sleep-guide',
+            },
+          ].map(({ icon, title, body, cta, href }) => (
+            <Link
+              key={href}
+              href={href}
+              className="group flex flex-col rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-md"
+              style={{
+                backgroundColor: 'var(--paper-raised)',
+                border: 'var(--border-hairline)',
+              }}
+            >
+              <span className="text-3xl mb-4" aria-hidden="true">{icon}</span>
+              <p className="font-serif text-lg mb-2" style={{ color: 'var(--ink-900)' }}>
+                {title}
+              </p>
+              <p className="text-sm leading-relaxed mb-5 flex-1" style={{ color: 'var(--ink-500)' }}>
+                {body}
+              </p>
+              <span
+                className="inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: 'var(--zone-peak)' }}
+              >
+                {cta}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Featured guides preview */}
       <section id="guides" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-14">
@@ -42,7 +115,7 @@ export default function Home() {
             className="max-w-xl mx-auto leading-relaxed"
             style={{ color: 'var(--ink-500)' }}
           >
-            Foundational, Specialty, and Advanced guides — each a rich web
+            Foundational, Specialty, and Advanced guides, each a rich web
             page and a printable PDF. Browse the full library below or jump
             straight to the categorized index.
           </p>
@@ -85,7 +158,7 @@ export default function Home() {
             </h2>
             <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
               I built Your Health Guide as a place to share the research
-              I&apos;ve spent years inside of — how the body works, what
+              I&apos;ve spent years inside of: how the body works, what
               food does inside it, and how healing traditions across the
               world have understood that relationship for centuries.
               I&apos;m training as a Certified Nutrition Specialist, and
@@ -95,14 +168,14 @@ export default function Home() {
               The research spans West African food medicine, Ayurvedic
               tradition, Traditional Chinese Medicine, Mediterranean
               protocols, Caribbean herbal lineages, and Southeast Asian
-              botanical knowledge — integrated with modern clinical
+              botanical knowledge, integrated with modern clinical
               research.
             </p>
             <p className="leading-relaxed mb-4" style={{ color: 'var(--ink-700)' }}>
               <strong style={{ color: 'var(--ink-900)' }}>
                 About Dr. Vera Holloway.
               </strong>{' '}
-              Dr. Vera is the teaching voice of this platform — an
+              Dr. Vera is the teaching voice of this platform, an
               educational persona I created to bring multi-tradition
               holistic medicine into a warm, accessible conversation. The
               protocols, mechanisms, and food-as-medicine guidance you
@@ -115,7 +188,7 @@ export default function Home() {
               style={{ color: 'var(--ink-500)' }}
             >
               The body is honored when we feed it well. Understanding how
-              it works — how to nourish it, protect it, and restore it —
+              it works (how to nourish it, protect it, and restore it)
               is, in my tradition and many others, one of the deepest acts
               of stewardship we can offer. That is what this work is for.
             </p>

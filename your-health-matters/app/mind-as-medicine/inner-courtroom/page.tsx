@@ -8,11 +8,11 @@ import InnerCourtroom from './InnerCourtroom'
 export const metadata: Metadata = {
   title: 'The Inner Courtroom | Station 2 Deep-Dive | Mind as Medicine',
   description:
-    'A deep-dive on Station 2 (Binary Collapse): how the mind sorts an ambiguous reality into a verdict about your worth — judge, prosecutor, and jury — and what breaks the cycle. From Dr. Vera Holloway, CNS + CHN.',
+    'A deep-dive on Station 2 (Binary Collapse): how the mind sorts an ambiguous reality into a verdict about your worth (judge, prosecutor, and jury) and what breaks the cycle. From Dr. Vera Holloway.',
   openGraph: {
     title: 'The Inner Courtroom · Station 2 Deep-Dive',
     description:
-      'The courtroom is binary collapse dramatized: "she pulled away" becomes "I have been replaced." Learn how the verdict is rendered — and how to reopen the case.',
+      'The courtroom is binary collapse dramatized: "she pulled away" becomes "I have been replaced." Learn how the verdict is rendered, and how to reopen the case.',
   },
 }
 

@@ -118,7 +118,7 @@ export async function subscribe({ email, name, streams }: SubscribeInput) {
           <p style="color:#3f3a33;font-size:15px;line-height:1.7;margin:0 0 16px">
             Each week you will receive evidence-based insights on nutrition,
             healing foods, herbal medicine, and how to support your body
-            through food and lifestyle — drawn from West African, Ayurvedic,
+            through food and lifestyle, drawn from West African, Ayurvedic,
             TCM, Mediterranean, Caribbean, and Amazonian traditions.
           </p>
           <p style="color:#3f3a33;font-size:15px;line-height:1.7;margin:0">
@@ -232,7 +232,7 @@ export async function sendGuideDeliveryEmail({
           <p style="font-size:16px;line-height:1.7;margin:0 0 14px">${greeting}</p>
           <p style="font-size:15px;line-height:1.7;margin:0 0 18px;color:#3f3a33">
             Thank you for asking for <strong>${guide.title}</strong>. Your
-            download is below — keep it on your device so it is there
+            download is below. Keep it on your device so it is there
             whenever you need it.
           </p>
 
@@ -250,7 +250,7 @@ export async function sendGuideDeliveryEmail({
           </ul>
 
           <p style="font-size:14px;line-height:1.7;margin:14px 0 0;color:#3f3a33">
-            I will send you the occasional note from Your Health Guide —
+            I will send you the occasional note from Your Health Guide:
             new resources as I publish them, gentle protocols, and
             reminders that your body is wiser than you think. If that is
             not what you signed up for, the unsubscribe link is at the

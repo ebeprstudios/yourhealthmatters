@@ -27,7 +27,7 @@ export default function DisclaimerFooter() {
               Your Health Guide<sup className="text-[0.55em] align-super">™</sup>
             </p>
             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--ink-700)' }}>
-              One body. Two doorways. Educational stewardship from Dr. Vera Holloway, CNS + CHN.
+              One body. Two doorways. Educational stewardship from Dr. Vera, the teaching voice of Your Health Guide.
             </p>
             <p className="text-xs leading-relaxed" style={{ color: 'var(--ink-500)' }}>
               Grounded in West African, Ayurvedic, TCM, Mediterranean, Caribbean, and Amazonian traditions.
@@ -89,7 +89,7 @@ export default function DisclaimerFooter() {
             <strong style={{ color: 'var(--ink-900)' }}>Medical Disclaimer.</strong>{' '}
             This content is educational and does not substitute for the care of
             your own physician. Always consult your healthcare provider before
-            making changes to your diet, supplement routine, or medications —
+            making changes to your diet, supplement routine, or medications,
             especially if you are pregnant, nursing, on prescription medications,
             or managing a chronic condition.
           </p>

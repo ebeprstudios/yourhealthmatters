@@ -59,7 +59,7 @@ export const salads: Salad[] = [
       "EVOO, lemon juice, raw apple cider vinegar, minced garlic, pinch of sea salt",
     organSystems: ["thyroid", "adrenal", "immune"],
     mechanismNotes:
-      "Built for thyroid patients — all cruciferous vegetables are lightly cooked to reduce goitrogenic compounds. Brazil nuts deliver selenium for T4→T3 conversion. Pumpkin seeds add zinc. Sea vegetables provide gentle iodine.",
+      "Built for thyroid patients: all cruciferous vegetables are lightly cooked to reduce goitrogenic compounds. Brazil nuts deliver selenium for T4→T3 conversion. Pumpkin seeds add zinc. Sea vegetables provide gentle iodine.",
     thyroidNote:
       "Cruciferous vegetables (kale, broccoli, cabbage, Brussels sprouts) MUST be cooked for thyroid patients. Raw forms can interfere with thyroid hormone synthesis.",
   },

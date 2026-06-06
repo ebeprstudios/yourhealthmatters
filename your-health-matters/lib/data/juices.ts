@@ -34,7 +34,7 @@ export const juices: Juice[] = [
     mechanismNotes:
       "The morning protocol juice. Beet nitrates relax the vasculature, turmeric quiets inflammation (always with a pinch of black pepper if added), ginger stimulates digestion, and citrus drives phase I/II liver detoxification. Drink within 20 minutes of pressing.",
     preparationRules: [
-      "Press fresh — do not store",
+      "Press fresh, do not store",
       "Add a pinch of fresh-cracked black pepper if including turmeric powder afterward",
       "Drink within 20 minutes",
       "Peak Zone only (6am–2pm)",
@@ -78,7 +78,7 @@ export const juices: Juice[] = [
     insulinZone: "declining",
     organSystems: ["gut", "liver", "anti-inflammatory"],
     mechanismNotes:
-      "A low-sugar afternoon option for the Declining Zone (2–6pm). Only one fruit — a green apple — to keep glucose response gentle. Chlorophyll from greens supports oxygenation and gentle detox into evening.",
+      "A low-sugar afternoon option for the Declining Zone (2–6pm). Only one fruit, a green apple, to keep glucose response gentle. Chlorophyll from greens supports oxygenation and gentle detox into evening.",
     preparationRules: [
       "Press fresh",
       "Drink within 20 minutes",
@@ -100,12 +100,12 @@ export const juices: Juice[] = [
     insulinZone: "caution",
     organSystems: ["kidneys", "lymphatic", "liver"],
     mechanismNotes:
-      "A safe Caution Zone (6–9pm) option — no fruit, no starchy roots, no sweetness. A gentle mineral and chlorophyll press for those who want something between dinner and the closed kitchen.",
+      "A safe Caution Zone (6–9pm) option: no fruit, no starchy roots, no sweetness. A gentle mineral and chlorophyll press for those who want something between dinner and the closed kitchen.",
     preparationRules: [
       "No fruit at this hour",
       "Press fresh",
       "Drink within 20 minutes",
-      "Must be consumed by 9pm — after that, only water",
+      "Must be consumed by 9pm: after that, only water",
     ],
     consumeWithinMinutes: 20,
   },
