@@ -29,12 +29,21 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://yourhealthguide.co',
     siteName: 'Your Health Guide',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Your Health Guide — Because your health matters.',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Your Health Guide | Because your health matters',
     description:
       'Evidence-based healing guides for the whole body: food, herbs, and lifestyle protocols grounded in multi-tradition holistic medicine.',
+    images: ['/opengraph-image'],
   },
   alternates: { canonical: 'https://yourhealthguide.co' },
 }
