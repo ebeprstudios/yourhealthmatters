@@ -12,7 +12,8 @@ import DrVeraChat from '@/components/chat/DrVeraChat'
 import NewsletterForm from '@/components/ui/NewsletterForm'
 import NewsletterPopup from '@/components/ui/NewsletterPopup'
 import DisclaimerFooter from '@/components/ui/DisclaimerFooter'
-import { tieredGuides } from '@/lib/data'
+import { tieredGuides, testimonials } from '@/lib/data'
+import type { Testimonial } from '@/lib/types'
 import Link from 'next/link'
 
 export default function Home() {
@@ -242,6 +243,8 @@ export default function Home() {
         </div>
       </section>
 
+      <TestimonialsStrip items={testimonials} />
+
       {/* Newsletter Section */}
       <section
         className="py-20 px-4"
@@ -312,5 +315,98 @@ export default function Home() {
 
       <DrVeraChat />
     </main>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// TestimonialsStrip
+// Returns null when the testimonials array is empty — invisible to visitors
+// until real, consent-confirmed entries are added.
+// ---------------------------------------------------------------------------
+
+function TestimonialsStrip({ items }: { items: Testimonial[] }) {
+  if (items.length === 0) return null
+
+  return (
+    <section className="py-20" style={{ backgroundColor: 'var(--paper-sunk)' }}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12">
+          <span
+            className="inline-block text-xs font-semibold tracking-widest uppercase mb-3"
+            style={{ color: 'var(--zone-peak)' }}
+          >
+            Reader Experiences
+          </span>
+          <h2
+            className="font-serif text-3xl sm:text-4xl"
+            style={{ color: 'var(--ink-900)' }}
+          >
+            What readers have noticed
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((t) => (
+            <div
+              key={t.id}
+              className="flex flex-col rounded-2xl p-6"
+              style={{
+                backgroundColor: 'var(--paper-raised)',
+                border: 'var(--border-hairline)',
+                boxShadow: 'var(--shadow-card)',
+              }}
+            >
+              {/* Open-quote mark */}
+              <span
+                className="text-5xl font-serif leading-none mb-4 select-none"
+                aria-hidden="true"
+                style={{ color: 'var(--zone-peak)' }}
+              >
+                &ldquo;
+              </span>
+
+              {/* Primary concern tag */}
+              <span
+                className="inline-block self-start text-xs font-semibold px-2.5 py-1 rounded-full mb-4"
+                style={{
+                  backgroundColor: 'var(--paper-sunk)',
+                  color: 'var(--ink-700)',
+                  border: 'var(--border-hairline)',
+                }}
+              >
+                {t.primaryConcern}
+              </span>
+
+              {/* Main quote body */}
+              <p
+                className="text-sm leading-relaxed flex-1 mb-6 italic"
+                style={{ color: 'var(--ink-700)' }}
+              >
+                {t.whatChanged}
+              </p>
+
+              {/* Footer */}
+              <div
+                className="flex items-center justify-between pt-4"
+                style={{ borderTop: 'var(--border-hairline)' }}
+              >
+                <p
+                  className="text-xs font-semibold"
+                  style={{ color: 'var(--ink-900)' }}
+                >
+                  {t.patientLabel}
+                </p>
+                <p
+                  className="text-xs"
+                  style={{ color: 'var(--ink-500)' }}
+                >
+                  {t.durationOnProtocol}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
